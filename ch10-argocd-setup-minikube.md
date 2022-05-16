@@ -83,7 +83,7 @@ Argo CD uygulaması "minikube" uygulaması üzerinde çalışan Kubernetes clust
 
     **Eğer bu adıma kadar sorunsuz ilerleyebildiysek localhost bağlantısına tıkladığımızda ekranımıza aşağıdaki gibi bir sayfa gelecektir.**
 
-<p align="center"><img src="./images/Argo-CD/image-17.png"></p>
+<p align="center"><img src="images/Argo-CD/image-17.png"></p>
 
 6. Varsayılan kullanıcı adı olarak "admin" ile gelen Argo CD uygulaması, kullanıcı şifresini ise kurulum anında oluşturmaktadır. Initial password'e ise şu şekilde ulaşılabilir:
 
@@ -109,7 +109,7 @@ Argo CD uygulaması "minikube" uygulaması üzerinde çalışan Kubernetes clust
 
     Şifrenin **Bcrypt** şifreleme yöntemi kullanılarak şifrelenmesi gerekmektedir. Bunu yapabilmek için [browserling](https://www.browserling.com/tools/bcrypt) adresine gidip Password kısmına belirlediğimiz şifreyi yazıp **Bcrypt** butonuna basarak şifreleme işlemini gerçekleştirebiliriz.
 
-<p align="center"><img src="./images/Argo-CD/image-18.png"></p>
+<p align="center"><img src="images/Argo-CD/image-18.png"></p>
 
   Oluşturulan bu şifreyi kopyalayıp yukarıdaki komuttaki "XXXXXXXXXXXXX" kısmının yerine yazıp çalıştırdığımızda şifre değiştirme işlemi başarıyla tamamlanmış olacaktır.
 
@@ -131,14 +131,14 @@ Argo CD uygulaması "minikube" uygulaması üzerinde çalışan Kubernetes clust
 
   `kubectl get secret argocd-initial-admin-secret -n argocd -o yaml` komutunu çalıştırıp *data* -> *password* altında şifremizin base64 ile encode edilmiş halini görebiliriz.
 
-<p align="center"><img src="./images/Argo-CD/image-26.png"></p>
+<p align="center"><img src="images/Argo-CD/image-26.png"></p>
 
   `echo <encoded-sifre> | base64 --decode` komutu ile de şifremizi decode edip çıktısını doğrudan terminalde görebiliriz. '%' işaretinden önceki kısım şifremizdir, **'%' karakterini kopyalamamaya dikkat ediniz!**
 
-<p align="center"><img src="./images/Argo-CD/image-27.png"></p>
+<p align="center"><img src="images/Argo-CD/image-27.png"></p>
 
 7. Bu aşamaları sıkıntısız geçebildiysek artık localhost:8080 ile yeniden uygulamamıza erişip kendi belirlediğimiz ve bcrypt ettiğimiz şifre ile giriş yapabilmemiz gerekmekte. Giriş işlemi başarıyla sonuçlanırsa karşımıza şu şekilde bir ekran gelecektir:
 
-<p align="center"><img src="./images/Argo-CD/image-19.png"></p>
+<p align="center"><img src="images/Argo-CD/image-19.png"></p>
 
 8. Tebrikler. Kurulum işlemini başarıyla tamamladınız. Bir sonraki adımda bu boş ekranı uygulamalarla doldurup biraz hareketlendireceğiz :)

@@ -4,7 +4,7 @@
 
 ### Riemann Toplamı
 
-<p align="center"><img src="./images/CI-surecleri/image-1.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-1.png"></p>
 
 Yukarıdaki şeklin alanını nasıl hesaplayabiliriz?
 
@@ -12,7 +12,7 @@ Hayat, problemler, projeler kenarı köşesi belli olmayan, eğik-bükük şekil
 
 *"Madem dörtgenlerin alanlarını hesaplamayı biliyoruz, o zaman düzgün olmayan bu şekli, dörtgen parçalardan oluşan bir bütün olarak düşünelim ve bu dörtgenlerin alanlarını toplayarak tüm şeklin alanının yaklaşık değerini bulalım"* diye düşünüp, bu düşünceden temel alan bir formül üretmiş.
 
-<p align="center"><img src="./images/CI-surecleri/image-2.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-2.png"></p>
 
 Bugün yaygın olan yazılım geliştirme metodolojilerinin mantığı Riemann’ın mantığına benziyor. Uygulamaları özelliklere bölüp, belli zaman dilimleri içerisinde bu özellikleri tamamlayarak projeleri inşa ediyoruz.
 
@@ -28,7 +28,7 @@ Parçalara bölünüp bu şekilde geliştirilen bir projeye sürekli olarak ekle
 
 ## CI Nedir?
 
-<p align="center"><img src="./images/CI-surecleri/image-3.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-3.png"></p>
 
 Continuous Integration (CI) is the process of automating the build and testing of code every time a team member commits changes to version control. CI encourages developers to share their code and unit tests by merging their changes into a shared version control repository after every small task completion. Committing code triggers an automated build system to grab the latest code from the shared repository and to build, test, and validate the full main, or trunk, branch.
 
@@ -74,7 +74,7 @@ Here are key differences between development using CI or without CI.
 
 ## Difference between Compilation and Continuous Integration
 
-<p align="center"><img src="./images/CI-surecleri/image-4.png" alt="Activities in Continuous Integration"></p>
+<p align="center"><img src="images/CI-surecleri/image-4.png" alt="Activities in Continuous Integration"></p>
 <h4 align="center">Activities in Continuous Integration</h4>
 
 While compilation only compiles a code, CI does the following activities:
@@ -111,7 +111,7 @@ Compilation is the process the computer takes to convert a high-level programmin
 
 ### How do I build?
 
-<p align="center"><img src="./images/CI-surecleri/image-5.png" alt="CI process"></p>
+<p align="center"><img src="images/CI-surecleri/image-5.png" alt="CI process"></p>
 <h4 align="center">CI process</h4>
 
 - Ideally, the build should come from the command line and should not depend on IDE.
@@ -122,7 +122,7 @@ Compilation is the process the computer takes to convert a high-level programmin
 
 ## What do you need to conduct CI process?
 
-<p align="center"><img src="./images/CI-surecleri/image-6.png" alt="CI process"></p>
+<p align="center"><img src="images/CI-surecleri/image-6.png" alt="CI process"></p>
 
 Here, are the key elements which you need to perfom the entire CI process:
 
@@ -133,7 +133,7 @@ Here, are the key elements which you need to perfom the entire CI process:
 
 ## How Continuous integration work?
 
-<p align="center"><img src="./images/CI-surecleri/image-7.png" alt="Example of Continuous Integration"></p>
+<p align="center"><img src="images/CI-surecleri/image-7.png" alt="Example of Continuous Integration"></p>
 <h4 align="center">Example of Continuous Integration</h4>
 
 You are surely aware of the old phone Nokia. Nokia used to implement a procedure called nightly build. After multiple commits from diverse developers during the day, the software built every night. Since the software was built only once in a day, it's a huge pain to isolate, identify, and fix the errors in a large codebase.
@@ -199,19 +199,19 @@ Here, are some most essential CI/CD tools:
 
 ### Jenkins
 
-<p align="center"><img src="./images/CI-surecleri/image-8.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-8.png"></p>
 
 Jenkins is an open-source continuous integration software. It is written using the Java programming language. It facilitates real-time testing and reporting on isolated changes in a more massive codebase. This software helps developers to quickly find and solve defects in their codebase & automate testing of their builds.
 
 ### Bamboo
 
-<p align="center"><img src="./images/CI-surecleri/image-9.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-9.png"></p>
 
 Bamboo is a continuous integration build server that performs - automatic build, test, and releases in a single place. It works seamlessly with JIRA software and Bitbucket. Bamboo supports many languages and technologies such as CodeDeply, Ducker, Git, SVN, Mercurial, AWS, and Amazon S3 buckets.
 
 ### TeamCity
 
-<p align="center"><img src="./images/CI-surecleri/image-10.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-10.png"></p>
 
 TeamCity is a Continuous Integration server that supports many powerful features. It maintains a CI server healthy and stable even when no builds are running. It provides better code quality for any project
 

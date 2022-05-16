@@ -8,7 +8,7 @@
 
 Yazının devamında daha detaylı olarak anlatılacak olan Argo CD mimarisinin bir örneğini aşağıdaki görselde görebilmekteyiz. GitOps yazısını okuduktan sonra "GitHub Repo" ifadesinin neden mimaride yer aldığını, alması gerektiğini hemen anlayabilmiş olmalıyız.
 
-<p align="center"><img src="./images/Argo-CD/image-1.png"></p>
+<p align="center"><img src="images/Argo-CD/image-1.png"></p>
 
 ## Argo CD Nedir?
 
@@ -19,33 +19,33 @@ Argo CD, adından da anlaşılabileceği üzere aslında bir **C**ontinuous **D*
 Aşağıdaki görsellerin solundaki gibi birçok mikro servisimizin olduğunu ve sağ görseldeki gibi bunları Kubernetes(K8s) cluster'ına taşıdığımızı düşünelim.
 
 <p float="center">
-  <img src="./images/Argo-CD/image-2.png" width="49%">
-  <img src="./images/Argo-CD/image-3.png" width="49%">
+  <img src="images/Argo-CD/image-2.png" width="49%">
+  <img src="images/Argo-CD/image-3.png" width="49%">
 </p>
 
 Uygulamamızın kaynak kodunda değişiklikler yapıp (yeni özellilk eklemek veya bugfix yapmak gibi), Git repo'suna push'ladığımızı düşünelim.
 
-<p align="center"><img src="./images/Argo-CD/image-4.png"></p>
+<p align="center"><img src="images/Argo-CD/image-4.png"></p>
 
 Bu değişiklik ve push'lama işleminden sonra sistemimizde kurulu olan ve bu Git repos'su ile eşlenmiş olan Jenkins vb. uygulamalarımızın CI pipeline süreci otomatik olarak tetiklenecektir.
 
-<p align="center"><img src="./images/Argo-CD/image-5.png"></p>
+<p align="center"><img src="images/Argo-CD/image-5.png"></p>
 
 Tetiklenen bu pipeline süreci otomatik adımlarla önce uygulamamızı test sürecinden geçirecek, hata ile karşılaşmazsa yeni bir Docker imajı oluşturacak ve bunu Docker Repo'ya push'layarak CI sürecini tamamlayacaktır.
 
-<p align="center"><img src="./images/Argo-CD/image-6.png"></p>
+<p align="center"><img src="images/Argo-CD/image-6.png"></p>
 
 Artık önümüzde yeni bir soru var: *"Yeni oluşturulan bu Docker imajı K8s cluster'ına nasıl deploy edilecek?"*
 
   1. K8s deployment YAML dosyasını Docker imajının yeni versiyon numarasını yazarak güncelleriz.
 
-<p align="center"><img src="./images/Argo-CD/image-7.png"></p>
+<p align="center"><img src="images/Argo-CD/image-7.png"></p>
 
   2. Değiştirilen YAML dosyasını K8s'e uygularız (apply).
 
 Docker imajını Docker Repo'ya push'lama işlemine kadar olan basamakların tümü CI sürecini oluştururken güncellenmiş YAML dosyasını K8s cluster'ına apply etmek ise CD sürecini oluşturmaktadır.
 
-<p align="center"><img src="./images/Argo-CD/image-8.png"></p>
+<p align="center"><img src="images/Argo-CD/image-8.png"></p>
 
 **Bu CI/CD sürecinin zorlukları ve sıkıntıları:**
 
@@ -95,17 +95,17 @@ Peki neden bu yaklaşımı uygulamamız lazım? Çünkü:
 
 - Yalnızca *App Configuration* Git repo'sunu takip etmesini söylediğimiz Argo CD uygulaması, Jenkins uygulamasının CI sürecini tamamlayıp K8s manifest dosyasını (örneğin Deployment.yml) değiştirip bu repo'ya push'lamasından sonra otomatikl olarak çalışıp bunu K8s cluster'ının içine çekecektir.
 
-<p align="center"><img src="./images/Argo-CD/image-9.png"></p>
+<p align="center"><img src="images/Argo-CD/image-9.png"></p>
 
 Argo CD K8s manifest dosyalarının "Plain(K8s) YAML Files", "Helm Charts", "Kustomize Files" veya diğer K8s manifest dosyaları oluşturan diğer template dosyaları desteklemektedir.
 
 Bu dosyaların olduğu ve *App Configuration* olarak adlandırığımız repo aslında GitOps repo'su olmuş olmakta ve Argo CD'ye burayı dinlemesini söylemekteyiz. Bu repo'daki dosyalar Jenkins CI süreci ile değiştirilebileceği gibi doğrudan DevOps mühendisleri tarafından da değiştirilebilecektir.
 
-<p align="center"><img src="./images/Argo-CD/image-10.png"></p>
+<p align="center"><img src="images/Argo-CD/image-10.png"></p>
 
 Argo CD kurulumu ve kullanımı sonrasında artık CI ve CD pipeline'larımızı ayırmış oluyoruz. Bunun bize sağladığı avantaj ise CI süreçlerini, kodları geliştiren developer'ların yürütebilmesini ve kendi yazdıkları kodların paketlenmesini takip edebilmesini sağlamak. Aynı zamanda daha çok operasyonel işlerle ilgilenen kişilerin de developer'ların düzenlediği pipeline'lar sonucunda üretilen paketlerin alınması ve doğru şekilde çalışmasını sağlamaya odaklanabilmeleridir. Böylece farklı odakları olan iki farklı takım kendi süreçlerine odaklanabilecektir.
 
-<p align="center"><img src="./images/Argo-CD/image-11.png"></p>
+<p align="center"><img src="images/Argo-CD/image-11.png"></p>
 
 Git reposunun "Single Source of Truth" olarak kullanılması aynı zamanda K8s cluster'ının tamamen şeffaf olmasını sağlamaktadır çünkü cluster'da çalışan uygulamalar, bunların ayarları vb. tüm bilgiler kod ile açıkça belirlenmiş ve Git repo'sunda kayıt altına alınmıştır. Sürüm kontrolünü zaten söylemeye gerek yok :)
 
@@ -123,7 +123,7 @@ Gerçekten cluster'da çok hızlı bir şekilde güncelleme yapılması gerekti�
 
 ### Cluster'ın Kurtarılması
 
-<p align="center"><img src="./images/Argo-CD/image-12.png"></p>
+<p align="center"><img src="images/Argo-CD/image-12.png"></p>
 
 Geliştirdiğimiz uygulamalarının kaynak kod'larının Git repo'sunda yer alması kodların güvenle saklanmasını, yerel makinede sorun olması/sistemin çökmesi/makinenin kaybolması durumunda bizi kurtardığı gibi cluster'ın çalıştığı bilgisayarın sorun yaşaması durumunda da bu yöntemle repo'laştırdığımız configuration dosyaları ile de cluster'ımızı aynı şekliyle yeniden ayaklandırabilmiş olacağız. Manuel değişiklikler ile ilerlenmiş olsaydı daha önceki tüm düzenlemelerin hatırlanıp tekrar yapılması gerekecekti, tabi bu ne kadar mümkün olabilirse.
 
@@ -131,20 +131,20 @@ Aslında bu Argo CD'nin getirdiği bir şey değil, GitOps'un sağladığı fayd
 
 ### K8s'in Git ile Erişim Kontrolü
 
-<p align="center"><img src="./images/Argo-CD/image-13.png"></p>
+<p align="center"><img src="images/Argo-CD/image-13.png"></p>
 
 Git repo'su ile yönettiğimiz K8s cluster'ları için *"Cluster Role"*
 ve *"User resources"* gibi tanımlamalar yapmamız gerekmeyecektir. Cluster erişimlerini direkt olarak Git ile yönetebilmiş olacağız. Örnek olarak yukarıdaki görselde de olduğu gibi tüm takıma "merge request" açma yetkisi verilebilecekken "merge" yetkisini sadece "Senior Engineers"a atayabiliriz.
 
 Takıma sadece Git repo'suna erişim yetkisi verip K8s cluster'ına takımın erişimini tanımlamadan işlemlerimizi daha güvenli şekilde devam edebilmiş olacağız.
 
-<p align="center"><img src="./images/Argo-CD/image-14.png"></p>
+<p align="center"><img src="images/Argo-CD/image-14.png"></p>
 
 Bunu aynı zamanda "non-human users"a da uygulayacağız. Örneğin Jenkins gibi build automation tool'larının direkt olarak K8s erişiminin tanımlanmasına gerek olmayacaktır çünkü Argo CD zaten cluster'ın içinde çalışmaktadır ve değişik değişiklikleri cluster'a uygulayan tek o olacaktır.
 
 **Özetle** artık cluster credential'larının cluster dışında olmasına gerek yoktur çünkü zaten agent cluster'ın içinde çalışmaktadır. Bu bize tüm cluster'ların güvenliğinin yönetiminin de basitleşmesini sağlamaktadır.
 
-<p align="center"><img src="./images/Argo-CD/image-15.png"></p>
+<p align="center"><img src="images/Argo-CD/image-15.png"></p>
 
 ### K8s Eklentisi Olarak Argo CD
 
@@ -154,6 +154,6 @@ Argo CD'nin bize büyük avantaj sunmasını sağlayan şeylerden biri de aslın
 
 Eğer büyük resme bakarsak, aslında bir tarafta Git repo'muz, diğer tarafta K8s cluster'ı ve bu ikisinin tam ortasında ise Argo CD yer almakta. Git repo'su burada **istenen durum**u, K8s cluster'ı ise **gerçekte çalışan durum**u belirtmektedir. Argo CD ise bu ikisinin senkronize olduğundan emin olmak ile yükümlüdür. İkisi arasında ayrılık/farklılık olduğu durumda ilk fırsatta güncelleme yapmaktadır.
 
-<p align="center"><img src="./images/Argo-CD/image-16.png"></p>
+<p align="center"><img src="images/Argo-CD/image-16.png"></p>
 
 *Notların çıkarılmasına kaynaklık eden YouTube videosuna (ArgoCD Tutorial for Beginners | GitOps CD for Kubernetes) [buradan](https://www.youtube.com/watch?v=MeU5_k9ssrs&ab_channel=TechWorldwithNana) ulaşabilirsiniz.*

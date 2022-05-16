@@ -38,7 +38,7 @@ Also when we commit our changes infras's code changes into the repository, no au
 
 We need to use GitOps Flow for IaC approach.
 
-<p align="center"><img src="./images/GitOps/image-1.png"></p>
+<p align="center"><img src="images/GitOps/image-1.png"></p>
 <h4 align="center">GitOps Flow<br><br></h1>
 
 ### Steps
@@ -60,25 +60,25 @@ As we see in GitOps Flow, once merged into the main branch, the changes will be 
 
 It is what we traditionally know from the application pipeline on Jenkins or GitLab CI/CD etc. Application is build
 
-<p align="center"><img src="./images/GitOps/image-2.png"></p>
+<p align="center"><img src="images/GitOps/image-2.png"></p>
 
 and pipeline executes command to deploy the new application version into the environment.
 
-<p align="center"><img src="./images/GitOps/image-3.png"></p>
+<p align="center"><img src="images/GitOps/image-3.png"></p>
 
 ### Pull-based Deployment
 
 Here we have an agent installed in the environment like in k8s cluster, that actively pulls the changes from the Git repository itself.
 
-<p align="center"><img src="./images/GitOps/image-4.png"></p>
+<p align="center"><img src="images/GitOps/image-4.png"></p>
 
 The agent will check regularly what is the state of the infrastructure code in the repository
 
-<p align="center"><img src="./images/GitOps/image-5.png"></p>
+<p align="center"><img src="images/GitOps/image-5.png"></p>
 
 and compare it to actual state in the environment where it's running
 
-<p align="center"><img src="./images/GitOps/image-6.png"></p>
+<p align="center"><img src="images/GitOps/image-6.png"></p>
 
 If it sees there is a difference in the repository, it will pull and apply these changes to get the environment from the actual state to the desired state defined in the repository.
 
@@ -86,43 +86,43 @@ Examples of GitOps tools that work with the pull-based model are Flux CD and Arg
 
 ## Easy Rollback
 
-<p align="center"><img src="./images/GitOps/image-7.png"></p>
+<p align="center"><img src="images/GitOps/image-7.png"></p>
 <h4 align="center">Breaked<br><br></h1>
 
-<p align="center"><img src="./images/GitOps/image-8.png"></p>
+<p align="center"><img src="images/GitOps/image-8.png"></p>
 <h4 align="center">Fixed<br><br></h1>
 
 When we have version control for our code and the changes in our repository are automatically synced to the environment, we can easily rollback the environment to any previous state in our code. I gives us another big advantage, for example, if we make changes that break sth in the environment, so our cluster does not work anymore, we can just do git revert to undo the latest changes and get the environment back to the last working state.
 
 ## Git - Single Source of Truth
 
-<p align="center"><img src="./images/GitOps/image-9.png"></p>
+<p align="center"><img src="images/GitOps/image-9.png"></p>
 
 Instead of spreading our infrastructure as code and configuration as code etc. in different places and machines and basically having those files lying around on our computers, everything is stored centrally in a Git repository.
 
-<p align="center"><img src="./images/GitOps/image-10.png"></p>
+<p align="center"><img src="images/GitOps/image-10.png"></p>
 
 The environment is always synced with what's defined in that repository.
 
-<p align="center"><img src="./images/GitOps/image-11.png"></p>
+<p align="center"><img src="images/GitOps/image-11.png"></p>
 
 This means that Git repository becomes the single source of truth for your environment and this makes managing our infrastructure or our platform way easier.
 
-<p align="center"><img src="./images/GitOps/image-12.png"></p>
+<p align="center"><img src="images/GitOps/image-12.png"></p>
 
 ## Git - Increasing Security
 
 GitOps also increases the security because now we do not have to give everyone in the team who needs to change sth on the infra or in k8s cluster direct access to it to execute the changes
 
-<p align="center"><img src="./images/GitOps/image-13.png"></p>
+<p align="center"><img src="images/GitOps/image-13.png"></p>
 
 because it is the CD pipeline that deploys the changes, not individual team members from their laptops.
 
-<p align="center"><img src="./images/GitOps/image-14.png"></p>
+<p align="center"><img src="images/GitOps/image-14.png"></p>
 
 But anyone on the team can propose changes to the infra in the Git repository through pull requests and once it is time to merge that pull request and apply those changes, we can have much narrower group of people who are allowed to approve and merge those changes into the main branch so that it gets applied.
 
-<p align="center"><img src="./images/GitOps/image-15.png"></p>
+<p align="center"><img src="images/GitOps/image-15.png"></p>
 
 So as a result; we have
 
@@ -131,7 +131,7 @@ So as a result; we have
 
 ## Wrap Up
 
-<p align="center"><img src="./images/GitOps/image-16.png"></p>
+<p align="center"><img src="images/GitOps/image-16.png"></p>
 
 To summarize, GitOps is an **Infrastructure as Code** with **Version Control**, **Pull/Merge Requests** and **CI/CD Pipeline**.
 

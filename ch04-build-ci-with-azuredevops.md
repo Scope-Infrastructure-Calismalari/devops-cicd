@@ -63,11 +63,11 @@ This is a step-by-step guide to using Azure Pipelines to build a sample applicat
 
 2. Sol menüde yer alan seçeneklerden "Pipelines"a tıklanıp drop-down menü genişletilip çıkan menüdeki "Pipelines"a tıklanır.
 
-<p align="center"><img src="./images/CI-surecleri/image-15.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-15.png"></p>
 
 3. İlk defa pipelines oluşturulacakda ekrana gelen "Create your first Pipeline" penceresinin altında yer alan "Create Pipeline" butonuna tıklanır.
 
-<p align="center"><img src="./images/CI-surecleri/image-16.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-16.png"></p>
 
 4. Azure DevOps'un yeni versiyonlarında artık varsayılan ayar olarak **yaml** dosyası ile pipeline tanımlanması ve yönetilmesi sağlanmaktadır.
 
@@ -77,11 +77,11 @@ This is a step-by-step guide to using Azure Pipelines to build a sample applicat
 
     "Where is your code?" penceresinden "Azure Repos Git" seçilir.
 
-<p align="center"><img src="./images/CI-surecleri/image-17.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-17.png"></p>
 
 5. Collection altındaki tüm repo'ların sıralandığı pencereden üzerinde çalışacağımız repo seçilir.
 
-<p align="center"><img src="./images/CI-surecleri/image-18.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-18.png"></p>
 
 6. "Configure your pipeline" penceresinde "Maven" seçeneği seçilir.
 
@@ -94,13 +94,13 @@ This is a step-by-step guide to using Azure Pipelines to build a sample applicat
     Bu örnek için oluşturduğumuz *"azure-pipelines.yml"* dosyası:
 
     <p align="center">
-      <img src="./images/CI-surecleri/image-19.png">
+      <img src="images/CI-surecleri/image-19.png">
     </p>
 
     **Pool ismini collection için tanımlı olan agent pool ile değiştirmezsek pipeline çalışacağı agent'ı bulamayacaktır.**
 
     <p align="center">
-      <img src="./images/CI-surecleri/image-20.png">
+      <img src="images/CI-surecleri/image-20.png">
     </p>
 
 8. İlgili kısımları değiştirip istediğimiz komutları ve ayarlamaları yaptıktan sonra sağ üstte yer alan **"Save and run"** butonuna tıklıyoruz. Karşımıza gelen pencere "azure-pipelines.yml" dosyasının direkt main branch'ine mi yoksa yeni oluşturulmak istenen branch'e mi commit edilmesini sormaktadır.
@@ -109,39 +109,39 @@ This is a step-by-step guide to using Azure Pipelines to build a sample applicat
 
     Ayarlamadan sonra "Save and run" butonuna tıklıyoruz.
 
-<p align="center"><img src="./images/CI-surecleri/image-21.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-21.png"></p>
 
 9. Artık karşımızda belirtilen agent tarafından çalıştırılmak üzere sıraya girmiş beklemekte olan pipeline'ın görüntüsü yer almakta:
 
-<p align="center"><img src="./images/CI-surecleri/image-22.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-22.png"></p>
 
     Eğer aşağıdaki gibi hata alıyorsanız gerekli izinleri vererek hatayı çözebilirsiniz.
 
-<p align="center"><img src="./images/CI-surecleri/image-23.png"></p><p align="center"><img src="./images/CI-surecleri/image-24.png"></p><p align="center"><img src="./images/CI-surecleri/image-25.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-23.png"></p><p align="center"><img src="images/CI-surecleri/image-24.png"></p><p align="center"><img src="images/CI-surecleri/image-25.png"></p>
 
 10. İzinler verildiktan sonra derleme işlemine alınan pipeline her bir adımındaki çıktıları tıklanabilir şekilde göstererek işlemi tamamlayacaktır:
 
-<p align="center"><img src="./images/CI-surecleri/image-26.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-26.png"></p>
 
 11. Main branch'ine commit geldiğinde tekrar tetiklenmek üzere ayarladığımız pipeline'ımızı test etmek için "Demo.java" dosyasına bir satır ekleyip tekrar commit'liyoruz:
 
-<p align="center"><img src="./images/CI-surecleri/image-27.png"></p><p align="center"><img src="./images/CI-surecleri/image-28.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-27.png"></p><p align="center"><img src="images/CI-surecleri/image-28.png"></p>
 
 12. Sol menüde yer alan ve daha önceden pipeline oluşturmak için kullandığımız "Pipelines" butonuna tıklayarak derlemeye alınan pipeline'ımızı görmüş oluyoruz. Bu bize main'e gelen commit ile pipeline'ımızın otomatik olarak tetiklendiğini göstermektedir. *(Derleme işlemi tamamlandığında mavi simge yeşile dönüşecektir.)*
 
-<p align="center"><img src="./images/CI-surecleri/image-29.png"></p><p align="center"><img src="./images/CI-surecleri/image-30.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-29.png"></p><p align="center"><img src="images/CI-surecleri/image-30.png"></p>
 
 13. "Tik" simgesine dönen pipeline'ımızın üstüne tıkladığımızda karşımıza bu pipeline'ın daha önceki çalıştığı zamanlar çıkmakta. Önceki "Run"larla ilgili ne kadar süre önce çalıştığı, çalışmasının ne kadar sürdüğü, hata ile mi yoksa başarıyla mı sonlandığı bilgileri yer almakta:
 
-<p align="center"><img src="./images/CI-surecleri/image-31.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-31.png"></p>
 
   Herhangi bir çalışmanın (run) içerisine girildiğinde daha da detaylı bilgilere yer verilmekte.
 
-<p align="center"><img src="./images/CI-surecleri/image-32.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-32.png"></p>
 
   Bu yeni pencerenin altında yer alan "Jobs" başlığı altındaki "Job"a tıkladığımızda ise çalıştırılmış olan o pipeline'ın step'leri gözükmekte ve üzerlerine tıklanarak detaylı incelenebilmekte.
 
-<p align="center"><img src="./images/CI-surecleri/image-33.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-33.png"></p>
 
 **Bu çalışma ile "example-repo-ci-cd-java-pipeline" repo'su için oluşturulan, SCOPE-CICD havuzundaki agent'lar tarafından derlenen, main branch'ine her commit geldiğinde otomatik olarak tetiklenen, YAML formatındaki "azure-pipelines" dosyası ile konfigüre edilen bir Build Pipeline oluşturmuş olduk. CI adımı için olan bu pipeline'ı CD adımı için olan Release Pipeline takip etmektedir. İkisinin birleştirilmesi ve uç uca çalışması ile CI/CD süreci tamamlanmaktadır.**
 
@@ -151,15 +151,15 @@ This is a step-by-step guide to using Azure Pipelines to build a sample applicat
 
 Azure DevOps platformu bize iki çeşit pipeline oluşturma seçeneği sunmakta; klasik editör ile yaml. Yeni pipeline oluşturmak istediğimizde Azure DevOps platformu bizi varsayılan olarak yaml ile pipeline oluşturmaya yönlendirse de aşağıdaki görselde de belirtilen "Use the classic editor" butonu ile klasik pipeline yapısında kurulum yapılabilinir.
 
-<p align="center"><img src="./images/CI-surecleri/image-34.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-34.png"></p>
 
 Template ile devam edilebildiği gibi "Empty job" ile de devam edilebilinir ve istenilen daha spesifik task'lar seçilip sıralanarak pipeline oluşturulabilinir.
 
-<p align="center"><img src="./images/CI-surecleri/image-35.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-35.png"></p>
 
 Aşağıdaki görselde de görülen şekilde agent'a "+" butonu ile yeni slot açılıp arama penceresi ile ihtiyaca uygun task'lar eklenip pipeline oluşturulabilinir.
 
-<p align="center"><img src="./images/CI-surecleri/image-36.png"></p>
+<p align="center"><img src="images/CI-surecleri/image-36.png"></p>
 
 ### Neden klasik editör kullanılmamalı?
 
