@@ -4,7 +4,7 @@
 
 [GitHub Homepage](https://argoproj.github.io/cd/) | [Alternative Homepage](https://argo-cd.readthedocs.io/en/stable/)
 
-<p align="center"><img src="images/CD-toolsets/gif-1.gif"></p>
+<p align="center"><img src="./images/CD-toolsets/gif-1.gif"></p>
 
 Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. It follows the GitOps pattern of using Git repositories as the source of truth for defining the desired application state.
 
@@ -14,7 +14,7 @@ Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. It fol
 
 [Homepage](https://fluxcd.io/) | [Flux Documentation](https://fluxcd.io/docs/) | [Use Cases](https://fluxcd.io/docs/use-cases/) | [Installation](https://fluxcd.io/docs/installation/) | [GitHub](https://github.com/fluxcd/flux)
 
-<p align="center"><img src="images/CD-toolsets/image-1.png"></p>
+<p align="center"><img src="./images/CD-toolsets/image-1.png"></p>
 
 Flux is a set of continuous and progressive delivery solutions for Kubernetes that are open and extensible.
 
@@ -73,7 +73,7 @@ We welcome contributors of any kind. The components of Flux are on Kubernetes co
 
 [Homepage](https://jenkins-x.io/) | [Get Started](https://jenkins-x.io/v3/) | [What is Jenkins X?](https://jenkins-x.io/v3/about/what/) | [How it works](https://jenkins-x.io/v3/about/how-it-works/) | [Creating projects](https://jenkins-x.io/v3/develop/create-project/)
 
-<p align="center"><img src="images/CD-toolsets/image-2.png"></p>
+<p align="center"><img src="./images/CD-toolsets/image-2.png"></p>
 
 Jenkins X provides pipeline automation, built-in GitOps, and preview environments to help teams collaborate and accelerate their software delivery at any scale.
 

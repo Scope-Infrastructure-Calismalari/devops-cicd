@@ -39,7 +39,7 @@ In this CI tutorial, you will learn:
 
 ## 1-Jenkins
 
-<p align="center"><img src="images/CI-toolsets/image-1.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-1.png"></p>
 
 [Jenkins](https://www.jenkins.io/) is a Java-based cross platform, open-source CI/CD tool. It offers continuous integration, along with facilitating continuous delivery. It also enables real-time testing and reporting. Jenkins can be installed by just downloading its executable in the .war format and starting the same from the terminal.
 
@@ -60,7 +60,7 @@ Check out the [Best Jenkins Pipeline Tutorial For Beginners [Examples]](https://
 
 ## 2-TeamCity
 
-<p align="center"><img src="images/CI-toolsets/image-2.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-2.png"></p>
 
 [TeamCity](https://www.jetbrains.com/teamcity/) is a server based CI/CD pipeline tool in Java. It is developed and maintained by JetBrains, the company behind the development of several useful tools like PyCharm, IntelliJ Idea, and more. It is available for installation on Windows and Linux Servers.
 
@@ -77,7 +77,7 @@ TeamCity is free to use for open-source projects and offers small teams an easy 
 
 ## 3-CircleCI
 
-<p align="center"><img src="images/CI-toolsets/image-3.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-3.png"></p>
 
 [CircleCI](https://circleci.com/) is one of the best CI/CD tools that is suited for realizing CI/CD for open-source projects and large-scale projects. CircleCI Cloud is its cloud-based offering whereas CircleCI Server is its on-premise (or self-hosted) solution.
 
@@ -97,7 +97,7 @@ It supports languages that can be built on Windows, Linux, and macOS platforms. 
 
 ## 4-Travis CI
 
-<p align="center"><img src="images/CI-toolsets/image-4.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-4.png"></p>
 
 Like Jenkins, [Travis CI](https://travis-ci.org/) is also one of the early movers in the CI/CD pipeline tools market. It was initially rolled-out only for open-source projects and later migrated to support closed-source projects as well.
 
@@ -118,7 +118,7 @@ Comparing The Best CI/CD Tools: [CircleCI vs Travis CI](https://www.lambdatest.c
 
 ## 5-Bamboo
 
-<p align="center"><img src="images/CI-toolsets/image-5.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-5.png"></p>
 
 [Bamboo](https://www.atlassian.com/software/bamboo) is a popular tool for Continuous Integration (CI). It is an enterprise product developed by Atlassian, the organization behind the creation of Jira that provides the facility for performing builds, tests, and releases in a single window.
 
@@ -135,7 +135,7 @@ It only works seamlessly with Jira but also works with popular SCM tools like Bi
 
 ## 6-GoCD
 
-<p align="center"><img src="images/CI-toolsets/image-6.jpg"></p>
+<p align="center"><img src="./images/CI-toolsets/image-6.jpg"></p>
 
 [GoCD](https://www.gocd.org/download/) is an open-source Continuous Integration server from the folks at Thoughtworks. In comparison to the other CI/CD DevOps tools, its major differentiator is the [Value Stream Map](https://www.gocd.org/getting-started/part-3/#value_stream_map) (VSM) feature. VSM is a full end-to-end view across pipelines, and it successfully maps it to the concept of ‘Deployment Pipeline’ or ‘Continuous Delivery Pipeline.’
 
@@ -153,7 +153,7 @@ The provision to chain pipelines helps in reducing the interdependence between t
 
 ## 7-CodeShip
 
-<p align="center"><img src="images/CI-toolsets/image-7.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-7.png"></p>
 
 [CodeShip](https://codeship.com/) is a hosted Continuous Integration platform. If your organization uses GitHub for version controlling systems, CodeShip could be a huge value-add. The primary reason being its capability to enable testing, build, and deployment directly from GitHub projects.
 
@@ -173,7 +173,7 @@ It follows a freemium pricing model where 100 builds per month are free for unli
 
 ## 8-GitLab CI
 
-<p align="center"><img src="images/CI-toolsets/image-8.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-8.png"></p>
 
 [GitLab CI](https://docs.gitlab.com/ee/ci/) is a tool that is built into GitLab. It is one of the best CI/CD tools since it offers a host of features like code reviews, CI/CD, continuous deployment, and more within a single dashboard.
 
@@ -196,7 +196,7 @@ This GitLab Tutorial for beginners and professionals will help you learn how to 
 
 ## 9-Jenkins X
 
-<p align="center"><img src="images/CI-toolsets/image-9.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-9.png"></p>
 
 [Jenkins X](https://jenkins-x.io/) is an open-source project that primarily offers automated CI/CD for cloud-native applications on Docker and Kubernetes. Jenkins X is not here to replace Jenkins.
 
@@ -210,7 +210,7 @@ Though it is relatively new compared to Jenkins, it has still garnered interest 
 
 ## 10-Shippable
 
-<p align="center"><img src="images/CI-toolsets/image-10.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-10.png"></p>
 
 [Shippable](https://www.shippable.com/) is one of the leading CI/CD tools developed by the software firm – Jfrog. The DevOps team can use it for making software releases predictable, frequent, and error-free. Moreover, it helps to achieve the same by connecting the DevOps tools and activities into an event-driven & state-based workflow.
 
@@ -228,7 +228,7 @@ The Shippable SaaS variant can be deployed on the public Cloud, whereas Shippabl
 
 ## 11-Buildkite
 
-<p align="center"><img src="images/CI-toolsets/image-11.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-11.png"></p>
 
 [Buildkite](https://buildkite.com/) is a CI/CD pipeline tool that lets developers run fast, secure, and scalable pipelines with on-premises infrastructure. It is free for open-source projects, students, and teaching organizations.
 
@@ -247,7 +247,7 @@ Organizations also have the option to run [open-source Buildkite](https://github
 
 ## 12-Concourse CI
 
-<p align="center"><img src="images/CI-toolsets/image-12.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-12.png"></p>
 
 [Concourse CI](https://concourse-ci.org/) is another CI/CD tool from the stable of open-source CI/CD tools. The build is triggered over Docker containers. It comes with a web interface with intuitive UI that makes it easy to analyze the dashboard and check if there are any issues with the build execution.
 
@@ -264,7 +264,7 @@ Built on the mechanics of tasks, jobs, and resources, it handles every task (in 
 
 ## 13-Codefresh
 
-<p align="center"><img src="images/CI-toolsets/image-13.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-13.png"></p>
 
 [Codefresh](https://codefresh.io/) is a CI/CD platform built on Kubernetes. It is built for achieving superior speed and unlimited scalability. It comes with complete GitOps support.
 
@@ -282,7 +282,7 @@ Its CLI called [‘Codefresh Runner’](https://codefresh.io/features/codefresh-
 
 ## 14-Buddy
 
-<p align="center"><img src="images/CI-toolsets/image-14.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-14.png"></p>
 
 [Buddy](https://buddy.works/) is a web-based CI/CD pipeline tool that can be used to build, test, and deploy websites and apps with code from GitHub, Bitbucket, and GitLab. It is easy to create workflows in Buddy.
 
@@ -300,7 +300,7 @@ Buddy also supports integration with popular cloud providers like AWS, Digital O
 
 ## 15-Buildbot
 
-<p align="center"><img src="images/CI-toolsets/image-15.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-15.png"></p>
 
 [Buildbot](https://buildbot.net/) is a Python-based Continuous Integration testing framework. It acts more like a job scheduling system where it queues jobs, executes jobs (as and when the necessary resources are available), and generates the reports.
 
@@ -318,7 +318,7 @@ It can be used on popular platforms like Windows, Linux, macOS, etc. and integra
 
 ## 16-Semaphore
 
-<p align="center"><img src="images/CI-toolsets/image-16.jpg"></p>
+<p align="center"><img src="./images/CI-toolsets/image-16.jpg"></p>
 
 [Semaphore](https://semaphoreci.com/) is one of the best CI/CD tools that allows continuous integration and deployment on the Cloud. Like Travis CI and CircleCI, this CI/CD tool also comes with seamless integration with GitHub.
 
@@ -335,7 +335,7 @@ Using CI/CD pipelines offered by Semaphore, iOS developers can test and deploy t
 
 ## 17-Wercker
 
-<p align="center"><img src="images/CI-toolsets/image-17.jpg"></p>
+<p align="center"><img src="./images/CI-toolsets/image-17.jpg"></p>
 
 [Wercker](https://devcenter.wercker.com/) by Oracle is a Docker-based Continuous Delivery platform that helps developers accelerate the build and deployment of their apps and microservices. Build and Deploy pipelines can be executed using [Wercker’s CLI](https://github.com/wercker/wercker). Wercker triggers the pipeline when any new code is committed.
 
@@ -351,7 +351,7 @@ Wercker can be integrated with Git and popular notification systems like HipChat
 
 ## 18-Integrity
 
-<p align="center"><img src="images/CI-toolsets/image-18.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-18.png"></p>
 
 [Integrity](http://integrity.github.io/) is a Continuous Integration server built using Ruby. It works only with GitHub. If you are using SCM tools (other than GitHub), Integrity can be used by mirroring the repositories (i.e., GitHub mirrors the other SCM). On successful mirroring, Integrity can use the project.
 
@@ -366,7 +366,7 @@ The only downside with this approach is that any change in the SCM repository re
 
 ## 19-Weave Flux
 
-<p align="center"><img src="images/CI-toolsets/image-19.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-19.png"></p>
 
 [Weave](https://www.weave.works/oss/flux/) by Flux enables continuous delivery of container images. It ensures that deployment is reproducible, auditable, and revertible by following version control at every step.
 
@@ -380,7 +380,7 @@ Flux acts like an operator in a cluster for triggering deployments inside Kubern
 
 ## 20-Codemagic
 
-<p align="center"><img src="images/CI-toolsets/image-20.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-20.png"></p>
 
 Another CI/CD tool in our best CI/CD tools list is Codemagic. It is a CI/CD tool for mobile applications that supports the development of Flutter, React Native, Ionic, Cordova, Native Android, and Native iOS apps. With Codemagic CI/CD, you can set up the pipeline to create your app using your preferred framework via the YAML pipeline.
 
@@ -394,7 +394,7 @@ Codemagic was the first CI/CD tool designed specifically for Flutter. Now it als
 
 ## 21-AutoRABIT
 
-<p align="center"><img src="images/CI-toolsets/image-21.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-21.png"></p>
 
 If your organization is looking for a complete CI/CD tool that works seamlessly (or is tailor-made) for the Salesforce platform, you have to check out [AutoRABIT](https://www.autorabit.com/).
 
@@ -411,7 +411,7 @@ It delivers the fastest CI/CD solution for Salesforce and [Salesforce Testing](h
 
 ## 22-CruiseControl
 
-<p align="center"><img src="images/CI-toolsets/image-22.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-22.png"></p>
 
 [CruiseControl](http://cruisecontrol.sourceforge.net/) is a Java-based Continuous Integration tool as well as an extensible framework. It is primarily used for creating a custom build process. The project is hosted on SourceForge, and the project is licensed under a BSD-style license.
 
@@ -427,7 +427,7 @@ It offers a simple and user-friendly interface that provides information about t
 
 ## 23-Bitrise
 
-<p align="center"><img src="images/CI-toolsets/image-23.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-23.png"></p>
 
 [Bitrise] is one of the best CI/CD tools that offer mobile-first features instrumental in building, testing, and deploying mobile apps at an accelerated pace. It is a cloud-based CI/CD tool that eliminates the need to invest in expensive hardware. It is free to use for individual mobile-app developers and open-source projects.
 
@@ -442,7 +442,7 @@ It can run builds on macOS and Linux machines. Bitrise supports major programmin
 
 ## 24-Drone CI
 
-<p align="center"><img src="images/CI-toolsets/image-24.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-24.png"></p>
 
 [Drone CI](https://drone.io/) is one of the best and modern CI/CD pipeline tools. It not only provides Continuous Integration but also provides a distributed CI/CD pipeline. This feature is not available in other open-source CI/CD tools like Jenkins. Using a powerful cloud-native pipeline engine, Drone lets you automate build, test, and release workflows.
 
@@ -462,7 +462,7 @@ It offers Cloud (or Open Source) variant, free for use, and Drone Enterprise tha
 
 ## 25-UrbanCode
 
-<p align="center"><img src="images/CI-toolsets/image-25.jpg"></p>
+<p align="center"><img src="./images/CI-toolsets/image-25.jpg"></p>
 
 [UrbanCode](http://www.urbancode.com/) from IBM is a CI/CD tool that is suited for enterprises that require a range of tools for effective management of their complex builds. It enables continuous delivery through a more stringent process that comprises a combination of on-premises, Cloud, and mainframe applications.
 
@@ -481,7 +481,7 @@ On the other hand, [UrbanCode Deploy](https://www.urbancode.com/product/deploy/)
 
 ## 26-Strider
 
-<p align="center"><img src="images/CI-toolsets/image-26.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-26.png"></p>
 
 [Strider](https://strider-cd.github.io/) is one of the widely used open-source CI/CD pipeline tools. It is written using NodeJS/JavaScript. MongoDB is used as the back-end database storage. Like Jenkins, Strider is also extensible and has a thriving plugin ecosystem.
 
@@ -497,7 +497,7 @@ Extensions in Strider are npm packages containing additional metadata available 
 
 ## 27-FinalBuilder
 
-<p align="center"><img src="images/CI-toolsets/image-27.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-27.png"></p>
 
 [FinalBuilder](https://www.finalbuilder.com/downloads/finalbuilder) uniqueness is that it is categorized as an ‘Automated Build Tool’ rather than a specific CI/CD DevOps tool. For automating the build process, FinalBuilder provides an interface that lets you define and debug build scripts. There is no need to edit XML files or YAML files like we have seen in other CI/CD tools.
 
@@ -512,7 +512,7 @@ The scripts created using the graphical interface can be scheduled using a Windo
 
 ## 28-GitHub Actions
 
-<p align="center"><img src="images/CI-toolsets/image-28.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-28.png"></p>
 
 Introduced in 2018, [GitHub Actions](https://github.com/features/actions) is a comparatively new tool to perform the CI/CD. With GitHub Actions, you can easily create custom SDLC workflows in your GitHub Repo directly. This can be done using different tasks/actions, which can further run on certain events automatically. Below are some more reasons why developers would love using this tool.
 
@@ -526,7 +526,7 @@ Introduced in 2018, [GitHub Actions](https://github.com/features/actions) is a c
 
 ## 29-Azure DevOps
 
-<p align="center"><img src="images/CI-toolsets/image-29.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-29.png"></p>
 
 [Azure DevOps](https://azure.microsoft.com/en-in/services/devops/) by Microsoft Azure presents a simple process for creating a continuous integration (CI) and continuous delivery (CD) pipeline to Azure. It includes advanced capabilities that are streamlined to accelerate the software development process. These capabilities include features from Azure DevOps services like Azure Pipelines, Visual Studio Team Services (VSTS), Software Delivery Services, and more.
 
@@ -540,7 +540,7 @@ Introduced in 2018, [GitHub Actions](https://github.com/features/actions) is a c
 Start running your Selenium tests in Azure DevOps pipeline.
 ## 30-Terraform
 
-<p align="center"><img src="images/CI-toolsets/image-30.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-30.png"></p>
 
 [Terraform](https://www.terraform.io/) by HashiCorp provides a way to codify APIs into declarative configuration files and manage changes to those cloud resources across different providers. Terraform treats cloud infrastructure as code, enabling you to manage 1000s of cloud resources with the reliability and reproducibility of software.
 
@@ -557,7 +557,7 @@ Start running your Selenium tests in Azure DevOps pipeline.
 
 ## 31-Tekton
 
-<p align="center"><img src="images/CI-toolsets/image-31.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-31.png"></p>
 
 [Tekton](https://tekton.dev/) is an opinionated framework that takes the guesswork out of building a modern CI/CD system, so you can get back to building your product. At its core, Tekton powers some of the largest Kubernetes-native deployments on Azure and AWS. From its simple declarative syntax, you can express multi-stage build processes with parallel execution, use templates to manage complexity and describe your immutable infrastructure in code, define complex validations for your pipeline that will be checked at build-time, and a lot more.
 
@@ -570,7 +570,7 @@ Start running your Selenium tests in Azure DevOps pipeline.
 
 ## 32-Spacelift
 
-<p align="center"><img src="images/CI-toolsets/image-32.jpg"></p>
+<p align="center"><img src="./images/CI-toolsets/image-32.jpg"></p>
 
 Spacelift is the most flexible CI/CD tool for Infrastructure-as-Code (IaC) and Policy-as-Code (PaaC). Spacelift makes it easy to build, deploy, and manage infrastructure; whether it is on-prem or in the cloud.
 
@@ -639,7 +639,7 @@ CircleCI and Travis CI are both heavyweights in the CI/CD tool arena. Each of th
 
 ### CircleCI
 
-<p align="center"><img src="images/CI-toolsets/image-33.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-33.png"></p>
 
 CircleCI offers a hosted tool called CircleCI Cloud and a self-hosted tool called CircleCI Server. These tools have many similarities as well as a few key differences.
 
@@ -649,7 +649,7 @@ CircleCI generally refers to CI/CD pipelines as “workflows,” which let you w
 
 ### Travis CI
 
-<p align="center"><img src="images/CI-toolsets/image-34.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-34.png"></p>
 
 Travis CI also offers a hosted tool, as well as a self-hosted tool called Travis CI Enterprise. Both tools allow you to build using a variety of languages and runtimes on Linux, Windows, or macOS.
 
@@ -671,7 +671,7 @@ Now let’s take a look at the tools from the three big cloud service providers.
 
 ## Azure Pipelines
 
-<p align="center"><img src="images/CI-toolsets/image-35.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-35.png"></p>
 
 Azure Pipelines is advertised as a complete CI/CD system that can build anything and deploy anywhere. While it certainly is capable of supporting deployments to other cloud providers, the documentation and examples focus on deployment to Azure. It offers deep integration with the larger Azure DevOps platform and a rather large marketplace with extensions that can add new integrations to your pipeline.
 
@@ -683,7 +683,7 @@ Build agents can be Microsoft-hosted or self-hosted. Builds can run directly on 
 
 ## Google Cloud Build
 
-<p align="center"><img src="images/CI-toolsets/image-36.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-36.png"></p>
 
 Google Cloud Build is a newer tool compared to its peers. This tool focuses primarily on building containerized applications. There are a few characteristics and limitations that differentiate this tool from the others.
 
@@ -695,7 +695,7 @@ The Google Cloud SDK (CLI) can be used to trigger builds remotely or even run bu
 
 ## AWS CodePipeline
 
-<p align="center"><img src="images/CI-toolsets/image-37.png"></p>
+<p align="center"><img src="./images/CI-toolsets/image-37.png"></p>
 
 AWS CodePipeline is one of several Amazon tools that are tightly integrated together and necessary to build a CI/CD pipeline. CodeBuild and CodeDeploy are the two other tools that you will most likely want to set up. In fact, Amazon has done a great job making sure all of its AWS tools and services are given first-class treatment.
 

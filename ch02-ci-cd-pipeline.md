@@ -30,7 +30,7 @@ deliver a new version of any software. Failure in each and every stage triggers 
 
 Here are the important Stages of CI/CD pipeline:
 
-<p align="center"><img src="../images/CI-surecleri/image-11.png" alt="Stages of CI/CD pipeline"></p>
+<p align="center"><img src="./images/CI-surecleri/image-11.png" alt="Stages of CI/CD pipeline"></p>
 
 <h4 align="center">Stages of CI/CD pipeline</h4>
 
@@ -105,7 +105,7 @@ Here are the important CI/CD tools:
 
 ### Jenkins
 
-<p align="center"><img src="../images/CI-surecleri/image-12.png"></p>
+<p align="center"><img src="./images/CI-surecleri/image-12.png"></p>
 
 Jenkins is an open-source Continuous Integration server that helps to achieve the Continuous Integration process (and not only) in an automated fashion. Jenkins is free and is entirely written in Java. Jenkins is a widely used application around the world that has around 300k installations and growing day by day.
 
@@ -120,7 +120,7 @@ Link: <https://www.jenkins.io/download/>
 
 ### Bambo
 
-<p align="center"><img src="../images/CI-surecleri/image-13.png"></p>
+<p align="center"><img src="./images/CI-surecleri/image-13.png"></p>
 
 Bamboo is a continuous integration build server that performs - automatic build, test, and releases in a single place. It works seamlessly with JIRA software and Bitbucket.
 
@@ -135,7 +135,7 @@ Link: <https://www.atlassian.com/software/bamboo>
 
 ### CircleCI
 
-<p align="center"><img src="../images/CI-surecleri/image-14.png"></p>
+<p align="center"><img src="./images/CI-surecleri/image-14.png"></p>
 
 Circle CI is a flexible CI tool that runs in any environment like a cross-platform mobile app, Python API server, or Docker cluster. This tool reduces bugs and improves the quality of the application.
 
