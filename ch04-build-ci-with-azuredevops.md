@@ -8,15 +8,15 @@ Table of Content:
 
 - [What is a CI/CD Pipeline?](#what-is-a-ci-cd-pipeline)
 - [What is Azure DevOps?](#what-is-azure-devops)
-- [How to build Azure CI-CD Pipeline?](#how-to-build-azure-ci-cd-pipeline)
+- [How to build Azure CI/CD Pipeline?](#how-to-build-azure-ci-cd-pipeline)
 
-## What is a CI/CD Pipeline?
+## What is a CI-CD Pipeline?
 
 A CI/CD pipeline is used to automate the process of continuous integration and continuous deployment. The pipeline facilitates the software delivery process via stages like Build, Test, Merge, and Deploy.
 
 In simple words, a pipeline may sound like an overhead, but it isn’t. Instead, it’s a runnable specification of steps that reduce developers’ manual work by delivering a new version of a software productively and saves time.
 
-**Stages of a CI/CD Pipeline:**
+**Stages of a CI-CD Pipeline:**
 
   1. **Source Stage** – In most cases, when a change is attempted to the central repository, a pipeline run is triggered. These triggers are set by the CI/CD pipeline tool in the source stage.
   2. **Build Stage** – The combination of source code and its dependencies when building into a runnable instance corporate to the end-user application. The built-in application languages like Java need compilation too, which is done in the build stage. If docker images are to be constructed, that can also be facilitated in this stage. Failing this stage marks a potential error in the code or its dependencies.
