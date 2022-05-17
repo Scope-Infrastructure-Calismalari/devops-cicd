@@ -2,6 +2,8 @@
 
 ## What is CI?
 
+<p align="center"><img src="images/CI-surecleri/image-3.png"></p>
+
 Continuous Integration (CI) is the process of automating the build and testing of code every time a team member commits changes to version control. CI encourages developers to share their code and unit tests by merging their changes into a shared version control repository after every small task completion. Committing code triggers an automated build system to grab the latest code from the shared repository and to build, test, and validate the full main, or trunk, branch.
 
 CI emerged as a best practice because software developers often work in isolation, and then they need to integrate their changes with the rest of the team's code base. Waiting days or weeks to integrate code creates many merge conflicts, hard to fix bugs, diverging code strategies, and duplicated efforts.  CI requires the development team's code be merged to a shared version control branch continuously to avoid these problems.
@@ -12,13 +14,12 @@ Teams use build definitions to ensure that every commit to the main branch trigg
 
 CI is a standard feature in modern DevOps platforms. GitHub users can start implementing CI today through GitHub Actions. Azure DevOps users can get started with Azure Pipelines.
 
-### Another answer for "What is Continuous Integration?"
+### Another answer for "What is Continuous Integration?":
 
 #### **"Continuous Integration is a software development method where team members integrate their work at least once a day. In this method, every integration is checked by an automated build to detect errors. This concept was first introduced over two decades ago to avoid "integration hell," which happens when integration is put off till the end of a project."**
 
 In Continuous Integration after a code commit, the software is built and tested immediately. In a large project with many developers, commits are made many times during a day. With each commit code is built and tested. If the test is passed, build is tested for deployment. If the deployment is a success, the code is pushed to Production. This commit, build, test, and deploy is a continuous process, and hence the name continuous integration/deployment.
 
-<p align="center"><img src="images/CI-surecleri/image-3.png"></p>
 
 In this CI tutorial, you will learn:
 
@@ -188,9 +189,13 @@ Here, are cons/drawbacks of Continuous Integration process:
 - many resources for Cl server
 - Jenkins, Bambook, and Team City are some useful AWS Continuous Integration tools.
 
+<br>
+<br>
+<br>
+
 ## What is CD?
 
-The "CD" refers to continuous delivery and/or continuous deployment, which are related concepts that sometimes get used interchangeably. Both are about automating further stages of the pipeline, but they’re sometimes used separately to illustrate just how much automation is happening.
+The "CD" refers to Continuous Delivery and/or Continuous Deployment, which are related concepts that sometimes get used interchangeably. Both are about automating further stages of the pipeline, but they’re sometimes used separately to illustrate just how much automation is happening.
 
 Continuous delivery usually means a developer’s changes to an application are automatically bug tested and uploaded to a repository (like GitHub or a container registry), where they can then be deployed to a live production environment by the operations team. It’s an answer to the problem of poor visibility and communication between dev and business teams. To that end, the purpose of continuous delivery is to ensure that it takes minimal effort to deploy new code.
 
