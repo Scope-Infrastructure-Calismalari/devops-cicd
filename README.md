@@ -12,6 +12,8 @@ Date: April 2022
 > - [What is CI/CD?](https://www.redhat.com/en/topics/devops/what-is-ci-cd)
 > - [What is continuous delivery?](https://www.redhat.com/en/topics/devops/what-is-continuous-delivery)
 > - [GitOps: The Missing Link for CI/CD for Kubernetes](https://containerjournal.com/features/gitops-the-missing-link-for-ci-cd-for-kubernetes/)
+> - [What is GitOps, How GitOps works and Why it's so useful](https://www.youtube.com/watch?v=f5EpcWp0THw&ab_channel=TechWorldwithNana)
+> - [ArgoCD Tutorial for Beginners | GitOps CD for Kubernetes](https://www.youtube.com/watch?v=MeU5_k9ssrs)
 
 **LEGAL NOTICE: This document is created for educational purposes, and it can not be used for any commercial intentions. If you find this document useful in any means please support the original authors for ethical reasons.**
 

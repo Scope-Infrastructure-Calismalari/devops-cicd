@@ -134,7 +134,3 @@ So as a result; we have
 <p align="center"><img src="images/GitOps/image-16.png"></p>
 
 To summarize, GitOps is an **Infrastructure as Code** with **Version Control**, **Pull/Merge Requests** and **CI/CD Pipeline**.
-
-<br>
-
-#### Note: The notes have taken from a YouTube video [What is GitOps, How GitOps works and Why it's so useful](https://www.youtube.com/watch?v=f5EpcWp0THw&ab_channel=TechWorldwithNana) from the "TechWorld with Nana", a YouTube channel. You can watch it and add/change the notes to improve the document. Thanks :)
