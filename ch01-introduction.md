@@ -1,34 +1,6 @@
-# CI - Continuous Integration - Sürekli Bütünleştirme
+# CI - Continuous Integration
 
-## Konuya felsefik bir yaklaşım
-
-### Riemann Toplamı
-
-<p align="center"><img src="images/CI-surecleri/image-1.png"></p>
-
-Yukarıdaki şeklin alanını nasıl hesaplayabiliriz?
-
-Hayat, problemler, projeler kenarı köşesi belli olmayan, eğik-bükük şekillerle dolu ama biz sadece üçgen, dörtgen gibi düzgün şekillerle net hesaplamalar yapmayı biliyoruz. Bernhard Riemann isimli bir matematikçi düzgün olmayan şekillerle ilgili hesaplamalar yapma konusunda çok sade bir yol bulmuş.
-
-*"Madem dörtgenlerin alanlarını hesaplamayı biliyoruz, o zaman düzgün olmayan bu şekli, dörtgen parçalardan oluşan bir bütün olarak düşünelim ve bu dörtgenlerin alanlarını toplayarak tüm şeklin alanının yaklaşık değerini bulalım"* diye düşünüp, bu düşünceden temel alan bir formül üretmiş.
-
-<p align="center"><img src="images/CI-surecleri/image-2.png"></p>
-
-Bugün yaygın olan yazılım geliştirme metodolojilerinin mantığı Riemann’ın mantığına benziyor. Uygulamaları özelliklere bölüp, belli zaman dilimleri içerisinde bu özellikleri tamamlayarak projeleri inşa ediyoruz.
-
-Bu yaklaşımın sağladığı faydaların başında kapsamımızı daraltarak projenin isterlerinde boğulmamızı engellemesi geliyor. Her ister özelinde bağımsız şekilde derinlemesine düşünebiliyoruz. Belli bir anda spesifik bir özellik üzerinde çalışırken, bu özelliği daha odaklı şekilde test edebilme şansı buluyoruz. Bir özelliğin tamamlanması, projede çalışan kişilere “Closure”, "Done" hissini yaşatıyor.
-
-Bir yazılım ürününü ufak özelliklerden oluşan bir bütün şeklinde görmek, yazılımda MVP(Minimum Valuable Product) fikrinin ortaya çıkmasına da yardımcı olmuştur. Bu sayede bir yazılım projesinden değer üretebilmek/para kazanabilmek için tamamen bitmesini beklemek zorunda kalmıyoruz. “Kimsenin kullanmadığı” projeler için geliştirme yapmıyor, boşa emek vermiyoruz. Projeyi “iş görür” hale getirebilecek özellikleri ekler eklemez ilk versiyonu çıkabiliyoruz. Yeni özellikler ekledikçe versiyonu arttırıyoruz. Kodunu yazdığımız özellikler hemen kullanılabiliyor. Hatalı çalışan noktalar anında ortaya çıkabiliyor.
-
-Tüm bunlar yazılım projelerinin başarıyla tamamlanmasını, projelerin ürünleştirilebilmesini sağladığından, bu yaklaşım artık default hale gelmiş durumda.
-
-### Esas kısım
-
-Parçalara bölünüp bu şekilde geliştirilen bir projeye sürekli olarak eklemeler yapmak, bir veya birden fazla kişi tarafından yazılmış kodların birleştirilmesi, yeni bir versiyonun başarılı bir şekilde üretilmesi de başlı başına bir iş haline gelmekte çünkü yeni yazılan kodların bütünleştirmeden sonra diğer kodlara zarar vermemesi, tüm kodların hala çalışabilir durumda olması gerekiyor. Bu yüzden *"CI - Continuous Integration - Sürekli Bütünleştirme"* bir ismi ve üzerinde düşünülmeyi hak eden bir süreç haline geliyor.
-
-## CI Nedir?
-
-<p align="center"><img src="images/CI-surecleri/image-3.png"></p>
+## What is CI?
 
 Continuous Integration (CI) is the process of automating the build and testing of code every time a team member commits changes to version control. CI encourages developers to share their code and unit tests by merging their changes into a shared version control repository after every small task completion. Committing code triggers an automated build system to grab the latest code from the shared repository and to build, test, and validate the full main, or trunk, branch.
 
@@ -40,11 +12,13 @@ Teams use build definitions to ensure that every commit to the main branch trigg
 
 CI is a standard feature in modern DevOps platforms. GitHub users can start implementing CI today through GitHub Actions. Azure DevOps users can get started with Azure Pipelines.
 
-## Farklı kaynak - What is Continuous Integration?
+### Another answer for "What is Continuous Integration?"
 
-Continuous Integration is a software development method where team members integrate their work at least once a day. In this method, every integration is checked by an automated build to detect errors. This concept was first introduced over two decades ago to avoid "integration hell," which happens when integration is put off till the end of a project.
+#### **"Continuous Integration is a software development method where team members integrate their work at least once a day. In this method, every integration is checked by an automated build to detect errors. This concept was first introduced over two decades ago to avoid "integration hell," which happens when integration is put off till the end of a project."**
 
 In Continuous Integration after a code commit, the software is built and tested immediately. In a large project with many developers, commits are made many times during a day. With each commit code is built and tested. If the test is passed, build is tested for deployment. If the deployment is a success, the code is pushed to Production. This commit, build, test, and deploy is a continuous process, and hence the name continuous integration/deployment.
+
+<p align="center"><img src="images/CI-surecleri/image-3.png"></p>
 
 In this CI tutorial, you will learn:
 
@@ -193,37 +167,16 @@ Here, are cons/drawbacks of Continuous Integration process:
 - Requires additional servers and environments
 - Waiting times may occur when multiple developers want to integrate their code around the same time
 
-## Tools for CI process
-
-Here, are some most essential CI/CD tools:
-
-### Jenkins
-
-<p align="center"><img src="images/CI-surecleri/image-8.png"></p>
-
-Jenkins is an open-source continuous integration software. It is written using the Java programming language. It facilitates real-time testing and reporting on isolated changes in a more massive codebase. This software helps developers to quickly find and solve defects in their codebase & automate testing of their builds.
-
-### Bamboo
-
-<p align="center"><img src="images/CI-surecleri/image-9.png"></p>
-
-Bamboo is a continuous integration build server that performs - automatic build, test, and releases in a single place. It works seamlessly with JIRA software and Bitbucket. Bamboo supports many languages and technologies such as CodeDeply, Ducker, Git, SVN, Mercurial, AWS, and Amazon S3 buckets.
-
-### TeamCity
-
-<p align="center"><img src="images/CI-surecleri/image-10.png"></p>
-
-TeamCity is a Continuous Integration server that supports many powerful features. It maintains a CI server healthy and stable even when no builds are running. It provides better code quality for any project
-
 ## Summary
 
-- Continuous Integration definition: Continuous integration is a software development method
-- where members of the team can integrate their work at least once a day
-- CI/CD meaning combination of Continuous Integration and Continuous Delivery or Continuous
-- Deployment.
-- Development without CI creates lots of bugs whereas Development with CI offers Fewer bugs•
-- Important activities of Continous Integration are 1) DB integration, 2) Code Inspection, 3)
-- Automated Deployment, Document generation, and Compilation.
+- Continuous Integration definition: Continuous integration is a software development method where members of the team can integrate their work at least once a day
+- CI/CD meaning combination of Continuous Integration and Continuous Delivery or Continuous Deployment.
+- Development without CI creates lots of bugs whereas Development with CI offers Fewer bugs
+- Important activities of Continous Integration are
+
+1. DB integration
+2. Code Inspection, 3) Automated Deployment, Document generation, and Compilation.
+
 - The build should happen continuously using a dedicated Cl server, not a cron job.
 - Important elements of CI are 1) Version Control System 2) Virtual Machine 3) Host CI Tool
 - solutions 4) Tools
@@ -235,13 +188,9 @@ TeamCity is a Continuous Integration server that supports many powerful features
 - many resources for Cl server
 - Jenkins, Bambook, and Team City are some useful AWS Continuous Integration tools.
 
-## CD part
+## What is CD?
 
-## What's the difference between CI and CD (and the other CD)?
-
-The acronym CI/CD has a few different meanings. The "CI" in CI/CD always refers to continuous integration, which is an automation process for developers. Successful CI means new code changes to an app are regularly built, tested, and merged to a shared repository. It’s a solution to the problem of having too many branches of an app in development at once that might conflict with each other.
-
-The "CD" in CI/CD refers to continuous delivery and/or continuous deployment, which are related concepts that sometimes get used interchangeably. Both are about automating further stages of the pipeline, but they’re sometimes used separately to illustrate just how much automation is happening.
+The "CD" refers to continuous delivery and/or continuous deployment, which are related concepts that sometimes get used interchangeably. Both are about automating further stages of the pipeline, but they’re sometimes used separately to illustrate just how much automation is happening.
 
 Continuous delivery usually means a developer’s changes to an application are automatically bug tested and uploaded to a repository (like GitHub or a container registry), where they can then be deployed to a live production environment by the operations team. It’s an answer to the problem of poor visibility and communication between dev and business teams. To that end, the purpose of continuous delivery is to ensure that it takes minimal effort to deploy new code.
 
@@ -256,10 +205,6 @@ In the end, it’s probably not worth your time to get bogged down in these sema
 Case-by-case, what the terms refer to depends on how much automation has been built into the CI/CD pipeline. Many enterprises start by adding CI, and then work their way towards automating delivery and deployment down the road, for instance as part of cloud-native apps.
 
 Our experts can help your organization develop the practices, tools, and culture needed to more efficiently modernize existing applications and to build new ones.
-
-## Continuous integration
-
-You can read it from [here](CI-surecleri.md).
 
 ## Continuous delivery
 
@@ -298,10 +243,10 @@ A major outcome of implementing DevOps is a CI/CD pipeline supported by developm
 
 GitOps has emerged as an essential process as organizations evaluate frameworks to optimize CI/CD on Kubernetes. DevOps teams are exploring how GitOps redefines CI/CD, with Git serving as the central, immutable state declaration for faster deployments and more audit-friendly secure environments. GitOps offers teams well-documented improvements in productivity, security, and compliance, which ultimately translate into a better experience for the user.
 
-You can read the details of GitOps from [here](GitOps.md).
+You can read the details of GitOps from [here](ch08-gitops.md).
 
 ## Practise for Continuous Delivery
 
 Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. It follows the GitOps pattern of using Git repositories as the source of truth for defining the desired application state.
 
-You can read and learn the usage of GitOps via CD tools from [here](./Argo%20CD/Ch.01%20-%20Argo%20CD%20Nedir%3F.md). This document contains both explanation and examples.
+You can read and learn the usage of GitOps via CD tools from [here](ch09-argocd-introduction.md). This document contains both explanation and examples.
