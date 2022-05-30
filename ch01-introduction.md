@@ -20,7 +20,6 @@ CI is a standard feature in modern DevOps platforms. GitHub users can start impl
 
 In Continuous Integration after a code commit, the software is built and tested immediately. In a large project with many developers, commits are made many times during a day. With each commit code is built and tested. If the test is passed, build is tested for deployment. If the deployment is a success, the code is pushed to Production. This commit, build, test, and deploy is a continuous process, and hence the name continuous integration/deployment.
 
-
 In this CI tutorial, you will learn:
 
 - [Development without CI vs. Development with CI](#development-without-ci-vs-development-with-ci)
