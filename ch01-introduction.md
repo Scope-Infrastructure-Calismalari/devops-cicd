@@ -188,6 +188,10 @@ Here, are cons/drawbacks of Continuous Integration process:
 - many resources for Cl server
 - Jenkins, Bambook, and Team City are some useful AWS Continuous Integration tools.
 
+<br>
+<br>
+<br>
+
 ## What is CD?
 
 The "CD" refers to continuous delivery and/or continuous deployment, which are related concepts that sometimes get used interchangeably. Both are about automating further stages of the pipeline, but they’re sometimes used separately to illustrate just how much automation is happening.
