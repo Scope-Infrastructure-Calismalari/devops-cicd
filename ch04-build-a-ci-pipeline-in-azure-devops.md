@@ -1,4 +1,4 @@
-# How To Build a CI/CD Pipeline In Azure DevOps?
+# How To Build a CI Pipeline In Azure DevOps?
 
 Azure DevOps by Microsoft Azure is one of the leading tools that automate CI/CD’s process and, in turn, supports automatic builds and code projects to make them available to others. The Azure pipelines combine Continuous Integration (CI) and Continuous Delivery (CD) to consistently test and build the code and ship it to the target environment.
 
@@ -8,7 +8,7 @@ Table of Content:
 
 - [What is a CI/CD Pipeline?](#what-is-a-ci-cd-pipeline)
 - [What is Azure DevOps?](#what-is-azure-devops)
-- [How to build Azure CI/CD Pipeline?](#how-to-build-azure-ci-cd-pipeline)
+- [How to build Azure CI Pipeline?](#how-to-build-azure-ci-cd-pipeline)
 
 ## What is a CI-CD Pipeline?
 
@@ -53,7 +53,7 @@ The Azure Pipelines can be multifactored, and in the Azure DevOps CI/CD practice
   
   3. **Deployment Targets** – The applications with Azure CI/CD pipelines can be deployed to multiple target environments. This includes Virtual Machines, Containers, or any On-prem or Cloud Platform.
 
-## How to build Azure CI-CD Pipeline?
+## How to build Azure CI Pipeline?
 
 This is a step-by-step guide to using Azure Pipelines to build a sample application. This guide uses YAML pipelines configured with the [YAML pipeline editor](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/yaml-pipeline-editor?view=azure-devops). If you'd like to use Classic pipelines instead, see [Define your Classic pipeline](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/define-multistage-release-process?view=azure-devops).
 

@@ -155,5 +155,3 @@ Argo CD'nin bize büyük avantaj sunmasını sağlayan şeylerden biri de aslın
 Eğer büyük resme bakarsak, aslında bir tarafta Git repo'muz, diğer tarafta K8s cluster'ı ve bu ikisinin tam ortasında ise Argo CD yer almakta. Git repo'su burada **istenen durum**u, K8s cluster'ı ise **gerçekte çalışan durum**u belirtmektedir. Argo CD ise bu ikisinin senkronize olduğundan emin olmak ile yükümlüdür. İkisi arasında ayrılık/farklılık olduğu durumda ilk fırsatta güncelleme yapmaktadır.
 
 <p align="center"><img src="images/Argo-CD/image-16.png"></p>
-
-*Notların çıkarılmasına kaynaklık eden YouTube videosuna (ArgoCD Tutorial for Beginners | GitOps CD for Kubernetes) [buradan](https://www.youtube.com/watch?v=MeU5_k9ssrs&ab_channel=TechWorldwithNana) ulaşabilirsiniz.*
