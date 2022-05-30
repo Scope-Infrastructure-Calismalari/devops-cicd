@@ -59,110 +59,113 @@ This is a step-by-step guide to using Azure Pipelines to build a sample applicat
 
 ### Create the first Java pipeline
 
-1. Azure DevOps platformundan üzerinde çalışılan "collection" açılır.
+1. Open your project's collection on Azure DevOps.
 
-2. Sol menüde yer alan seçeneklerden "Pipelines"a tıklanıp drop-down menü genişletilip çıkan menüdeki "Pipelines"a tıklanır.
+2. Click on the **Pipelines** button which is under the Pipelines in the left panel.
 
 <p align="center"><img src="images/CI-surecleri/image-15.png"></p>
 
-3. İlk defa pipelines oluşturulacakda ekrana gelen "Create your first Pipeline" penceresinin altında yer alan "Create Pipeline" butonuna tıklanır.
+3. If it is the first time to create a pipeline, **"Create your First Pipeline"** screen will come to screen. Click the **"Create Pipeline"** button under this screen.
 
 <p align="center"><img src="images/CI-surecleri/image-16.png"></p>
 
-4. Azure DevOps'un yeni versiyonlarında artık varsayılan ayar olarak **yaml** dosyası ile pipeline tanımlanması ve yönetilmesi sağlanmaktadır.
+4. New versions of pipelines comes with yaml configuration as default instead of classic pipeline. One yaml file is enough to define the pipeline now.
 
-    - *(Biz de bu dokümanda [Neden Pipeline as Code Yaklasimi Uygulanmali?](#neden-pipeline-as-code-yaklasimi-uygulanmali) başlığının altında avantajlarının açıklandığı "Pipeline as Code" yaklaşımı ile devam edeceğiz.)*
+*In this document, we also use **Pipeline as Code** approach. Under the [Why "Pipeline as Code?"](#why-pipeline-as-code) section, you can see the details and benefits of this approach*
 
-    - *Ekrana gelen pencerenin sol altında yer alan "Use the classic editor" butonu ile klasik pipeline tasarımına devam edilebilir.*
-
-    "Where is your code?" penceresinden "Azure Repos Git" seçilir.
+5. Choose "Azure Repos Git" from "Where is your code?" screen.
 
 <p align="center"><img src="images/CI-surecleri/image-17.png"></p>
 
-5. Collection altındaki tüm repo'ların sıralandığı pencereden üzerinde çalışacağımız repo seçilir.
+*You can also continue with classic editor by clicking the "Use the classic editor" in the left-bottom corner but this method is old, not recommended and used in this document.*
+
+6. Choose the repo you want to work and define pipeline on it.
 
 <p align="center"><img src="images/CI-surecleri/image-18.png"></p>
 
-6. "Configure your pipeline" penceresinde "Maven" seçeneği seçilir.
+7. Choose "Maven" under the "Configure your pipeline" screen. You can also continue with other topics.
 
-7. Artık önümüzde **"azure-pipelines.yml"** isimli, pipeline ayarlarımızı içeren ve otomatik oluşturulmuş YAML dosyasının taslak hali yer almaktadır. Buradaki önemli kısımlar:
+8. Now we can see a **template** of **"azure-pipelines.yml"** file which contains our pipeline configurations. The automatically generated file contains this important subtopics:
 
-- **trigger**: Bu seçenek oluşturacağımız pipeline'ın ne zaman tetikleneceği belirttiğimiz yerdir. Eğer buraya "main" yazarsak main branch'ine, eğer "master" yazarsak veya "develop" yazarsak **"Bu branch'lere her commit geldiğinde bu pipeline'ı tetikle"** komutunu tanımlamış oluyoruz.
-  - **pool**: Hangi agent havuzunu kullanacağımızı burada belirtiyoruz. Varsayılan olarak "default" gelmektedir.
-  - **steps**: Burada ise pipeline'ımızın sırasıyla çalıştıracağı task'ları belirlemiş oluyoruz.
+- **trigger**: This is the place where we define the trigger of the pipeline. It comes "main" as default. It means when a commit comes to "main" branch, the pipelines will be triggered. We can change and use it as "develop", "master", etc.
 
-    Bu örnek için oluşturduğumuz *"azure-pipelines.yml"* dosyası:
+- **pool**: This is the place where we define the Azure DevOps agent pool. It comes with "default" as default.
 
-    <p align="center">
-      <img src="images/CI-surecleri/image-19.png">
-    </p>
+- **steps**: This is the place where we define the tasks which will be run in order.
 
-    **Pool ismini collection için tanımlı olan agent pool ile değiştirmezsek pipeline çalışacağı agent'ı bulamayacaktır.**
+Here you can see the "azure-pipelines.yml" file below
 
-    <p align="center">
-      <img src="images/CI-surecleri/image-20.png">
-    </p>
+<p align="center">
+  <img src="images/CI-surecleri/image-19.png">
+</p>
 
-8. İlgili kısımları değiştirip istediğimiz komutları ve ayarlamaları yaptıktan sonra sağ üstte yer alan **"Save and run"** butonuna tıklıyoruz. Karşımıza gelen pencere "azure-pipelines.yml" dosyasının direkt main branch'ine mi yoksa yeni oluşturulmak istenen branch'e mi commit edilmesini sormaktadır.
+**If we do not change the pool name which the collection can reach, the pipeline cannot be worked.**
 
-    *(Eğer pipeline'lar için ayrı bir branch oluşturulmak istenmiyorsa direkt main branch'ine commit atılarak devam edilebilir.)*
+<p align="center">
+  <img src="images/CI-surecleri/image-20.png">
+</p>
 
-    Ayarlamadan sonra "Save and run" butonuna tıklıyoruz.
+8. After changing the required fields, adding desired commands or steps, click on **"Save and run"** button. A new screen will appear, ask whether to commit directly to the main branch or create a new branch for azure-pipelines.yml file, you can choose which you want.
 
 <p align="center"><img src="images/CI-surecleri/image-21.png"></p>
 
-9. Artık karşımızda belirtilen agent tarafından çalıştırılmak üzere sıraya girmiş beklemekte olan pipeline'ın görüntüsü yer almakta:
+9. Now we can see pipeline job which is in the queue and waiting to be executed by agent from specified agent pool.
 
 <p align="center"><img src="images/CI-surecleri/image-22.png"></p>
 
-    Eğer aşağıdaki gibi hata alıyorsanız gerekli izinleri vererek hatayı çözebilirsiniz.
+If you encounter a screen about permissions which is like below, you can solve it with giving required permissions.
 
 <p align="center"><img src="images/CI-surecleri/image-23.png"></p><p align="center"><img src="images/CI-surecleri/image-24.png"></p><p align="center"><img src="images/CI-surecleri/image-25.png"></p>
 
-10. İzinler verildiktan sonra derleme işlemine alınan pipeline her bir adımındaki çıktıları tıklanabilir şekilde göstererek işlemi tamamlayacaktır:
+10. After giving permissions, the pipeline steps will be executed in order  and we can see details of each step by only click on them.
 
 <p align="center"><img src="images/CI-surecleri/image-26.png"></p>
 
-11. Main branch'ine commit geldiğinde tekrar tetiklenmek üzere ayarladığımız pipeline'ımızı test etmek için "Demo.java" dosyasına bir satır ekleyip tekrar commit'liyoruz:
+11. We add a new line to the "Demo.java" file and commit again to test our pipeline, which we have set to trigger when the main branch commits comes.
 
 <p align="center"><img src="images/CI-surecleri/image-27.png"></p><p align="center"><img src="images/CI-surecleri/image-28.png"></p>
 
-12. Sol menüde yer alan ve daha önceden pipeline oluşturmak için kullandığımız "Pipelines" butonuna tıklayarak derlemeye alınan pipeline'ımızı görmüş oluyoruz. Bu bize main'e gelen commit ile pipeline'ımızın otomatik olarak tetiklendiğini göstermektedir. *(Derleme işlemi tamamlandığında mavi simge yeşile dönüşecektir.)*
+12. By clicking the "Pipelines" button on the left menu, which we used to create the pipeline before, we see our compiled pipeline. This shows us that our pipeline is triggered automatically with the commit came to the main branch. *(The blue icon will turn green when the compilation process is complete.)*
 
 <p align="center"><img src="images/CI-surecleri/image-29.png"></p><p align="center"><img src="images/CI-surecleri/image-30.png"></p>
 
-13. "Tik" simgesine dönen pipeline'ımızın üstüne tıkladığımızda karşımıza bu pipeline'ın daha önceki çalıştığı zamanlar çıkmakta. Önceki "Run"larla ilgili ne kadar süre önce çalıştığı, çalışmasının ne kadar sürdüğü, hata ile mi yoksa başarıyla mı sonlandığı bilgileri yer almakta:
+13. When we click on our pipeline that turns into a "tick" icon, we see the previous times that this pipeline was running. There is information about the previous "Runs", how long ago it worked, how long it took to run, whether it ended with an error or successfully:
 
 <p align="center"><img src="images/CI-surecleri/image-31.png"></p>
 
-  Herhangi bir çalışmanın (run) içerisine girildiğinde daha da detaylı bilgilere yer verilmekte.
+When a run is entered, more detailed information is given.
 
 <p align="center"><img src="images/CI-surecleri/image-32.png"></p>
 
-  Bu yeni pencerenin altında yer alan "Jobs" başlığı altındaki "Job"a tıkladığımızda ise çalıştırılmış olan o pipeline'ın step'leri gözükmekte ve üzerlerine tıklanarak detaylı incelenebilmekte.
+When we click on "Job" under the "Jobs" heading at the bottom of this new window, the steps of that pipeline that has been run appear and can be examined in detail by clicking on them.
 
 <p align="center"><img src="images/CI-surecleri/image-33.png"></p>
 
-**Bu çalışma ile "example-repo-ci-cd-java-pipeline" repo'su için oluşturulan, SCOPE-CICD havuzundaki agent'lar tarafından derlenen, main branch'ine her commit geldiğinde otomatik olarak tetiklenen, YAML formatındaki "azure-pipelines" dosyası ile konfigüre edilen bir Build Pipeline oluşturmuş olduk. CI adımı için olan bu pipeline'ı CD adımı için olan Release Pipeline takip etmektedir. İkisinin birleştirilmesi ve uç uca çalışması ile CI/CD süreci tamamlanmaktadır.**
+### **SUMMARY:** With this study, we have created a build pipeline configured with the "azure-pipelines" file in YAML format for the "example-repo-ci-cd-java-pipeline" repository, which is compiled by agents in the SCOPE-CICD repository and automatically triggered every time a commit comes to the main branch.
 
-## Neden Pipeline as Code Yaklasimi Uygulanmali?
+<br>
 
-### Halen klasik editör kullanılabilir mi?
+## **Can we still use classic editor?**
 
-Azure DevOps platformu bize iki çeşit pipeline oluşturma seçeneği sunmakta; klasik editör ile yaml. Yeni pipeline oluşturmak istediğimizde Azure DevOps platformu bizi varsayılan olarak yaml ile pipeline oluşturmaya yönlendirse de aşağıdaki görselde de belirtilen "Use the classic editor" butonu ile klasik pipeline yapısında kurulum yapılabilinir.
+Azure DevOps platform offers us two kinds of pipeline creation options; classic editor and yaml.
+Although the Azure DevOps platform directs us to create a pipeline with yaml by default when we want to create a new pipeline, the classic pipeline structure can be installed with the "Use the classic editor" button, which is also indicated in the image below.
 
 <p align="center"><img src="images/CI-surecleri/image-34.png"></p>
 
-Template ile devam edilebildiği gibi "Empty job" ile de devam edilebilinir ve istenilen daha spesifik task'lar seçilip sıralanarak pipeline oluşturulabilinir.
+As you can continue with the template, you can also continue with the "Empty job" and the desired more specific tasks can be selected and ordered to create a pipeline.
 
 <p align="center"><img src="images/CI-surecleri/image-35.png"></p>
 
-Aşağıdaki görselde de görülen şekilde agent'a "+" butonu ile yeni slot açılıp arama penceresi ile ihtiyaca uygun task'lar eklenip pipeline oluşturulabilinir.
+As seen in the image below, a new slot can be opened to the agent with the "+" button, and a pipeline can be created by adding the appropriate tasks through the search window.
 
 <p align="center"><img src="images/CI-surecleri/image-36.png"></p>
 
-### Neden klasik editör kullanılmamalı?
+## Why Pipeline as Code?
 
-**"Pipeline as Code"** yaklaşımının klasik pipeline oluşturulma sisteminden en büyük farkı bu yaklaşımın bize pipeline'ları da versiyonlamamızı sağlayacak olmasıdır. Repo'nun root ('/') klasöründe yer alan "azure-pipelines.yml" da bir dosya olduğu için Git yapısı altında versiyonlanarak tutulmakta, yapılan geliştirmeler, eklemeler ve çıkarmalar saklanmaktadır. Yani iki yıl öncesinin kod'larını ve versiyonları görebileceğimiz gibi o kod'ların pipeline versiyonlarını da görebileceğiz. **Kod ile pipeline'lar eşleşmiş olacak**, *"Şu zamanın artifact'ini oluşturmalıyız"* denildiği zaman kodların o versiyonu için oluşturulup çalıştırılmış olan pipeline dosyasını kullanıp yine aynı artifact'i oluşturbilecek imkana sahip olunmuş olacaktır.
+The biggest difference of the **"Pipeline as Code"** approach from the classical pipeline generation system is that this approach will allow us to version the pipelines as well.
 
-*NOT: Global'de devam eden süreçte developer'lar kendi geliştirdikleri kodun pipeline'ını da kendileri yazmaktadırlar, CI süreçlerinin yönetimi developer'lar yapmakta, kodları ile birlikte pipeline yapısını da idame etmektedirler.*
+Since there is a file in the "azure-pipelines.yml" located in the root ('/') folder of the repo, it is versioned and kept under the Git structure, and the improvements, additions and removals are kept.
+
+In other words, we can see the codes and versions of two years ago, as well as the pipeline versions of those codes. **Code and pipelines will be matched**, *"We need to create the artifact of this time"* When it is said, it will be possible to use the pipeline file created and run for that version of the codes and create the same artifact again.
+
+*NOTE: In the ongoing processes in the software development world, developers also write the pipeline of the code they have developed, developers manage the CI processes, and maintain the pipeline structure with their codes.*
