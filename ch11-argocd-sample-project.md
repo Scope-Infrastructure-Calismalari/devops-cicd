@@ -2,7 +2,7 @@
 
 ## *In this example we will see how to install and run the fully automated CD pipeline with the Argo CD application for K8s configuration changes*
 
-### In this sample application we need:
+### In this sample application we need
 
 - Git repo with "deployment" and "service" yaml files,
 
@@ -10,7 +10,7 @@
 
 - Minikube cluster
 
-### Steps to complete this example:
+### Steps to complete this example
 
 1. Install Argo CD in K8s cluster
 
