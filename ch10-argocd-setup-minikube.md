@@ -1,30 +1,32 @@
-## Kurulum (Yerel makina)
+## Installation (Local machine)
 
-*Not: Bu uygulama kişisel bilgisayar üzerine yüklenmiş olan Ubuntu 20.04 LTS üzerine kurulmuştur. Farklı işletim sistemleri için bazı adımlar/komutlar değişecektir fakat kurulumun ana mantığu/iskeleti burada tanımlandığı gibidir· Kurulum adımlarına Argo CD'nin [Getting Started](https://argo-cd.readthedocs.io/en/stable/getting_started/) bağlantısından da ulaşabilirsiniz.*
+*Note: This application is installed on Ubuntu 20.04 LTS installed on the PC. Some steps/commands will vary for different operating systems, but the main logic/skeleton of the installation is as described here. You can also access the installation steps from Argo CD's [Getting Started](https://argo-cd.readthedocs.io/en/stable/getting_started/) link.*
 
-Argo CD uygulaması "minikube" uygulaması üzerinde çalışan Kubernetes cluster'ına kurulmuş ve orada çalıştırılmıştır.
+The Argo CD application was installed and run in the Kubernetes cluster running on the "minikube" application.
 
-1. Minikube uygulaması başlatılır:
+Installation steps:
+
+1. The Minikube application is launched:
 
     `minikube start`
 
-    *Eğer minikube kurulu değilse diğer adımlara geçmeden önce [buradaki](https://www.linuxtechi.com/how-to-install-minikube-on-ubuntu/) adımları takip edip kurulumu tamamlamalısınız*
+    *If you don't have minikube installed, you must follow the steps [here](https://www.linuxtechi.com/how-to-install-minikube-on-ubuntu/) and complete the installation before proceeding to the next steps*
 
-2. Argo CD uygulaması için namespace tanımlanır:
+2. The namespace is defined for the Argo CD application:
 
     `kubectl create namespace argocd`
 
-3. Argo CD kurulumu yapılır:
+3. Argo CD is installed:
 
     `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml`
 
-    Not: Load Balancer yapı için farklı kurulum URL'i gerekmektedir.
+    Note: Different installation URL is required for Load Balancer build.
 
-4. Kurulumun doğru yapılıp yapılmadığını şu şekilde kontrol edebiliriz:
+4. We can check if the installation is done correctly as follows:
 
     `kubectl -n argocd get all`
 
-    Eğer kurulum doğru şekilde tamamlanmışsa karşımıza şuna benzer sonuçlar gelecektir:
+    If the installation is completed correctly, we will see results similar to the following:
 
         NAME                                                       READY   STATUS    RESTARTS   AGE
         pod/argocd-application-controller-***                      1/1     Running   0          3h32m
@@ -65,80 +67,84 @@ Argo CD uygulaması "minikube" uygulaması üzerinde çalışan Kubernetes clust
         NAME                                                       READY   AGE
         statefulset.apps/argocd-application-controller             1/1     3h32m
 
-5. Cluster'da pod'da çalışan uygulamaya erişebilmek için servis tanımlanması gerekmektedir.Load Balancer, ingress gibi farklı seçenekler mevcut. Biz bu anlatımda *Port Forwarding* kullanacağız:
+5. In order to access the application running on the pod in the cluster, a service must be defined. For this, there are different options such as loadbalancer and ingress. We will use *Port Forwarding* in this tutorial:
 
     `kubectl port-forward svc/argocd-server -n argocd 8080:443`
 
-    Bu komut ile Argo CD'nin API sunucusuna <https://localhost:8080> bağlantısını kullanarak erişebilmiş olacağız.
+    With this command, we will be able to access Argo CD's API server using the <https://localhost:8080> link.
 
-    - LoadBalancer için:
+    - For LoadBalancer:
 
-        argocd-server servisinin tipini LoadBalancer olarak değiştirmeliyiz:
+        We have to change the type of argocd-server service to LoadBalancer:
 
         `kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'`
 
-    - Ingress için:
+    - For Ingress:
 
-        Argo CD'nin ingress ile konfigüre edilmesini anlatan doküman için bağlantı: <https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/ingress.md>
+        Link for the document describing how to configure Argo CD with ingress: <https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/ingress.md>
 
-    **Eğer bu adıma kadar sorunsuz ilerleyebildiysek localhost bağlantısına tıkladığımızda ekranımıza aşağıdaki gibi bir sayfa gelecektir.**
+**If we have been able to proceed smoothly until this step, when we click on the localhost link, a page like the one below will appear on our screen.**
 
 <p align="center"><img src="images/Argo-CD/image-17.png"></p>
 
-6. Varsayılan kullanıcı adı olarak "admin" ile gelen Argo CD uygulaması, kullanıcı şifresini ise kurulum anında oluşturmaktadır. Initial password'e ise şu şekilde ulaşılabilir:
+6. Argo CD application, which comes with "admin" as the default user name, creates the user password at the time of installation. The initial password can be accessed as follows:
 
-### **Argo CD versiyon 1 için:**
+    #### **For Argo CD version 1:**
 
-    - Aşağıdaki komut ile argocd namespace'indeki tüm kurulumları listeyelim pod'lardan *argocd-server* olanını filtreliyoruz.
+    With the command below, we list all the installations in the argocd namespace and filter the *argocd-server* pods.
 
-    `kubectl -n argocd get all | grep pod/argocd-server`
+   ```kubectl -n argocd get all | grep pod/argocd-server```
 
-    Çıktı olarak bize dönecek sonuç:
+    The result that will return us as output:
 
        pod/argocd-server-77b597bc68-w52zp      1/1     Running     0     148m
 
-    Burada "pod/" kısmından sonraki kısım bizim initial password'ümüzdür.
+    Here, the part after "pod/" is our initial password.
 
-    **Dikkat!!**
+    **Attention!!**
 
-    Muhtemelen versiyon farkından kaynaklanan nedenlerden dolayı artık initial password'e bu şekilde ulaşılamamaktadır, onun yerine direkt bu şifreyi kendi istediğimiz şifre ile değiştirebiliriz.
+    Using the code below, we can change this password to the one we want.
 
-    `kubectl -n argocd patch secret argocd-secret \\n  -p '{"stringData": {\n    "admin.password": "XXXXXXXXXXXXX",\n    "admin.passwordMtime": "'$(date +%FT%T%Z)'"\n  }}'`
+    `kubectl -n argocd patch secret argocd-secret \\n  -p '{"stringData": {\n    "admin.password": "XXXXX",\n    "admin.passwordMtime": "'$(date +%FT%T%Z)'"\n  }}'`
 
-    Buradaki *admin.password* 'den sonra *XXX* ile belirtilen yere kendi **encrypt edilmiş** şifremizi yazmamız gerekmektedir.
+    After *admin.password* here, we need to write our own **encrypted** password in the place indicated with *XXXXX*.
 
-    Şifrenin **Bcrypt** şifreleme yöntemi kullanılarak şifrelenmesi gerekmektedir. Bunu yapabilmek için [browserling](https://www.browserling.com/tools/bcrypt) adresine gidip Password kısmına belirlediğimiz şifreyi yazıp **Bcrypt** butonuna basarak şifreleme işlemini gerçekleştirebiliriz.
+    The password must be encrypted using the **Bcrypt** encryption method. In order to do this, we can perform the encryption process by going to [browserling](https://www.browserling.com/tools/bcrypt) and typing the password we have determined in the Password field and pressing the **Bcrypt** button.
 
-<p align="center"><img src="images/Argo-CD/image-18.png"></p>
+    <p align="center"><img src="images/Argo-CD/image-18.png"></p>
 
-  Oluşturulan bu şifreyi kopyalayıp yukarıdaki komuttaki "XXXXXXXXXXXXX" kısmının yerine yazıp çalıştırdığımızda şifre değiştirme işlemi başarıyla tamamlanmış olacaktır.
+    When we copy this created password, replace the "XXXXX" part in the above command and run it, the password change process will be completed successfully.
 
-  Şifre değiştiği için Argo CD uygulamasının servide deployment'ını yeniden başlatmamız gerekmektedir:
+    Since the password has changed, we need to restart the servide deployment of the Argo CD application:
 
-  `kubectl -n argocd rollout restart deployment argocd-server`
+    `kubectl -n argocd rollout restart deployment argocd-server`
 
-  Yeniden başlatma nedeniyle durmuş olan *port-forwarding* işlemini yeniden başlatıyoruz:
+    We restart the *port-forwarding* process that has stopped due to a reboot:
 
-  `kubectl port-forward svc/argocd-server -n argocd 8080:443`
+    `kubectl port-forward svc/argocd-server -n argocd 8080:443`
 
-  Bu komuttan sonra şu şekilde bir çıktı oluşacaktır:
+    After this command, the output will be like this:
 
-    deployment.apps/argocd-server restarted
+       deployment.apps/argocd-server restarted
 
-### **Argo CD versiyon 2 için:**
+    #### **Argo CD versiyon 2 için:**
 
-  Şifre yine otomatik olarak *"argocd-initial-admin-secret"*  isminde bir secret olarak oluşturulmuştur.
+    The password is also automatically created as a secret named *"argocd-initial-admin-secret"*.
+  
+    We can see the base64 encoded version of our password under *data* -> *password* by running the
+    
+    `kubectl get secret argocd-initial-admin-secret -n argocd -o yaml`
+    
+    command.
 
-  `kubectl get secret argocd-initial-admin-secret -n argocd -o yaml` komutunu çalıştırıp *data* -> *password* altında şifremizin base64 ile encode edilmiş halini görebiliriz.
+    <p align="center"><img src="images/Argo-CD/image-26.png"></p>
 
-<p align="center"><img src="images/Argo-CD/image-26.png"></p>
+    `echo <encoded-password> | base64 --decode` command, we can decode our password and see the output directly on the terminal. The part before the '%' sign is our password, **Be careful not to copy the '%' character!**
 
-  `echo <encoded-sifre> | base64 --decode` komutu ile de şifremizi decode edip çıktısını doğrudan terminalde görebiliriz. '%' işaretinden önceki kısım şifremizdir, **'%' karakterini kopyalamamaya dikkat ediniz!**
+    <p align="center"><img src="images/Argo-CD/image-27.png"></p>
 
-<p align="center"><img src="images/Argo-CD/image-27.png"></p>
+    7. If we were able to pass these stages without any problems, we should be able to access our application again with [localhost:8080](https://localhost:8080) and log in with the password we set and bcrypt. If the login process is successful, the following screen will appear:
 
-7. Bu aşamaları sıkıntısız geçebildiysek artık localhost:8080 ile yeniden uygulamamıza erişip kendi belirlediğimiz ve bcrypt ettiğimiz şifre ile giriş yapabilmemiz gerekmekte. Giriş işlemi başarıyla sonuçlanırsa karşımıza şu şekilde bir ekran gelecektir:
+    <p align="center"><img src="images/Argo-CD/image-19.png"></p>
 
-<p align="center"><img src="images/Argo-CD/image-19.png"></p>
-
-8. Tebrikler. Kurulum işlemini başarıyla tamamladınız. Bir sonraki adımda bu boş ekranı uygulamalarla doldurup biraz hareketlendireceğiz :)
+    8. Congratulations. You have successfully completed the installation process. In the next step, we will fill this empty screen with applications and animate it a little :)
