@@ -3,16 +3,21 @@
 #### Previous Chapter: [01 - Introduction](ch01-introduction.md) | Next Chapter: [03 - CI/CD Pipeline](ch03-ci-cd-pipeline.md) | Return to [Main Page](README.md)
 ---
 
-### Continuous Integration(CI) vs Continuous Delivery(CD) vs Continuous Deployment(CD)
+In this document, you can find:
 
-<br>
-
-**Key differences are:**
-
-- CI is an approach of testing each change to codebase automatically whereas Continuous Delivery is an approach to obtain changes of new features, configuration, and bug fixes. On the other hand, Continuous Deployment is an approach to develop software in a short cycle.
-- CI is performed immediately after the developer checks- in. While in Continuous Delivery, developed code is continuously delivered until the programmer considers it is ready to ship and in Continuous Deployment, developers deploy the code directly to the production stage when it is developed.
-- CI uses unit tests on the contrary Continuous Delivery uses business logic tests. In Continuous Deployment any testing strategy is used.
-- CI refers to the versioning of source code whereas Continuous Delivery refers to the logical evolution of CI and Continuous Deployment refers to automated implementations of the source code.
+- [Difference between CI vs CD vs CD](#difference-between-ci-vs-cd-vs-cd)
+- [Advantages of Continuous Integration](#advantages-of-continuous-integration)
+- [Advantages of Continuous Delivery](#advantages-of-continuous-delivery)
+- [Advantages of Continuous Deployment](#advantages-of-continuous-deployment)
+- [Disadvantages of Continuous Integration](#disadvantages-of-continuous-integration)
+- [Disadvantages of Continuous Delivery](#disadvantages-of-continuous-delivery)
+- [Disadvantages of Continuous Deployment](#disadvantages-of-continuous-deployment)
+- [Continuous Integration Best Practices](#continuous-integration-best-practices)
+- [Continuous Delivery Best Practices](#continuous-delivery-best-practices)
+- [Challenges of Continuous Deployment](#challenges-of-continuous-deployment)
+- [Challenges of Continuous Delivery](#challenges-of-continuous-delivery)
+- [Challenges of Continuous Integration](#challenges-of-continuous-integration)
+- [Continuous Deployment Best Practices](#continuous-deployment-best-practices)
 
 ## Difference between CI vs CD vs CD
 
@@ -149,6 +154,7 @@ Here are some important best practices while implementing Continuous Delivery:
 - In case any state fails, you should automatically pause the process and fix the issues.
 
 ## Continuous Deployment Best Practices
+
 Here are some important best practices while implementing Continuous Deployment:
 
 - You should use an issue tracker for the development task.

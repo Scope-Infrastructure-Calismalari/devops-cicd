@@ -19,13 +19,9 @@ Teams use build definitions to ensure that every commit to the main branch trigg
 
 CI is a standard feature in modern DevOps platforms. GitHub users can start implementing CI today through GitHub Actions. Azure DevOps users can get started with Azure Pipelines.
 
-### Another answer for "What is Continuous Integration?":
+In CI after a code commit, the software is built and tested immediately. In a large project with many developers, commits are made many times during a day. With each commit code is built and tested. If the test is passed, build is tested for deployment. If the deployment is a success, the code is pushed to Production. This commit, build, test, and deploy is a continuous process, and hence the name continuous integration/deployment.
 
-#### **"Continuous Integration is a software development method where team members integrate their work at least once a day. In this method, every integration is checked by an automated build to detect errors. This concept was first introduced over two decades ago to avoid "integration hell," which happens when integration is put off till the end of a project."**
-
-In Continuous Integration after a code commit, the software is built and tested immediately. In a large project with many developers, commits are made many times during a day. With each commit code is built and tested. If the test is passed, build is tested for deployment. If the deployment is a success, the code is pushed to Production. This commit, build, test, and deploy is a continuous process, and hence the name continuous integration/deployment.
-
-In this CI document, you will learn:
+In this document, you can find:
 
 - [Development without CI vs. Development with CI](#development-without-ci-vs-development-with-ci)
 - [Difference between Compilation and Continuous Integration](#difference-between-compilation-and-continuous-integration)
@@ -35,7 +31,13 @@ In this CI document, you will learn:
 - [Why Use CI?](#why-use-ci)
 - [Best practices of using CI](#best-practices-of-using-ci)
 - [Disadvantages of CI](#disadvantages-of-ci)
-- [Tools for CI process](#tools-for-ci-process)
+- [What is CD?](#what-is-cd)
+- [Continuous Delivery](#continuous-delivery)
+- [Continuous Deployment](#continuous-deployment)
+- [What’s the difference between Continuous Delivery and Continuous Deployment?](#what-is-cd)
+- [How is Continuous Delivery Related to DevOps?](#how-is-continuous-delivery-related-to-devops)
+- [GitOps, The Missing Link for CI-CD for Kubernetes](#gitops-the-missing-link-for-ci-cd-for-kubernetes)
+- [Practise for Continuous Delivery](#practise-for-continuous-delivery)
 
 ## Development without CI vs. Development with CI
 
@@ -250,7 +252,7 @@ With DevOps, developers, usually coding in a standard development environment, w
 
 A major outcome of implementing DevOps is a CI/CD pipeline supported by development and operations teams working together using an agile methodology.
 
-## GitOps: The Missing Link for CI/CD for Kubernetes
+## GitOps, The Missing Link for CI-CD for Kubernetes
 
 GitOps has emerged as an essential process as organizations evaluate frameworks to optimize CI/CD on Kubernetes. DevOps teams are exploring how GitOps redefines CI/CD, with Git serving as the central, immutable state declaration for faster deployments and more audit-friendly secure environments. GitOps offers teams well-documented improvements in productivity, security, and compliance, which ultimately translate into a better experience for the user.
 
