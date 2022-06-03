@@ -16,7 +16,7 @@ In this document, you can find:
 
 ## What is GitOps?
 
-Short explanation of GitOps is **"Inftastructue as code(IaC), done right"**.
+Short explanation of GitOps is **"Infrastructue as code(IaC), done right"**.
 
 Inftastructue as code means defining the infrastructure as code instead of creating it manually.
 
@@ -34,7 +34,7 @@ For example, instead of manually creating servers and network and all the config
 
 ## Using IaC the Wrong Way
 
-As old fashion way, we can write the files and test them in locally and store them in locally. New fashion is to store files in Git repository, of course. It gives us version controlling for IaC files and store them centrally, where everyone has access to it.
+As old fashion way, we can write the files and test them in locally and store them in locally. New fashion is to store files in Git repository. It gives us version controlling for IaC files and store them centrally, where everyone has access to it.
 
 **But:**
 
@@ -46,7 +46,7 @@ As old fashion way, we can write the files and test them in locally and store th
 
    on the changes.
 
-Also when we commit our changes infras's code changes into the repository, no automated tests are running to test these code changes. Maybe we committed **invalid YAML files** or we made a typo and the attribute names are wrong or maybe the code changed will break something in the infrastructure or the application environment.
+Also, when we commit infras's code changes into the repository, no automated tests are running to test these code changes. Maybe we committed **invalid YAML files** or we made a typo and the attribute names are wrong or maybe the code changed will break something in the infrastructure or the application environment.
 
 ## Solution for IaC
 
@@ -57,14 +57,15 @@ We need to use GitOps Flow for IaC approach.
 
 ### Steps
 
- 1. Create Pull/Merge Request: Make changes to the code, collaborate with other team members on that pull request.
- 2. Run CI Pipeline: It gives us the opportunity to validate the config files and test them just like we test application code changes.
+1. Create Pull/Merge Request: Make changes to the code, collaborate with other team members on that pull request.
 
- 3. Approve changes: After testing these commits, other team members can approve the final changes. This way we have a tested and well-reviesed config changes before they get applied in any environment.
+2. Run CI Pipeline: It gives us the opportunity to validate the config files and test them just like we test application code changes.
 
- 4. Run CD Pipeline: Only after the Step #3, changes will be merged back into main branch and through a CD pipeline, get deployed to the environment. Whether it's changing sth in k8s cluster or updating the underlying infrastructure i.e., AWS.
+3. Approve changes: After testing these commits, other team members can approve the final changes. This way we have a tested and well-reviesed config changes before they get applied in any environment.
 
- So we have an automated process which is more transparent and produces high quality infra or config code where multiple person collaborate on the change and things get tested. Rather than one engineer doing all the stuff from their laptop manually that others do not see or cannot review.
+4. Run CD Pipeline: Only after the Step #3, changes will be merged back into main branch and through a CD pipeline, get deployed to the environment. Whether it's changing something in k8s cluster or updating the underlying infrastructure i.e., AWS.
+
+So we have an automated process which is more transparent and produces high quality infra or config code where multiple person collaborate on the change and things get tested. Rather than one engineer doing all the stuff from their laptop manually that others do not see or cannot review.
 
 ## Push-based vs Pull-based Deployment Models for CD Pipelines
 
@@ -100,23 +101,24 @@ The agent will check regularly what is the state of the infrastructure code in t
 
 <p align="center"><img src="images/GitOps/image-5.png"></p>
 
-and compare it to actual state in the environment where it's running
+and compare it to actual state in the environment where it's running. If it sees there is a difference in the repository, it will pull and apply these changes to get the environment from the actual state to the desired state defined in the repository.
 
 <p align="center"><img src="images/GitOps/image-6.png"></p>
 
-If it sees there is a difference in the repository, it will pull and apply these changes to get the environment from the actual state to the desired state defined in the repository.
 
-Examples of GitOps tools that work with the pull-based model are Flux CD and Argo CD.
+Examples of GitOps tools that work with the pull-based model are Argo CD, Flux CD and Jenkins X.
 
 ## Easy Rollback
 
+Infra is breaked because of a new commit:
 <p align="center"><img src="images/GitOps/image-7.png"></p>
 <h4 align="center">Breaked<br><br></h1>
 
+Roll-backing and fixing via `git revert ...` command:
 <p align="center"><img src="images/GitOps/image-8.png"></p>
 <h4 align="center">Fixed<br><br></h1>
 
-When we have version control for our code and the changes in our repository are automatically synced to the environment, we can easily rollback the environment to any previous state in our code. I gives us another big advantage, for example, if we make changes that break sth in the environment, so our cluster does not work anymore, we can just do git revert to undo the latest changes and get the environment back to the last working state.
+When we have version control for our code and the changes in our repository are automatically synced to the environment, we can easily rollback the environment to any previous state in our code. It gives us another big advantage, for example, if we make changes that break sth in the environment, so our cluster does not work anymore, we can just do git revert to undo the latest changes and get the environment back to the last working state.
 
 ## Single Source of Truth
 
@@ -136,11 +138,11 @@ This means that Git repository becomes the single source of truth for your envir
 
 ## Increasing Security
 
-GitOps also increases the security because now we do not have to give everyone in the team who needs to change sth on the infra or in k8s cluster direct access to it to execute the changes
+GitOps also increases the security because now we do not have to give direct access to everyone in the team who needs to change sth on the infra or in k8s cluster in order to execute the changes
 
 <p align="center"><img src="images/GitOps/image-13.png"></p>
 
-because it is the CD pipeline that deploys the changes, not individual team members from their laptops.
+Because it is the CD pipeline that deploys the changes, not individual team members from their laptops.
 
 <p align="center"><img src="images/GitOps/image-14.png"></p>
 
@@ -149,9 +151,8 @@ But anyone on the team can propose changes to the infra in the Git repository th
 <p align="center"><img src="images/GitOps/image-15.png"></p>
 
 So as a result; we have
-
-- Less Permissions to Manage
-- More Secure Environment
+- Less permissions to manage
+- More secure environment
 
 ## Wrap Up
 
