@@ -3,8 +3,6 @@
 #### Previous Chapter: [00 - Riemann Toplamı](ch00-riemann-toplami.md) | Next Chapter: [02 - CI vs CD vs CD](ch02-ci-vs-cd-vs-cd.md) | Return to [Main Page](README.md)
 ---
 
-In this document, you will read informations about [Continuous Integration(CI)]  (#what-is-ci) and [Continuous Delivery/Deployment(CD)](#what-is-cd).
-
 In this document, you can find:
 
 - [What is CI?](#what-is-ci)
