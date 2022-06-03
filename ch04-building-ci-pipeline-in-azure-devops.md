@@ -3,28 +3,20 @@
 #### Previous Chapter: [03 - CI/CD Pipeline](ch03-ci-cd-pipeline.md) | Next Chapter: [05 - Converting Classic Pipelines to YAMLs](ch05-converting-classic-pipelines-to-yamls.md) | Return to [Main Page](README.md)
 ---
 
-Azure DevOps by Microsoft Azure is one of the leading tools that automate CI/CD’s process and, in turn, supports automatic builds and code projects to make them available to others. The Azure pipelines combine Continuous Integration (CI) and Continuous Delivery (CD) to consistently test and build the code and ship it to the target environment.
+In this document, you can find:
 
-In this section, we will learn how to configure an Azure CI/CD pipeline and integrate it to Azure DevOps for bug tracking.
-
-Table of Content:
-
-- [What is a CI/CD Pipeline?](#what-is-a-ci-cd-pipeline)
 - [What is Azure DevOps?](#what-is-azure-devops)
-- [How to build Azure CI Pipeline?](#how-to-build-azure-ci-cd-pipeline)
-
-Just a reminder about stages of a CI-CD pipeline:
-
-  1. **Source Stage** – In most cases, when a change is attempted to the central repository, a pipeline run is triggered. These triggers are set by the CI/CD pipeline tool in the source stage.
-  2. **Build Stage** – The combination of source code and its dependencies when building into a runnable instance corporate to the end-user application. The built-in application languages like Java need compilation too, which is done in the build stage. If docker images are to be constructed, that can also be facilitated in this stage. Failing this stage marks a potential error in the code or its dependencies.
-  3. **Test Stage** – This stage corresponds to automated tests running to validate our code and its behavior accordingly. This stage acts as a sieve that prevents the bugs from reaching the end-user. There can be multiple stages, from smoke tests to end-to-end integration tests. Failure at this stage will expose errors in the code.
-  4. **Deploy Stage** – Once we have a runnable code, the deployment is processed with all predefined tests passed. There are a lot of stages like “Beta,” “Staging,” etc., for the product team. A “Production” stage for the end-users is also present.
-
-Remember, the stages mentioned above are the basic stages, and different steps can be added to make the CI/CD process more automated. To bring a new life to these stages, we have Azure DevOps CI/CD.
+- [What is Azure Pipelines?](#what-is-azure-pipelines)
+- [Advantages of Azure Pipelines](#advantages-of-azure-pipelines)
+- [How to Build Azure CI Pipeline?](#how-to-build-azure-ci-cd-pipeline)
+- [Why Pipeline as Code?](#why-pipeline-as-code)
+- [Can We Still Use Classic Editor?](#can-we-still-use-classic-editor)
 
 ## What is Azure DevOps?
 
-Azure DevOps is a collection of services given by Microsoft Azure. It provides development services for a team to support, plan, collaborate, build, and deploy applications. It provides integrated features in a browser or an IDE(Integrated Development Environment). Some of the services for developers are:
+Azure DevOps is a collection of services given by Microsoft Azure. It provides development services for a team to support, plan, collaborate, build, and deploy applications. It provides integrated features in a browser or an IDE(Integrated Development Environment). 
+
+Some of the services for developers are:
 
 - Azure Repos
 - Azure Pipelines
@@ -32,13 +24,22 @@ Azure DevOps is a collection of services given by Microsoft Azure. It provides d
 - Azure Test Plans
 - Azure Artifacts
 
-These resources are quite useful, especially Azure Pipelines. In this section, we will be using Azure Pipelines to create a CI/CD pipeline for a .NET project.
+Azure DevOps is also one of the leading tools that automate CI/CD’s process and, in turn, supports automatic builds and code projects to make them available to others. The Azure pipelines combine Continuous Integration (CI) and Continuous Delivery (CD) to consistently test and build the code and ship it to the target environment.
 
 ## What is Azure Pipelines?
 
 The Azure CI/CD pipeline simplifies continuous integration and continuous delivery (CI/CD) in the application development process. You can start from the source stage with existing code on GitHub or on-premise containers. The Azure Repos can maintain a central repository, and the Azure pipelines maintain build and release pipelines for the given project. The Azure DevOps CI/CD process is a crucial process with all the required dev services.
 
 Apart from continuous integration and continuous deployment with Azure DevOps, these pipelines are used to construct build-deploy-test workflows used mainly in continuous testing (CT). This tests the changes in a fast and scalable routine.
+
+Just a reminder about stages of a CI/CD pipeline:
+
+  1. **Source Stage** – In most cases, when a change is attempted to the central repository, a pipeline run is triggered. These triggers are set by the CI/CD pipeline tool in the source stage.
+  2. **Build Stage** – The combination of source code and its dependencies when building into a runnable instance corporate to the end-user application. The built-in application languages like Java need compilation too, which is done in the build stage. If docker images are to be constructed, that can also be facilitated in this stage. Failing this stage marks a potential error in the code or its dependencies.
+  3. **Test Stage** – This stage corresponds to automated tests running to validate our code and its behavior accordingly. This stage acts as a sieve that prevents the bugs from reaching the end-user. There can be multiple stages, from smoke tests to end-to-end integration tests. Failure at this stage will expose errors in the code.
+  4. **Deploy Stage** – Once we have a runnable code, the deployment is processed with all predefined tests passed. There are a lot of stages like “Beta,” “Staging,” etc., for the product team. A “Production” stage for the end-users is also present.
+
+Remember, the stages mentioned above are the basic stages, and different steps can be added to make the CI/CD process more automated. To bring a new life to these stages, we have Azure DevOps CI/CD.
 
 ## Advantages of Azure Pipelines
 
@@ -50,7 +51,7 @@ The Azure Pipelines can be multifactored, and in the Azure DevOps CI/CD practice
   
   3. **Deployment Targets** – The applications with Azure CI/CD pipelines can be deployed to multiple target environments. This includes Virtual Machines, Containers, or any On-prem or Cloud Platform.
 
-## How to build Azure CI Pipeline?
+## How to Build Azure CI Pipeline?
 
 This is a step-by-step guide to using Azure Pipelines to build a sample application. This guide uses YAML pipelines configured with the [YAML pipeline editor](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/yaml-pipeline-editor?view=azure-devops). If you'd like to use Classic pipelines instead, see [Define your Classic pipeline](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/define-multistage-release-process?view=azure-devops).
 
@@ -138,11 +139,19 @@ When we click on "Job" under the "Jobs" heading at the bottom of this new window
 
 <p align="center"><img src="images/CI-surecleri/image-33.png"></p>
 
-### **SUMMARY:** With this study, we have created a build pipeline configured with the "azure-pipelines" file in YAML format for the "example-repo-ci-cd-java-pipeline" repository, which is compiled by agents in the SCOPE-CICD repository and automatically triggered every time a commit comes to the main branch.
+**Summary:** In this example, we have created a build pipeline configured with the "azure-pipelines" file in YAML format for the "example-repo-ci-cd-java-pipeline" repository, which is compiled by agents in the SCOPE-CICD repository and automatically triggered every time a commit comes to the main branch.
 
-<br>
+## Why Pipeline as Code?
 
-## **Can we still use classic editor?**
+The biggest difference of the **"Pipeline as Code"** approach from the classical pipeline generation system is that this approach will allow us to version the pipelines as well.
+
+Since there is a file in the "azure-pipelines.yml" located in the root ('/') folder of the repo, it is versioned and kept under the Git structure, and the improvements, additions and removals are kept.
+
+In other words, we can see the codes and versions of two years ago, as well as the pipeline versions of those codes. **Code and pipelines will be matched**, *"We need to create the artifact of this time"* When it is said, it will be possible to use the pipeline file created and run for that version of the codes and create the same artifact again.
+
+*NOTE: In the ongoing processes in the software development world, developers also write the pipeline of the code they have developed, developers manage the CI processes, and maintain the pipeline structure with their codes.*
+
+## Can We Still Use Classic Editor?
 
 Azure DevOps platform offers us two kinds of pipeline creation options; classic editor and yaml.
 Although the Azure DevOps platform directs us to create a pipeline with yaml by default when we want to create a new pipeline, the classic pipeline structure can be installed with the "Use the classic editor" button, which is also indicated in the image below.
@@ -156,16 +165,6 @@ As you can continue with the template, you can also continue with the "Empty job
 As seen in the image below, a new slot can be opened to the agent with the "+" button, and a pipeline can be created by adding the appropriate tasks through the search window.
 
 <p align="center"><img src="images/CI-surecleri/image-36.png"></p>
-
-## Why Pipeline as Code?
-
-The biggest difference of the **"Pipeline as Code"** approach from the classical pipeline generation system is that this approach will allow us to version the pipelines as well.
-
-Since there is a file in the "azure-pipelines.yml" located in the root ('/') folder of the repo, it is versioned and kept under the Git structure, and the improvements, additions and removals are kept.
-
-In other words, we can see the codes and versions of two years ago, as well as the pipeline versions of those codes. **Code and pipelines will be matched**, *"We need to create the artifact of this time"* When it is said, it will be possible to use the pipeline file created and run for that version of the codes and create the same artifact again.
-
-*NOTE: In the ongoing processes in the software development world, developers also write the pipeline of the code they have developed, developers manage the CI processes, and maintain the pipeline structure with their codes.*
 
 ---
 #### Previous Chapter: [03 - CI/CD Pipeline](ch03-ci-cd-pipeline.md) | Next Chapter: [05 - Converting Classic Pipelines to YAMLs](ch05-converting-classic-pipelines-to-yamls.md) | Return to [Main Page](README.md)
