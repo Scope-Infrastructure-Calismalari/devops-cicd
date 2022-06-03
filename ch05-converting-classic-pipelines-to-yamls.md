@@ -1,4 +1,9 @@
-# How do we convert the classic pipelines to yaml pipelines?
+# Converting Classic Pipelines to YAMLs
+
+#### Previous Chapter: [04 - Building CI Pipeline In Azure DevOps](ch04-building-ci-pipeline-in-azure-devops.md) | Next Chapter: [06 - CI Tools](ch06-ci-tools.md) | Return to [Main Page](README.md)
+---
+
+## How can we convert the classic pipelines to yaml pipelines?
 
 As we mentioned before, using yaml files to develop our pipelines gives us huge benefits (skipped because explained before). So, how can we convert our traditional, classic pipelines to yaml? Let's see:
 
@@ -35,3 +40,7 @@ Do it for every step of the pipeline.
 "View YAML" option is not supported yet for task groups. You need to copy the step to a classic pipeline, then click the "View YAML" button.
 
 <p align="center"><img src="images/Converting-pipelines/image-7.png"></p>
+
+---
+#### Previous Chapter: [04 - Building CI Pipeline In Azure DevOps](ch04-building-ci-pipeline-in-azure-devops.md) | Next Chapter: [06 - CI Tools](ch06-ci-tools.md) | Return to [Main Page](README.md)
+---

@@ -1,4 +1,7 @@
-## Installation (Local machine)
+# Argo CD - Installation to Local Machine
+
+#### Previous Chapter: [09 - Argo CD - Introduction](ch09-argocd-introduction.md) | Next Chapter: [11 - Argo CD - Sample Project](ch11-argocd-sample-project.md) | Return to [Main Page](README.md)
+---
 
 *Note: This application is installed on Ubuntu 20.04 LTS installed on the PC. Some steps/commands will vary for different operating systems, but the main logic/skeleton of the installation is as described here. You can also access the installation steps from Argo CD's [Getting Started](https://argo-cd.readthedocs.io/en/stable/getting_started/) link.*
 
@@ -67,7 +70,7 @@ Installation steps:
         NAME                                                       READY   AGE
         statefulset.apps/argocd-application-controller             1/1     3h32m
 
-5. In order to access the application running on the pod in the cluster, a service must be defined. For this, there are different options such as loadbalancer and ingress. We will use *Port Forwarding* in this tutorial:
+5. In order to access the application running on the pod in the cluster, a service must be defined. For this, there are different options such as loadbalancer and ingress. We will use *Port Forwarding* in this document:
 
     `kubectl port-forward svc/argocd-server -n argocd 8080:443`
 
@@ -148,3 +151,7 @@ Installation steps:
     <p align="center"><img src="images/Argo-CD/image-19.png"></p>
 
     8. Congratulations. You have successfully completed the installation process. In the next step, we will fill this empty screen with applications and animate it a little :)
+
+---
+#### Previous Chapter: [09 - Argo CD - Introduction](ch09-argocd-introduction.md) | Next Chapter: [11 - Argo CD - Sample Project](ch11-argocd-sample-project.md) | Return to [Main Page](README.md)
+---

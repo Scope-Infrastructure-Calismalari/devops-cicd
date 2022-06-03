@@ -1,8 +1,11 @@
 # CI Tools
 
+#### Previous Chapter: [05 - Converting Classic Pipelines to YAMLs](ch05-converting-classic-pipelines-to-yamls.md) | Next Chapter: [07 - CD Tools](ch07-cd-tools.md) | Return to [Main Page](README.md)
+---
+
 Continuous Integration (CI) and Continuous Delivery (CD) (or CI/CD) has become an integral part of software development and DevOps testing. It provides developers the necessary features so that they can deploy the code continuously. It detects bugs at an early stage and avoids integration problems due to frequent committing of source code. With so many CI/CD tools available in the market, it becomes essential to choose the best CI/CD tools that suit the budget and project requirements. To make it easy for you, we have created this list, which we hope will help you choose the best CI/CD tool.
 
-In this CI tutorial, you will learn:
+Here is most popular ones of the CI tools:
 
 - [1-Jenkins](#1-jenkins)
 - [2-TeamCity](#2-teamcity)
@@ -832,3 +835,7 @@ I have already explored a few reasons why you might want to use cloud service pr
 CircleCI and Travis CI have highly capable, easy-to-use hosted and self-hosted tools that work well for individual users, small to large organizations, and open-source communities. It is clear that the big cloud service providers, with their deep pockets, massive infrastructure, and large customer bases, are starting to produce attractive CI/CD tools that are surely capable of stealing a slice of the market share.
 
 Out of all these tools, I will be watching Azure Pipelines (and Azure DevOps) most closely. Azure Pipelines already has a good base set of capabilities and is poised to grow quickly and expand its integrations with third-party tools. The future of continuous integration and continuous deployment is exciting!
+
+---
+#### Previous Chapter: [05 - Converting Classic Pipelines to YAMLs](ch05-converting-classic-pipelines-to-yamls.md) | Next Chapter: [07 - CD Tools](ch07-cd-tools.md) | Return to [Main Page](README.md)
+---

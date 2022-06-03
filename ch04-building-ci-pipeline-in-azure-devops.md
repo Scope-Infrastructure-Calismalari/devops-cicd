@@ -1,4 +1,7 @@
-# How To Build a CI Pipeline In Azure DevOps?
+# Building CI Pipeline In Azure DevOps
+
+#### Previous Chapter: [03 - CI/CD Pipeline](ch03-ci-cd-pipeline.md) | Next Chapter: [05 - Converting Classic Pipelines to YAMLs](ch05-converting-classic-pipelines-to-yamls.md) | Return to [Main Page](README.md)
+---
 
 Azure DevOps by Microsoft Azure is one of the leading tools that automate CI/CD’s process and, in turn, supports automatic builds and code projects to make them available to others. The Azure pipelines combine Continuous Integration (CI) and Continuous Delivery (CD) to consistently test and build the code and ship it to the target environment.
 
@@ -10,13 +13,7 @@ Table of Content:
 - [What is Azure DevOps?](#what-is-azure-devops)
 - [How to build Azure CI Pipeline?](#how-to-build-azure-ci-cd-pipeline)
 
-## What is a CI-CD Pipeline?
-
-A CI/CD pipeline is used to automate the process of continuous integration and continuous deployment. The pipeline facilitates the software delivery process via stages like Build, Test, Merge, and Deploy.
-
-In simple words, a pipeline may sound like an overhead, but it isn’t. Instead, it’s a runnable specification of steps that reduce developers’ manual work by delivering a new version of a software productively and saves time.
-
-**Stages of a CI-CD Pipeline:**
+Just a reminder about stages of a CI-CD pipeline:
 
   1. **Source Stage** – In most cases, when a change is attempted to the central repository, a pipeline run is triggered. These triggers are set by the CI/CD pipeline tool in the source stage.
   2. **Build Stage** – The combination of source code and its dependencies when building into a runnable instance corporate to the end-user application. The built-in application languages like Java need compilation too, which is done in the build stage. If docker images are to be constructed, that can also be facilitated in this stage. Failing this stage marks a potential error in the code or its dependencies.
@@ -169,3 +166,7 @@ Since there is a file in the "azure-pipelines.yml" located in the root ('/') fol
 In other words, we can see the codes and versions of two years ago, as well as the pipeline versions of those codes. **Code and pipelines will be matched**, *"We need to create the artifact of this time"* When it is said, it will be possible to use the pipeline file created and run for that version of the codes and create the same artifact again.
 
 *NOTE: In the ongoing processes in the software development world, developers also write the pipeline of the code they have developed, developers manage the CI processes, and maintain the pipeline structure with their codes.*
+
+---
+#### Previous Chapter: [03 - CI/CD Pipeline](ch03-ci-cd-pipeline.md) | Next Chapter: [05 - Converting Classic Pipelines to YAMLs](ch05-converting-classic-pipelines-to-yamls.md) | Return to [Main Page](README.md)
+---

@@ -1,4 +1,7 @@
-# Tools for the CD processes are
+# CD Tools
+
+#### Previous Chapter: [06 - CI Tools](ch06-ci-tools.md) | Next Chapter: [08 - GitOps](ch08-gitops.md) | Return to [Main Page](README.md)
+---
 
 ## 1 - Argo CD
 
@@ -94,3 +97,7 @@ Jenkins X provides pipeline automation, built-in GitOps, and preview environment
 4. Feedback - Feedback on Issues and Pull Requests
 
    Jenkins X automatically comments on your Commits, Issues and Pull Requests with feedback as code is ready to be previewed, is promoted to environments or if Pull Requests are generated automatically to upgrade versions.
+
+---
+#### Previous Chapter: [06 - CI Tools](ch06-ci-tools.md) | Next Chapter: [08 - GitOps](ch08-gitops.md) | Return to [Main Page](README.md)
+---
