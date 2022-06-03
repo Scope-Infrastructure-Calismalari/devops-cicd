@@ -1,4 +1,9 @@
-# CI - Continuous Integration
+# Introduction
+
+#### Previous Chapter: [00 - Riemann Toplamı](ch00-riemann-toplami.md) | Next Chapter: [02 - CI vs CD vs CD](ch02-ci-vs-cd-vs-cd.md) | Return to [Main Page](README.md)
+---
+
+In this document, you will read informations about [Continuous Integration(CI)]  (#what-is-ci) and [Continuous Delivery/Deployment(CD)](#what-is-cd).
 
 ## What is CI?
 
@@ -20,7 +25,7 @@ CI is a standard feature in modern DevOps platforms. GitHub users can start impl
 
 In Continuous Integration after a code commit, the software is built and tested immediately. In a large project with many developers, commits are made many times during a day. With each commit code is built and tested. If the test is passed, build is tested for deployment. If the deployment is a success, the code is pushed to Production. This commit, build, test, and deploy is a continuous process, and hence the name continuous integration/deployment.
 
-In this CI tutorial, you will learn:
+In this CI document, you will learn:
 
 - [Development without CI vs. Development with CI](#development-without-ci-vs-development-with-ci)
 - [Difference between Compilation and Continuous Integration](#difference-between-compilation-and-continuous-integration)
@@ -140,7 +145,8 @@ Here are important reasons for using Continuous Integration:
 
 ## Best practices of using CI
 
-- Here, are some important best practices while implementing
+Here, are some important best practices while implementing
+
 - Commit Early and Commit Often never Commit Broken Code
 - Fix build failures immediately
 - Act on metrics
@@ -172,10 +178,11 @@ Here, are cons/drawbacks of Continuous Integration process:
 - Continuous Integration definition: Continuous integration is a software development method where members of the team can integrate their work at least once a day
 - CI/CD meaning combination of Continuous Integration and Continuous Delivery or Continuous Deployment.
 - Development without CI creates lots of bugs whereas Development with CI offers Fewer bugs
-- Important activities of Continous Integration are
+- Important activities of Continous Integration are:
 
-1. DB integration
-2. Code Inspection, 3) Automated Deployment, Document generation, and Compilation.
+  1. DB integration
+  2. Code Inspection
+  3. Automated Deployment, Document generation, and Compilation.
 
 - The build should happen continuously using a dedicated Cl server, not a cron job.
 - Important elements of CI are 1) Version Control System 2) Virtual Machine 3) Host CI Tool
@@ -210,20 +217,20 @@ Case-by-case, what the terms refer to depends on how much automation has been bu
 
 Our experts can help your organization develop the practices, tools, and culture needed to more efficiently modernize existing applications and to build new ones.
 
-## Continuous delivery
+## Continuous Delivery
 
 Following the automation of builds and unit and integration testing in CI, continuous delivery automates the release of that validated code to a repository. So, in order to have an effective continuous delivery process, it’s important that CI is already built into your development pipeline. The goal of continuous delivery is to have a codebase that is always ready for deployment to a production environment.
 
 In continuous delivery, every stage—from the merger of code changes to the delivery of production-ready builds—involves test automation and code release automation. At the end of that process, the operations team is able to deploy an app to production quickly and easily.
 You can also automate these deployments.
 
-## Continuous deployment
+## Continuous Deployment
 
 The final stage of a mature CI/CD pipeline is continuous deployment. As an extension of continuous delivery, which automates the release of a production-ready build to a code repository, continuous deployment automates releasing an app to production. Because there is no manual gate at the stage of the pipeline before production, continuous deployment relies heavily on well-designed test automation.
 
 In practice, continuous deployment means that a developer’s change to a cloud application could go live within minutes of writing it (assuming it passes automated testing). This makes it much easier to continuously receive and incorporate user feedback. Taken together, all of these connected CI/CD practices make deployment of an application less risky, whereby it’s easier to release changes to apps in small pieces, rather than all at once. There’s also a lot of upfront investment, though, since automated tests will need to be written to accommodate a variety of testing and release stages in the CI/CD pipeline.
 
-## What’s the difference between continuous delivery and continuous deployment?
+## What’s the difference between Continuous Delivery and Continuous Deployment?
 
 Continuous delivery and continuous deployment, while closely related concepts, are sometimes used separately to specify just how much automation is happening.
 
@@ -231,7 +238,7 @@ Continuous delivery usually means a development team’s changes to an applicati
 
 Continuous deployment, on the other hand, covers some additional steps through the release process of the new software. It usually includes the process of automatically releasing a developer’s changes from the repository to production, where it is usable by customers. It addresses the problem of overloading operations teams with manual processes that slow down the app delivery process. It builds on the benefits of continuous delivery by automating the next stage in the pipeline.
 
-## How is continuous delivery related to DevOps?
+## How is Continuous Delivery related to DevOps?
 
 DevOps, a concept that combines the practices of “development” and “operations,” is an approach to culture, automation, and platform design intended to deliver increased business value and responsiveness through rapid, high-quality service delivery.
 
@@ -254,3 +261,7 @@ You can read the details of GitOps from [here](ch08-gitops.md).
 Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. It follows the GitOps pattern of using Git repositories as the source of truth for defining the desired application state.
 
 You can read and learn the usage of GitOps via CD tools from [here](ch09-argocd-introduction.md). This document contains both explanation and examples.
+
+---
+#### Previous Chapter: [00 - Riemann Toplamı](ch00-riemann-toplami.md) | Next Chapter: [02 - CI vs CD vs CD](ch02-ci-vs-cd-vs-cd.md) | Return to [Main Page](README.md)
+---

@@ -1,4 +1,7 @@
-# CI/CD Pipeline: Learn with Example
+# CI/CD Pipeline
+
+#### Previous Chapter: [02 - CI vs CD vs CD](ch02-ci-vs-cd-vs-cd.md) | Next Chapter: [04 - Building CI Pipeline In Azure DevOps](ch04-building-ci-pipeline-in-azure-devops.md) | Return to [Main Page](README.md)
+---
 
 ## What is a CI/CD pipeline?
 
@@ -7,26 +10,18 @@ provides feedback to developers, and allows fast product iterations.
 
 CI/CD pipeline introduces automation and continuous monitoring throughout the lifecycle of a software product. It involves from the integration and testing phase to delivery and deployment. These connected practices are referred as CI/CD pipeline.
 
-## What is Continuous Integration, Continuous Delivery, and Continuous Deployment?
-
-- **Continuous integration** is a software development method where members of the team can integrate their work at least once a day. In this method, every integration is checked by an automated build to search the error.
-- **Continuous delivery** is a software engineering method in which a team develops software products in a short cycle. It ensures that software can be easily released at any time.
-- **Continuous deployment** is a software engineering process in which product functionalities are delivered using automatic deployment. It helps testers to validate whether the codebase changes are correct, and it is stable or not.
-
-In this CI/CD Pipeline tutorial, you will learn:
+In this CI/CD Pipeline document, you will learn:
 
 - [Stages of a CI-CD pipeline](#stages-of-a-ci-cd-pipeline)
 - [Example of CI-CD Pipeline](#example-of-ci-cd-pipeline)
 - [CI-CD pipeline Best Practices](#ci-cd-pipeline-best-practices)
 - [Advantages of CI-CD pipelines](#advantages-of-ci-cd-pipelines)
-- [Important CI-CD tools](#important-ci-cd-tools)
 - [Why Does the CI-CD Pipeline Matter for IT Leaders?](#why-does-the-ci-cd-pipeline-matter-for-it-leaders)
 - [CI-CD Pipeline KPI](#ci-cd-pipeline-kpi)
 
 ## Stages of a CI-CD pipeline
 
-A CI/CD pipeline is a runnable specification of the steps that any developer should perform to
-deliver a new version of any software. Failure in each and every stage triggers a notification via email, Slack, or other communication platforms. It enables responsible developers to know about the important issues.
+A CI/CD pipeline is a runnable specification of the steps that any developer should perform to deliver a new version of any software. Failure in each and every stage triggers a notification via email, Slack, or other communication platforms. It enables responsible developers to know about the important issues.
 
 Here are the important Stages of CI/CD pipeline:
 
@@ -122,7 +117,7 @@ Here are the pros/ benefits of CI/CD Pipeline:
 
 - **MTTR vs. MTTF:** MTTR (Mean Time to Recovery) is the amount of time required by your team to recover from failure. MTTF (Mean Time to Failure) measures the amount of time between fixes and outages. These metrics are a reflection of the team's ability to respond and fix issues.
 
-### Summary
+## Summary
 
 - A CI/CD pipeline automates the process of software delivery.
 - CI/CD pipeline introduces automation and continuous monitoring throughout the lifecycle of a software product.
@@ -139,3 +134,7 @@ Here are the pros/ benefits of CI/CD Pipeline:
 - Change Failure Rate focuses on the number of times development get succeeds vs. the number of times it fails.
 - MTTR (Mean Time to Recovery) is the amount of time required by your team to recover from failure.
 - MTTF (Mean Time to Failure) measures the amount of time between fixes and outages.
+
+---
+#### Previous Chapter: [02 - CI vs CD vs CD](ch02-ci-vs-cd-vs-cd.md) | Next Chapter: [04 - Building CI Pipeline In Azure DevOps](ch04-building-ci-pipeline-in-azure-devops.md) | Return to [Main Page](README.md)
+---

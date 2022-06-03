@@ -1,22 +1,13 @@
-# Continuous Integration vs Continuous Delivery vs Continuous Deployment
+# CI vs CD vs CD
 
-## What is Continuous Integration?
+#### Previous Chapter: [01 - Introduction](ch01-introduction.md) | Next Chapter: [03 - CI/CD Pipeline](ch03-ci-cd-pipeline.md) | Return to [Main Page](README.md)
+---
 
-Continuous integration is a software development method where members of the team can integrate their work at least once a day. In this method, every integration is checked by an automated build to search the error.
+### Continuous Integration(CI) vs Continuous Delivery(CD) vs Continuous Deployment(CD)
 
-In continuous integration after a code commit, the software is built and tested immediately. In a large project with many developers, commits are made many times during a day. With each commit code is built and tested. If the test is passed, build is tested for Deployment. If the Deployment is a success, the code is pushed to production. This commit, build, test, and deploy is a continuous process, and hence the name continuous integration/deployment.
+<br>
 
-## What is Continuous Delivery?
-
-Continuous delivery is a software engineering method in which a team develops software products in a short cycle. It ensures that software can be easily released at any time. The main aim of continuous delivery is to build, test, and release software with good speed and frequency. It helps you to reduce the cost time and risk of delivering changes by allowing for frequent updates in production.
-
-## What is Continuous Deployment
-
-Continuous deployment is a software engineering process in which product functionalities are delivered using automatic deployment. It helps testers to validate whether the codebase changes are correct and stable or not.
-
-The team can achieve continuous deployment by relying on infrastructure that automates different testing steps. Once each integration meets this release criteria, the application is updated with a new code.
-
-**KEY DIFFERENCES:**
+**Key differences are:**
 
 - CI is an approach of testing each change to codebase automatically whereas Continuous Delivery is an approach to obtain changes of new features, configuration, and bug fixes. On the other hand, Continuous Deployment is an approach to develop software in a short cycle.
 - CI is performed immediately after the developer checks- in. While in Continuous Delivery, developed code is continuously delivered until the programmer considers it is ready to ship and in Continuous Deployment, developers deploy the code directly to the production stage when it is developed.
@@ -87,7 +78,7 @@ Here are the pros/benefits of continuous Deployment:
 
 ## Disadvantages of Continuous Integration
 
-Here are the cons/ disadvantages of continuous integration:
+Here are the cons/disadvantages of continuous integration:
 
 - Initial setup time and training is required to get acquainted with Cl server
 - Well-developed test-suite required many resources for Cl server.
@@ -144,7 +135,7 @@ Here are some important best practices while implementing Continuous Integration
 
 ## Continuous Delivery Best Practices
 
-Here are some important best practices while implementing continuous delivery:
+Here are some important best practices while implementing Continuous Delivery:
 
 - The first stage must be triggered upon every check-in.
 - Each stage should trigger the next one quickly upon successful completion.
@@ -157,8 +148,8 @@ Here are some important best practices while implementing continuous delivery:
 - This method enables you to eliminate conflicts and last-minute problems.
 - In case any state fails, you should automatically pause the process and fix the issues.
 
-Continuous Deployment Best Practices
-Here are some important best practices while implementing continuous Deployment:
+## Continuous Deployment Best Practices
+Here are some important best practices while implementing Continuous Deployment:
 
 - You should use an issue tracker for the development task.
 - In your version controlling system, you should create a branch that contains the issue number and description of any change you have made.
@@ -197,3 +188,7 @@ Here are the challenges of continuous deployment:
 - Rapid delivery must not be isolated to the software development process alone.
 - The flow should go with the overall software development cycle.
 - Experimental results must be continuously linked with the software roadmap.
+
+---
+#### Previous Chapter: [01 - Introduction](ch01-introduction.md) | Next Chapter: [03 - CI/CD Pipeline](ch03-ci-cd-pipeline.md) | Return to [Main Page](README.md)
+---

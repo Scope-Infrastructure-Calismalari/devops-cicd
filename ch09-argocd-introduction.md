@@ -1,4 +1,9 @@
-# Argo CD
+# Argo CD - Introduction
+
+#### Previous Chapter: [08 - GitOps](ch08-gitops.md) | Next Chapter: [10 - Argo CD - Installation to Local Machine](ch10-argocd-installation-to-local-machine.md) | Return to [Main Page](README.md)
+---
+
+## Argo CD
 
 [GitHub Homepage](https://argoproj.github.io/cd/) | [Alternative Homepage](https://argo-cd.readthedocs.io/en/stable/) | [Argo CD Example Apps](https://github.com/Scope-Infrastructure-Calismalari/argocd-example-apps)
 
@@ -152,3 +157,7 @@ One of the things that makes Argo CD give us a big advantage is that it actually
 If we look at the big picture, we actually have our Git repo on one side, the K8s cluster on the other, and Argo CD in the middle of the two. Git repo indicates **desired state** here, K8s cluster **actually running state**. Argo CD is responsible for making sure that these two are synchronized. In case of separation/difference between the two, it updates at the first opportunity.
 
 <p align="center"><img src="images/Argo-CD/image-16.png"></p>
+
+---
+#### Previous Chapter: [08 - GitOps](ch08-gitops.md) | Next Chapter: [10 - Argo CD - Installation to Local Machine](ch10-argocd-installation-to-local-machine.md) | Return to [Main Page](README.md)
+---

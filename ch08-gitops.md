@@ -1,5 +1,8 @@
 # GitOps
 
+#### Previous Chapter: [07 - CD Tools](ch07-cd-tools.md) | Next Chapter: [09 - Argo CD - Introduction](ch09-argocd-introduction.md) | Return to [Main Page](README.md)
+---
+
 ## What is GitOps?
 
 Short explanation of GitOps is **"Inftastructue as code, done right"**.
@@ -134,3 +137,7 @@ So as a result; we have
 <p align="center"><img src="images/GitOps/image-16.png"></p>
 
 To summarize, GitOps is an **Infrastructure as Code** with **Version Control**, **Pull/Merge Requests** and **CI/CD Pipeline**.
+
+---
+#### Previous Chapter: [07 - CD Tools](ch07-cd-tools.md) | Next Chapter: [09 - Argo CD - Introduction](ch09-argocd-introduction.md) | Return to [Main Page](README.md)
+---
