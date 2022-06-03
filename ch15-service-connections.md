@@ -1,6 +1,6 @@
 # Service Connections
 
-#### Previous Chapter: [12 - Argo CD - Installation to K8s Cluster](ch12-argo-cd-installation-to-k8s-cluster.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [14 - Argo CD - Installation to K8s Cluster](ch14-argo-cd-installation-to-k8s-cluster.md) | Return to [Main Page](README.md)
 ---
 
 ## SonarQube - Azure DevOps Integration
@@ -222,5 +222,5 @@ SonarQube can also report your Quality Gate status to Azure DevOps pull requests
 [Linking issues](https://docs.sonarqube.org/latest/analysis/azuredevops-integration/#)
 
 ---
-#### Previous Chapter: [12 - Argo CD - Installation to K8s Cluster](ch12-argo-cd-installation-to-k8s-cluster.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [14 - Argo CD - Installation to K8s Cluster](ch14-argo-cd-installation-to-k8s-cluster.md) | Return to [Main Page](README.md)
 ---
