@@ -1,6 +1,6 @@
 # GitOps
 
-#### Previous Chapter: [07 - CD Tools](ch07-cd-tools.md) | Next Chapter: [09 - Argo CD - Introduction](ch09-argocd-introduction.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [09 - Comparisons of CD Tools](ch09-comparisons-of-cd-tools.md) | Next Chapter: [11 - Argo CD - Introduction](ch11-argocd-introduction.md) | Return to [Main Page](README.md)
 ---
 
 ## What is GitOps?
@@ -19,7 +19,7 @@ Other "... as code" approaches are:
 - Configuration as Code
 - Security as Code
 
-For example, instead of manually creating servers and network and all the configuration around it on cloud service i.e., AWS and creating Kubernetes(k8s) cluster with certain components we define all of these in a Terraform code or Ansible code and k8s manifest files and we have a bunch of yaml files or other definition files that descirebe our infra our platform and şts configuration"
+For example, instead of manually creating servers and network and all the configuration around it on cloud service i.e., AWS and creating Kubernetes(k8s) cluster with certain components we define all of these in a Terraform code or Ansible code and k8s manifest files and we have a bunch of yaml files or other definition files that descirebe our infra our platform and its configuration"
 
 ## Using IaC the Wrong Way
 
@@ -139,5 +139,5 @@ So as a result; we have
 To summarize, GitOps is an **Infrastructure as Code** with **Version Control**, **Pull/Merge Requests** and **CI/CD Pipeline**.
 
 ---
-#### Previous Chapter: [07 - CD Tools](ch07-cd-tools.md) | Next Chapter: [09 - Argo CD - Introduction](ch09-argocd-introduction.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [09 - Comparisons of CD Tools](ch09-comparisons-of-cd-tools.md) | Next Chapter: [11 - Argo CD - Introduction](ch11-argocd-introduction.md) | Return to [Main Page](README.md)
 ---

@@ -1,6 +1,6 @@
 # Argo CD - Introduction
 
-#### Previous Chapter: [08 - GitOps](ch08-gitops.md) | Next Chapter: [10 - Argo CD - Installation to Local Machine](ch10-argocd-installation-to-local-machine.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [10 - GitOps](ch10-gitops.md) | Next Chapter: [12 - Argo CD - Installation to Local Machine](ch12-argocd-installation-to-local-machine.md) | Return to [Main Page](README.md)
 ---
 
 ## Argo CD
@@ -76,7 +76,7 @@ So how can we do this:
 
   2. We connect the Argo CD to the Git repo that we want it to follow and make it follow the changes in that repo instantly.
 
-  3. Bu repo'da herhangi bir değişiklik olduğunda K8s cluster'ına kurduğumuz ve bu repo'yu takip etmesini söylediğimiz Argo CD uygulaması bu değişikliği kendiliğinden algılayacak ve bunu otomatik olarak K8s cluster'ına çekecektır.
+  3. When there is a change in this repo, the Argo CD application that we install in the K8s cluster and tell it to follow this repo will automatically detect this change and automatically pull it into the K8s cluster.
 
 When we look at the process from the beginning, we can summarize it as follows:
 
@@ -159,5 +159,5 @@ If we look at the big picture, we actually have our Git repo on one side, the K8
 <p align="center"><img src="images/Argo-CD/image-16.png"></p>
 
 ---
-#### Previous Chapter: [08 - GitOps](ch08-gitops.md) | Next Chapter: [10 - Argo CD - Installation to Local Machine](ch10-argocd-installation-to-local-machine.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [10 - GitOps](ch10-gitops.md) | Next Chapter: [12 - Argo CD - Installation to Local Machine](ch12-argocd-installation-to-local-machine.md) | Return to [Main Page](README.md)
 ---

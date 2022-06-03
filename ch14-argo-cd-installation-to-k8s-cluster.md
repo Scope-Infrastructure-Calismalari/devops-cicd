@@ -1,6 +1,6 @@
 # Argo CD - Installation to K8s Cluster
 
-#### Previous Chapter: [11 - Argo CD - Sample Project](ch11-argocd-sample-project.md) | Next Chapter: [13 - Service Connections](ch13-service-connections.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [13 - Argo CD - Sample Project](ch13-argocd-sample-project.md) | Next Chapter: [15 - Service Connections](ch15-service-connections.md) | Return to [Main Page](README.md)
 ---
 
 ## Under this heading, how to install Argo CD to K8s cluster will be explained. Here are the steps
@@ -86,5 +86,5 @@ You can access the application by entering this password on the screen.
 <p align="center"><img src="images/Argo-CD/image-56.png"></p>
 
 ---
-#### Previous Chapter: [11 - Argo CD - Sample Project](ch11-argocd-sample-project.md) | Next Chapter: [13 - Service Connections](ch13-service-connections.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [13 - Argo CD - Sample Project](ch13-argocd-sample-project.md) | Next Chapter: [15 - Service Connections](ch15-service-connections.md) | Return to [Main Page](README.md)
 ---

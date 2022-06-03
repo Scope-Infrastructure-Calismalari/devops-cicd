@@ -1,6 +1,6 @@
 # Argo CD - Installation to Local Machine
 
-#### Previous Chapter: [09 - Argo CD - Introduction](ch09-argocd-introduction.md) | Next Chapter: [11 - Argo CD - Sample Project](ch11-argocd-sample-project.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [11 - Argo CD - Introduction](ch11-argocd-introduction.md) | Next Chapter: [13 - Argo CD - Sample Project](ch13-argocd-sample-project.md) | Return to [Main Page](README.md)
 ---
 
 *Note: This application is installed on Ubuntu 20.04 LTS installed on the PC. Some steps/commands will vary for different operating systems, but the main logic/skeleton of the installation is as described here. You can also access the installation steps from Argo CD's [Getting Started](https://argo-cd.readthedocs.io/en/stable/getting_started/) link.*
@@ -153,5 +153,5 @@ Installation steps:
     8. Congratulations. You have successfully completed the installation process. In the next step, we will fill this empty screen with applications and animate it a little :)
 
 ---
-#### Previous Chapter: [09 - Argo CD - Introduction](ch09-argocd-introduction.md) | Next Chapter: [11 - Argo CD - Sample Project](ch11-argocd-sample-project.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [11 - Argo CD - Introduction](ch11-argocd-introduction.md) | Next Chapter: [13 - Argo CD - Sample Project](ch13-argocd-sample-project.md) | Return to [Main Page](README.md)
 ---
