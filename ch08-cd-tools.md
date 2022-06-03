@@ -3,7 +3,13 @@
 #### Previous Chapter: [07 - Comparisons of CI Tools](ch07-comparisons-of-ci-tools.md) | Next Chapter: [09 - Comparisons of CD Tools](ch09-comparisons-of-cd-tools.md) | Return to [Main Page](README.md)
 ---
 
-## 1 - Argo CD
+In this document, you can find:
+
+- [1. Argo CD](#1-argo-cd)
+- [2. Flux CD](#2-flux-cd)
+- [3. Jenkins X](#3-jenkins-x)
+
+## 1. Argo CD
 
 [GitHub Homepage](https://argoproj.github.io/cd/) | [Alternative Homepage](https://argo-cd.readthedocs.io/en/stable/)
 
@@ -13,7 +19,7 @@ Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. It fol
 
 **Giving info about Argo CD in here is curtailed. Detailed documentation, setup instractions and examples can be found [here](Argo-CD.md).**
 
-## 2 - Flux CD
+## 2. Flux CD
 
 [Homepage](https://fluxcd.io/) | [Flux Documentation](https://fluxcd.io/docs/) | [Use Cases](https://fluxcd.io/docs/use-cases/) | [Installation](https://fluxcd.io/docs/installation/) | [GitHub](https://github.com/fluxcd/flux)
 
@@ -72,7 +78,7 @@ Flux is a CNCF Incubating project and was categorised as "Adopt" on the [CNCF CI
 Flux has a lovely community that is very easy to work with!
 We welcome contributors of any kind. The components of Flux are on Kubernetes core controller-runtime, so anyone can contribute and its functionality can be extended very easily.
 
-## Jenkins X
+## 3. Jenkins X
 
 [Homepage](https://jenkins-x.io/) | [Get Started](https://jenkins-x.io/v3/) | [What is Jenkins X?](https://jenkins-x.io/v3/about/what/) | [How it works](https://jenkins-x.io/v3/about/how-it-works/) | [Creating projects](https://jenkins-x.io/v3/develop/create-project/)
 

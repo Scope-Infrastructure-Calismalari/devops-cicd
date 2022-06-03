@@ -206,7 +206,7 @@ For example, update the line *"scopeinfra/argocd-app:1.0"* in the *image* line u
 
 After this change, Argo CD needs to detect this change and change the application we deploy. We can wait for 3 minutes for this, or we can trigger the synchronization manually by pressing the "Sync" button on the Argo CD application page.
 
-After triggering, a new *replica set (rs)* will be created and two new pods will be connected to it. These new pods will stand up with the **1.2** version of the scopeinfra/argocd-app Dcoker image as we set with the deployment.yaml in the Git repo, and the other two pods using the old image tag will be removed. it has been observed that the rs to which it is attached is not deleted, the reason should be investigated and its deletion adjusted).
+After triggering, a new *replica set (rs)* will be created and two new pods will be connected to it. These new pods will stand up with the **1.2** version of the scopeinfra/argocd-app Docker image as we set with the deployment.yaml in the Git repo, and the other two pods using the old image tag will be removed. it has been observed that the rs to which it is attached is not deleted, the reason should be investigated and its deletion adjusted).
 
 With the command
 

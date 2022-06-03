@@ -3,21 +3,30 @@
 #### Previous Chapter: [10 - GitOps](ch10-gitops.md) | Next Chapter: [12 - Argo CD - Installation to Local Machine](ch12-argocd-installation-to-local-machine.md) | Return to [Main Page](README.md)
 ---
 
-## Argo CD
+In this document, you can find:
 
-[GitHub Homepage](https://argoproj.github.io/cd/) | [Alternative Homepage](https://argo-cd.readthedocs.io/en/stable/) | [Argo CD Example Apps](https://github.com/Scope-Infrastructure-Calismalari/argocd-example-apps)
-
-*"Argo CD is a declerative, **GitOps** continuous delivery tool for Kubernetes."*
-
-**Attention! Before reading what GitOps tool Argo CD is, if you don't know what GitOps is, we ask you to read our [GitOps article](GitOps.md) first, then this article will be more understandable.**
-
-We can see an example of Argo CD architecture, which will be explained in more detail later in the article, in the image below. After reading the GitOps article, we should have been able to immediately understand why the phrase "GitHub Repo" is included in the architecture and should be included.
+- [What is Argo CD?](#what-is-argo-cd)
+- [Why Argo CD?](#why-argo-cd)
+- [How CD is used in many projects?](#how-cd-is-used-in-many-projects)
+- [Executing the CD Process with Argo CD](#executing-the-cd-process-with-argo-cd)
+- [Benefits](#benefits)
+- [Recovering the Cluster](#recovering-the-cluster)
+- [Access Control of K8s with Git](#access-control-of-k8s-with-git)
+- [Argo CD as K8s Add-on](#argo-cd-as-k8s-add-on)
 
 ## What is Argo CD?
 
-As the name suggests, Argo CD is actually a **C**ontinuous **D**elivery (Continuous Delivery) tool. Before we understand Argo CD, we will understand how CD is added and applied to projects.
+Argo CD is a declerative, **GitOps** CD tool for Kubernetes.
 
-### Birçok projede CD nasıl kullanılmaktadır?
+**Attention!** Before reading what is Argo CD, if you don't know what GitOps is, you should read our [GitOps article](ch10-gitops.md) first, then this article will be more understandable. After reading the GitOps article, you should have been able to immediately understand why the phrase "GitHub Repo" is included in the architecture and should be included.
+
+## Why Argo CD?
+
+Application definitions, configurations, and environments should be declarative and version controlled. Application deployment and lifecycle management should be automated, auditable, and easy to understand.
+
+Before we understand Argo CD, we need to understand how CD is added and applied to projects.
+
+## How CD is used in many projects?
 
 Let's imagine that we have many microservices like the one on the left of the images below and we move them to the Kubernetes(K8s) cluster as in the right image.
 
@@ -64,9 +73,9 @@ While all the steps up to pushing the Docker image to Docker Repo create the CI 
 
 Considering these special cases, Argo CD was developed on the basis of GitOps principles so that K8s clusters can be *"delivery"* more effectively. We can say **CD for Kubernetes** for Argo CD.
 
-### Executing the CD Process with Argo CD
+## Executing the CD Process with Argo CD
 
-First of all, instead of being a tool that accesses the K8s cluster from outside, like Argo CD, Jenkins, it is an application installed and running in this cluster. So Argo CD is part of the K8s cluster.
+First of all, instead of being a tool that accesses the K8s cluster from outside, like Jenkins, it is an application installed and running in this cluster. So Argo CD is part of the K8s cluster.
 
 The biggest advantage of having a K8s cluster built in this way is: **Pulls changes like Jenkins instead of pushing them to K8s**. Since it is already in the K8s cluster, it actually pulls the change in the modified K8s manifest file in the Git repo outside and forwards this new file to the K8s cluster.
 
@@ -114,7 +123,7 @@ Using the Git repo as a "Single Source of Truth" also ensures that the K8s clust
 
 In cases where the cluster needs to be updated very quickly, the automatic synchronization of Argo CD can be turned off and made open to manual changes and in case of manual change, a signal/warning can be sent to the outside and this change is provided to be made in the code.
 
-### Benefits
+## Benefits
 
 - All K8s config files are defined as code and kept in Git repo
 
@@ -124,7 +133,7 @@ In cases where the cluster needs to be updated very quickly, the automatic synch
 
 - **The biggest benefit is -> "Single Source of Truth"**. If a team member connects to the K8s cluster from their own computer and makes a change (such as increasing the number of replicas of an application from 1 to 2), it compares the instant status with the definitions in the files in the Git repo containing Argo CD configurations. accordingly it will notice the manual change and undo it.
 
-### Recovering the Cluster
+## Recovering the Cluster
 
 <p align="center"><img src="images/Argo-CD/image-12.png"></p>
 
@@ -132,7 +141,7 @@ Having the source codes of the applications we developed in the Git repo saves t
 
 Actually, this is not something that Argo CD brings, it is one of the benefits of GitOps. Argo CD helps us implement GitOps principles.
 
-### Access Control of K8s with Git
+## Access Control of K8s with Git
 
 <p align="center"><img src="images/Argo-CD/image-13.png"></p>
 
@@ -148,7 +157,7 @@ We will also apply this to "non-human users". For example, build automation tool
 
 <p align="center"><img src="images/Argo-CD/image-15.png"></p>
 
-### Argo CD as K8s Add-on
+## Argo CD as K8s Add-on
 
 Argo CD is not just an application deployed to the K8s cluster, if it were, there would be no difference since Jenkins could be deployed in the same way. What differentiates Argo CD here is that it is actually an extension of the K8s API. In fact, Argo CD adds and enriches the functions of the K8s, rather than rebuilding things, reintroducing all the functions. It also uses the functions of K8s to do its own operations, for example it uses *"etcd"* to store data.
 

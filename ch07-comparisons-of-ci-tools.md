@@ -3,7 +3,15 @@
 #### Previous Chapter: [06 - CI Tools](ch06-ci-tools.md) | Next Chapter: [08 - CD Tools](ch08-cd-tools.md) | Return to [Main Page](README.md)
 ---
 
-## Azure Pipeline vs Jenkins
+In this document, you can find:
+
+- [Azure DevOps Pipelines vs Jenkins](#azure-devops-pipelines-vs-jenkins)
+- [Azure DevOps Pipelines vs Travis CI](#azure-devops-pipelines-vs-travis-ci)
+- [Purpose Driven Tools, CircleCI vs Travis CI](#purpose-driven-tools-circleci-vs-travis-ci)
+- [CSP tools-Azure Pipelines, Google Cloud Build, and AWS CodePipeline](#csp-tools-azure-pipelines-google-cloud-build-and-aws-codepipeline)
+- [Comparing purpose-driven tools to CSP tools](#comparing-purpose-driven-tools-to-csp-tools)
+
+## Azure DevOps Pipelines vs Jenkins
 
 Developers describe **Azure DevOps** as "Services for teams to share code, track work, and ship software". Azure DevOps provides unlimited private Git hosting, cloud build for continuous integration, agile planning, and release management for continuous delivery to the cloud and on-premises. Includes broad IDE support. On the other hand, **Jenkins** is detailed as "An extendable open source continuous integration server". In a nutshell Jenkins CI is the leading open-source continuous integration server. Built with Java, it provides over 300 plugins to support building and testing virtually any project.
 
@@ -27,7 +35,7 @@ Jenkins is an open source tool with **13.3K** GitHub stars and **5.48K** GitHub 
 
 **Facebook**, **Netflix**, and **Instacart** are some of the popular companies that use Jenkins, whereas Azure DevOps is used by **Schlumberger**, **Poq**, and **simplement-e**. Jenkins has a broader approval, being mentioned in **1775** company stacks & **1529** developers stacks; compared to Azure DevOps, which is listed in **79** company stacks and **68** developer stacks.
 
-## Azure Pipelines vs Travis CI: What are the differences?
+## Azure DevOps Pipelines vs Travis CI
 
 **Azure Pipelines**: Continuously build, test, and deploy to any platform and cloud. Fast builds with parallel jobs and test execution. Use container jobs to create consistent and reliable builds with the exact tools you need. Create new containers with ease and push them to any registry;
 **Travis CI**: A hosted continuous integration service for open source and private projects. Free for open source projects, our CI environment provides multiple runtimes (e.g. Node.js or PHP versions), data stores and so on. Because of this, hosting your project on travis-ci.com means you can effortlessly test your library or applications against multiple runtimes and data stores without even having all of them installed locally.
@@ -48,7 +56,7 @@ On the other hand, Travis CI provides the following key features:
 
 **Lyft**, **Heroku**, and **Rainist** are some of the popular companies that use Travis CI, whereas Azure Pipelines is used by **CodeCarrot**, **HTML/CSS to Image**, and **Planetarium**. Travis CI has a broader approval, being mentioned in **670** company stacks & **625** developers stacks; compared to Azure Pipelines, which is listed in **7** company stacks and **8** developer stacks.
 
-## Purpose-driven tools: CircleCI and Travis CI
+## Purpose Driven Tools, CircleCI vs Travis CI
 
 CircleCI and Travis CI are both heavyweights in the CI/CD tool arena. Each of these tools have unique capabilities and cater to slightly different audiences.
 
@@ -80,11 +88,11 @@ The CircleCI config.yml file can contain multiple jobs with whatever steps (comm
 
 On the other hand, the Travis CI travis.yml file is much more structured. You specify a build language at the top of the YAML file. Each build language has a well-defined job lifecycle, with named phases and logical default steps (commands) if you don’t explicitly specify any steps.
 
-# CSP tools: Azure Pipelines, Google Cloud Build, and AWS CodePipeline
+## CSP tools-Azure Pipelines, Google Cloud Build, and AWS CodePipeline
 
 Now let’s take a look at the tools from the three big cloud service providers. It should come as no surprise that each of these tools is tightly integrated into its respective cloud platform.
 
-## Azure Pipelines
+### Azure Pipelines
 
 <p align="center"><img src="images/CI-toolsets/image-35.png"></p>
 
@@ -96,7 +104,7 @@ Azure pipelines are extremely flexible with respect to where builds can run. A p
 
 Build agents can be Microsoft-hosted or self-hosted. Builds can run directly on the build agent or in a container spun up on the build agent, and the entire Azure Pipelines product itself can be run on-premises using a self-hosted option.
 
-## Google Cloud Build
+### Google Cloud Build
 
 <p align="center"><img src="images/CI-toolsets/image-36.png"></p>
 
@@ -108,7 +116,7 @@ Google Cloud Build is primarily focused on continuous integration. If you want t
 
 The Google Cloud SDK (CLI) can be used to trigger builds remotely or even run builds locally for testing and debugging purposes.
 
-## AWS CodePipeline
+### AWS CodePipeline
 
 <p align="center"><img src="images/CI-toolsets/image-37.png"></p>
 
@@ -120,9 +128,9 @@ In AWS CodePipeline, builds run within containers. There are three Amazon-manage
 
 Given the componentized nature of AWS CodePipeline, you are free to use other CI or CD tools as part of your pipeline instead of CodeBuild or CodeDeploy. For example, if you prefer the Travis CI experience, there are instructions readily available to set up a Travis CI instance in AWS and integrate it with your pipeline.
 
-# Comparing purpose-driven tools to CSP tools
+## Comparing purpose-driven tools to CSP tools
 
-## How does the pipeline setup experience compare between tools?
+### How does the pipeline setup experience compare between tools?
 
 Each of the tools in this article offers different ways to get a new CI/CD pipeline set up, including hand-coding a YAML file or running through a visual web-based wizard. If you are not familiar with each tool’s YAML syntax, the visual wizard can be very helpful.
 
@@ -142,11 +150,11 @@ Unfortunately, only Azure Pipelines provides out-of-the-box email notifications 
 
 For a fast and easy pipeline setup process, CircleCI wins with its nice YAML configuration generator that lessens the up-front research required to produce a pipeline YAML file. For a thorough, developer-friendly pipeline setup process that gives you the opportunity to design your pipeline up front, Azure Pipelines wins.
 
-## How scalable is the tool as your organization grows?
+### How scalable is the tool as your organization grows?
 
 Scalability in the context of CI/CD tools is measured by more than just infrastructure scalability. Let’s take a look at a few scalability factors for growing organizations.
 
-### User management
+#### User management
 
 As your organization onboards more users, you need to be able to quickly provision those users, organize them into teams, and restrict access where necessary.
 
@@ -162,7 +170,7 @@ AWS CodePipeline has fine-grained user-level access controls, integration with A
 
 AWS CodePipeline edges out the competition with its robust access controls and tools for analyzing access. Azure Pipelines (and Azure DevOps) comes in a close second.
 
-### Infrastructure
+#### Infrastructure
 
 As your organization develops more applications on a growing variety of platforms, you need scalable infrastructure behind the scenes to run your builds and run more pipelines concurrently.
 
@@ -176,7 +184,7 @@ AWS CodePipeline is very similar to Azure Pipelines, except that there is an art
 
 Azure DevOps wins the infrastructure scalability battle given its virtually limitless capacity, pipeline concurrency, and ability to host build agents directly in Azure or on-premises.
 
-### Cost
+#### Cost
 
 Cost is a very important consideration when the size of your development teams and number of pipelines grows unpredictably.
 
@@ -192,7 +200,7 @@ The usage-based pricing models offered by AWS CodePipeline and Google Cloud Buil
 
 Azure Pipelines has a slight edge given the flexibility to scale your pipeline concurrency up and down in order to manage costs. You could scale down the number of concurrent pipelines to save some money at the cost of potentially slowing down teams during peak usage periods.
 
-### On-premises or regional requirements
+#### On-premises or regional requirements
 
 Your organization may have regulatory requirements or other needs for international or on-premises CI/CD servers. Almost all of the tools provide an on-premises solution, with the exception of Google Cloud Build.
 
@@ -202,7 +210,7 @@ Azure Pipelines and AWS CodePipeline allow you to choose the location of your bu
 
 With the exception of Google Cloud Build, all the tools we’ve reviewed should be able to meet your organization’s on-premises and/or regional requirements.
 
-### How flexible and extensible is the tool?
+#### How flexible and extensible is the tool?
 
 Your applications and their CI/CD pipelines will evolve and become more complex over time — you may need to introduce new custom steps into your pipeline, for example. Regardless, you’ll want your CI/CD tools to allow you to set up the pipeline in a way that suits your operations. Let’s take a closer look at how flexible and extensible these tools are.
 
@@ -220,7 +228,7 @@ Google Cloud Build relies completely on integrating with a variety of third-part
 
 Azure Pipelines wins the flexibility and extensibility award due to its extension marketplace, splitting and sharing of configuration across pipelines, and robust REST API.
 
-### Should you be concerned with vendor lock-in?
+#### Should you be concerned with vendor lock-in?
 
 You will always feel a little bit locked in with any CI/CD tool you use, given the proprietary YAML syntax and unique capabilities that are not necessarily available on all tools. That being said, some of these tools definitely make you feel a little less tied down.
 
@@ -234,19 +242,13 @@ AWS CodePipeline gives the greatest feeling of vendor lock-in. While setting up 
 
 If CircleCI or Travis CI offers the capabilities and scale that your organization requires, it is likely a safer bet to start with them. If your organization is already using Azure, AWS, or Google Cloud, it likely makes more sense to leverage their respective CI/CD tools due to the tight integration and plethora of docs and support available — at the risk of feeling further locked in, of course.
 
-## Why might you want to use CSP tools instead of purpose-driven tools?
+### Why might you want to use CSP tools instead of purpose-driven tools?
 
 I have already explored a few reasons why you might want to use cloud service provider tools over purpose-driven tools, but let’s summarize a few of them:
 
 - It is hard to beat the level of documentation and support you will get from setting up a CI/CD pipeline with a CSP if you already deploy your applications to that same provider’s cloud
 - If your organization doesn’t want to manage its own CI/CD infrastructure but you also have requirements for running your builds and storing your code in specific regions, then Azure Pipelines and AWS CodePipeline are the best choices
 - If you require fine-grained access controls, advanced user and group management capabilities, and integration with internal user directories, again, Azure Pipelines and AWS CodePipeline are the best choices
-
-## Final thoughts
-
-CircleCI and Travis CI have highly capable, easy-to-use hosted and self-hosted tools that work well for individual users, small to large organizations, and open-source communities. It is clear that the big cloud service providers, with their deep pockets, massive infrastructure, and large customer bases, are starting to produce attractive CI/CD tools that are surely capable of stealing a slice of the market share.
-
-Out of all these tools, I will be watching Azure Pipelines (and Azure DevOps) most closely. Azure Pipelines already has a good base set of capabilities and is poised to grow quickly and expand its integrations with third-party tools. The future of continuous integration and continuous deployment is exciting!
 
 ---
 #### Previous Chapter: [06 - CI Tools](ch06-ci-tools.md) | Next Chapter: [08 - CD Tools](ch08-cd-tools.md) | Return to [Main Page](README.md)

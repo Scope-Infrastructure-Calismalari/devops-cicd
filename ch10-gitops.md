@@ -3,9 +3,20 @@
 #### Previous Chapter: [09 - Comparisons of CD Tools](ch09-comparisons-of-cd-tools.md) | Next Chapter: [11 - Argo CD - Introduction](ch11-argocd-introduction.md) | Return to [Main Page](README.md)
 ---
 
+In this document, you can find:
+
+- [What is GitOps?](#what-is-gitops)
+- [Using IaC the Wrong Way](#using-iac-the-wrong-way)
+- [Solution for IaC](#solution-for-iac)
+- [Push based vs Pull based Deployment Models for CD Pipelines](#push-based-vs-pull-based-deployment-models-for-cd-pipelines)
+- [Easy Rollback](#easy-rollback)
+- [Single Source of Truth](#single-source-of-truth)
+- [Increasing Security](#increasing-security)
+- [Wrap Up](#wrap-up)
+
 ## What is GitOps?
 
-Short explanation of GitOps is **"Inftastructue as code, done right"**.
+Short explanation of GitOps is **"Inftastructue as code(IaC), done right"**.
 
 Inftastructue as code means defining the infrastructure as code instead of creating it manually.
 
@@ -37,12 +48,12 @@ As old fashion way, we can write the files and test them in locally and store th
 
 Also when we commit our changes infras's code changes into the repository, no automated tests are running to test these code changes. Maybe we committed **invalid YAML files** or we made a typo and the attribute names are wrong or maybe the code changed will break something in the infrastructure or the application environment.
 
-## Solution
+## Solution for IaC
 
 We need to use GitOps Flow for IaC approach.
 
 <p align="center"><img src="images/GitOps/image-1.png"></p>
-<h4 align="center">GitOps Flow<br><br></h1>
+<h4 align="center">GitOps Flow</h1>
 
 ### Steps
 
@@ -55,7 +66,17 @@ We need to use GitOps Flow for IaC approach.
 
  So we have an automated process which is more transparent and produces high quality infra or config code where multiple person collaborate on the change and things get tested. Rather than one engineer doing all the stuff from their laptop manually that others do not see or cannot review.
 
-## CD Pipeline: Push-based vs Pull-based Deployment Models
+## Push-based vs Pull-based Deployment Models for CD Pipelines
+
+There are two different approaches how a CI/CD pipeline can implement the changes you want to make:
+
+- **Push-based**
+  
+  The pipeline is started and runs tools that make the changes in the platform. Changes can be triggered by a commit or merge request.
+    
+- **Pull-based**
+  
+  An agent watches the git repository for changes and compares the definition in the repository with the actual running state. If changes are detected, the agent applies the changes to the infrastructure.
 
 As we see in GitOps Flow, once merged into the main branch, the changes will be automatically applied to the infrastructure through a CD pipeline. In GitOps, we have two ways of applying these changes; these are push or pull based deployments.
 
@@ -97,7 +118,7 @@ Examples of GitOps tools that work with the pull-based model are Flux CD and Arg
 
 When we have version control for our code and the changes in our repository are automatically synced to the environment, we can easily rollback the environment to any previous state in our code. I gives us another big advantage, for example, if we make changes that break sth in the environment, so our cluster does not work anymore, we can just do git revert to undo the latest changes and get the environment back to the last working state.
 
-## Git - Single Source of Truth
+## Single Source of Truth
 
 <p align="center"><img src="images/GitOps/image-9.png"></p>
 
@@ -113,7 +134,7 @@ This means that Git repository becomes the single source of truth for your envir
 
 <p align="center"><img src="images/GitOps/image-12.png"></p>
 
-## Git - Increasing Security
+## Increasing Security
 
 GitOps also increases the security because now we do not have to give everyone in the team who needs to change sth on the infra or in k8s cluster direct access to it to execute the changes
 
