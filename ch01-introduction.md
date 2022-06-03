@@ -48,14 +48,14 @@ Here are key differences between development using CI or without CI.
 | Infrequent commits             | Regular commits |
 | Infrequent and slow releases   | Regular working releases |
 | Difficult integration          | Easy and Effective Integration |
-| Testing happens late           | Continuous Integration testing happens early and often. |
+| Testing happens late           | CI testing happens early and often. |
 | Issue raised are harder to fix | Find and fix problems faster and more efficiently. |
 | Poor project visibility        | Better project visibility |
 
 ## Difference between Compilation and Continuous Integration
 
-<p align="center"><img src="images/CI-surecleri/image-4.png" alt="Activities in Continuous Integration"></p>
-<h4 align="center">Activities in Continuous Integration</h4>
+<p align="center"><img src="images/CI-surecleri/image-4.png" alt="Activities in CI"></p>
+<h4 align="center">Activities in CI</h4>
 
 While compilation only compiles a code, CI does the following activities:
 
@@ -72,7 +72,7 @@ While compilation only compiles a code, CI does the following activities:
 ### Automated Deployment
 
 - Allows you to release product anytime
-- Continually demo-able state and it is works on any machine
+- Continually demo-able state and it works on any machine
 
 ### Document generation
 
@@ -97,7 +97,7 @@ Compilation is the process the computer takes to convert a high-level programmin
 - Ideally, the build should come from the command line and should not depend on IDE.
 - The build should happen continuously using a dedicated Cl server, not a cron job.
 - CI built should be triggered on every check-in and not just at midnight
-- The build should provide immediate feedback and Require no developer effort•
+- The build should provide immediate feedback and Require no developer effort
 - Identify key metrics and track them visually. More importantly, act on them immediately
 
 ## What do you need to conduct CI process?
@@ -109,30 +109,30 @@ Here, are the key elements which you need to perfom the entire CI process:
 - **Version Control System (VCS):** It offers a reliable method to centralize and preserve changes made to your project over time.
 - **Virtual Machine:** You should have a spare server or at least one virtual machine to build your system.
 - **Hosted CI Tool Solutions:** To avoid servers or virtual machines, you should go for hosted CI tool solutions. This tool helps in the maintenance of the whole process and offers easier scalability.
-- **Tools:** If you select a self-hosted variant, you will need to install one of the many CI tools like Jenkins, TeamCity, Bamboo, GitLab, etc.
+- **CI Tools:** If you select a self-hosted variant, you will need to install one of the many CI tools like Jenkins, TeamCity, Bamboo, GitLab, etc.
 
-## How Continuous integration work?
+## How CI work?
 
-<p align="center"><img src="images/CI-surecleri/image-7.png" alt="Example of Continuous Integration"></p>
-<h4 align="center">Example of Continuous Integration</h4>
+<p align="center"><img src="images/CI-surecleri/image-7.png" alt="Example of CI"></p>
+<h4 align="center">Example of CI</h4>
 
 You are surely aware of the old phone Nokia. Nokia used to implement a procedure called nightly build. After multiple commits from diverse developers during the day, the software built every night. Since the software was built only once in a day, it's a huge pain to isolate, identify, and fix the errors in a large codebase.
 
-Later, they adopted the Continuous Integration approach. The software was built and tested as soon as a developer committed code. If any error is detected, the respective developer can quickly fix the defect.
+Later, they adopted the CI approach. The software was built and tested as soon as a developer committed code. If any error is detected, the respective developer can quickly fix the defect.
 
 ## Features of CI
 
-Here, are important features and benefits of Continuous Integration:
+Here, are important features and benefits of CI:
 
 - Allows you to maintain just a single source repository
 - You can test the clone of the production CI environment
 - The built environment should be close to the production environment.
-- One of the advantages of continuous integration is Constant availability of a current build
+- One of the advantages of CI is constant availability of a current build
 - The complete process of build and testing and deployment should be visible to all the stack holders.
 
 ## Why Use CI
 
-Here are important reasons for using Continuous Integration:
+Here are important reasons for using CI:
 
 - Helps you to build better quality software
 - CI process helps to scale up headcount and delivery output of engineering teams.
@@ -159,25 +159,25 @@ Here, are some important best practices while implementing
 - Helps you to find out key metrics and track them visually
 - Check-in often and early
 - Stronger source code control
-- Continuous integration is running unit tests whenever you commit code
+- CI is running unit tests whenever you commit code
 - Automate the build and test everyone
 - Keep the build fast with automated deployment
 
 ## Disadvantages of CI
 
-Here, are cons/drawbacks of Continuous Integration process:
+Here, are cons/drawbacks of CI process:
 
-- Initial setup time and training is required to get acquainted with Cl server
+- Initial setup time and training is required to get acquainted with CI server
 - Development of suitable test procedures is essential
-- Well-developed test-suite required many resources for Cl server
+- Well-developed test-suite required many resources for CI server
 - Conversion of familiar processes
 - Requires additional servers and environments
 - Waiting times may occur when multiple developers want to integrate their code around the same time
 
 ## Summary
 
-- Continuous Integration definition: Continuous integration is a software development method where members of the team can integrate their work at least once a day
-- CI/CD meaning combination of Continuous Integration and Continuous Delivery or Continuous Deployment.
+- Continuous Integration definition: CI is a software development method where members of the team can integrate their work at least once a day
+- CI/CD meaning combination of CI and Continuous Delivery or Continuous Deployment.
 - Development without CI creates lots of bugs whereas Development with CI offers Fewer bugs
 - Important activities of Continous Integration are:
 
@@ -188,13 +188,13 @@ Here, are cons/drawbacks of Continuous Integration process:
 - The build should happen continuously using a dedicated Cl server, not a cron job.
 - Important elements of CI are 1) Version Control System 2) Virtual Machine 3) Host CI Tool
 - solutions 4) Tools
-- Continuous Integration system allows you to maintain just a single source repository
+- CI system allows you to maintain just a single source repository
 - CI/CD process helps you to build better quality software
-- The most important best practices of Azure Continuous Integration process is to Commit Early
+- The most important best practices of Azure CI process is to Commit Early
 - and Commit Often never Commit Broken Code
 - The major drawback of the CICD pipeline process is that well-developed test-suite required
 - many resources for Cl server
-- Jenkins, Bambook, and Team City are some useful AWS Continuous Integration tools.
+- Jenkins, Bambook, and Team City are some useful AWS CI tools.
 
 <br>
 <br>
@@ -210,7 +210,7 @@ Continuous deployment (the other possible "CD") can refer to automatically relea
 
 <p align="center"><img src="images/CD-surecleri/image-1.png"></p>
 
-It’s possible for CI/CD to specify just the connected practices of continuous integration and continuous delivery, or it can also mean all 3 connected practices of continuous integration, continuous delivery, and continuous deployment. To make it more complicated, sometimes "continuous delivery" is used in a way that encompasses the processes of continuous deployment as well.
+It’s possible for CI/CD to specify just the connected practices of CI and continuous delivery, or it can also mean all 3 connected practices of CI, continuous delivery, and continuous deployment. To make it more complicated, sometimes "continuous delivery" is used in a way that encompasses the processes of continuous deployment as well.
 
 In the end, it’s probably not worth your time to get bogged down in these semantics—just remember that CI/CD is really a process, often visualized as a pipeline, that involves adding a high degree of ongoing automation and continuous monitoring to app development.
 
