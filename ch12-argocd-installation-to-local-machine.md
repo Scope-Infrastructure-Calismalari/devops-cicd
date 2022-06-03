@@ -86,7 +86,7 @@ Installation steps:
 
         Link for the document describing how to configure Argo CD with ingress: <https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/ingress.md>
 
-**If we have been able to proceed smoothly until this step, when we click on the localhost link, a page like the one below will appear on our screen.**
+**If we have been able to proceed smoothly until this step, when we click on the [localhost link](https://localhost:8080), a page like the one below will appear on our screen.**
 
 <p align="center"><img src="images/Argo-CD/image-17.png"></p>
 
@@ -130,7 +130,7 @@ Installation steps:
 
        deployment.apps/argocd-server restarted
 
-    #### **Argo CD versiyon 2 için:**
+    #### **For Argo CD version 2:**
 
     The password is also automatically created as a secret named *"argocd-initial-admin-secret"*.
   
@@ -142,15 +142,15 @@ Installation steps:
 
     <p align="center"><img src="images/Argo-CD/image-26.png"></p>
 
-    `echo <encoded-password> | base64 --decode` command, we can decode our password and see the output directly on the terminal. The part before the '%' sign is our password, **Be careful not to copy the '%' character!**
+    `echo <encoded-password> | base64 --decode` command, we can decode our password and see the output directly on the terminal. The part before the '%' sign is our password, **Be careful to not to copy the '%' character!**
 
     <p align="center"><img src="images/Argo-CD/image-27.png"></p>
 
-    7. If we were able to pass these stages without any problems, we should be able to access our application again with [localhost:8080](https://localhost:8080) and log in with the password we set and bcrypt. If the login process is successful, the following screen will appear:
+7. If we were able to pass these stages without any problems, we should be able to access our application again with [localhost:8080](https://localhost:8080) and log in with the password we set and bcrypt. If the login process is successful, the following screen will appear:
 
-    <p align="center"><img src="images/Argo-CD/image-19.png"></p>
+<p align="center"><img src="images/Argo-CD/image-19.png"></p>
 
-    8. Congratulations. You have successfully completed the installation process. In the next step, we will fill this empty screen with applications and animate it a little :)
+8. Congratulations. You have successfully completed the installation process. In the next step, we will fill this empty screen with applications and animate it a little :)
 
 ---
 #### Previous Chapter: [11 - Argo CD - Introduction](ch11-argocd-introduction.md) | Next Chapter: [13 - Argo CD - Sample Project](ch13-argocd-sample-project.md) | Return to [Main Page](README.md)
