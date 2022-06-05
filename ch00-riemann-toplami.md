@@ -1,6 +1,6 @@
 # Riemann Toplamı
 
-#### Next Chapter: [01 - Introduction](ch01-introduction.md) | Return to [Main Page](README.md)
+#### Next Chapter: [01 - Introduction to CI](ch01-introduction-to-ci.md) | Return to [Main Page](README.md)
 ---
 
 ## Riemann Toplamı - Konuya felsefik bir yaklaşım
@@ -28,5 +28,5 @@ Tüm bunlar yazılım projelerinin başarıyla tamamlanmasını, projelerin ür�
 Parçalara bölünüp bu şekilde geliştirilen bir projeye sürekli olarak eklemeler yapmak, bir veya birden fazla kişi tarafından yazılmış kodların birleştirilmesi, yeni bir versiyonun başarılı bir şekilde üretilmesi de başlı başına bir iş haline gelmekte çünkü yeni yazılan kodların bütünleştirmeden sonra diğer kodlara zarar vermemesi, tüm kodların hala çalışabilir durumda olması gerekiyor. Bu yüzden *"CI - Continuous Integration - Sürekli Bütünleştirme"* bir ismi ve üzerinde düşünülmeyi hak eden bir süreç haline geliyor.
 
 ---
-#### Next Chapter: [01 - Introduction](ch01-introduction.md) | Return to [Main Page](README.md)
+#### Next Chapter: [01 - Introduction to CI](ch01-introduction-to-ci.md) | Return to [Main Page](README.md)
 ---
