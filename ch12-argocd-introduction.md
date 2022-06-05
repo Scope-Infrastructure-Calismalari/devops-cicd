@@ -1,6 +1,6 @@
 # Argo CD - Introduction
 
-#### Previous Chapter: [10 - GitOps](ch10-gitops.md) | Next Chapter: [12 - Argo CD - Installation to Local Machine](ch12-argocd-installation-to-local-machine.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [11 - GitOps](ch11-gitops.md) | Next Chapter: [13 - Argo CD - Installation to Local Machine](ch13-argocd-installation-to-local-machine.md) | Return to [Main Page](README.md)
 ---
 
 In this document, you can find:
@@ -170,5 +170,5 @@ If we look at the big picture, we actually have our Git repo on one side, the k8
 <p align="center"><img src="images/Argo-CD/image-16.png"></p>
 
 ---
-#### Previous Chapter: [10 - GitOps](ch10-gitops.md) | Next Chapter: [12 - Argo CD - Installation to Local Machine](ch12-argocd-installation-to-local-machine.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [11 - GitOps](ch11-gitops.md) | Next Chapter: [13 - Argo CD - Installation to Local Machine](ch13-argocd-installation-to-local-machine.md) | Return to [Main Page](README.md)
 ---

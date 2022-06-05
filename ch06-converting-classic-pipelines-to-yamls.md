@@ -1,6 +1,6 @@
 # Converting Classic Pipelines to YAMLs
 
-#### Previous Chapter: [04 - Building CI Pipeline In Azure DevOps](ch04-building-ci-pipeline-in-azure-devops.md) | Next Chapter: [06 - CI Tools](ch06-ci-tools.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [05 - Building CI Pipeline In Azure DevOps](ch05-building-ci-pipeline-in-azure-devops.md) | Next Chapter: [07 - CI Tools](ch07-ci-tools.md) | Return to [Main Page](README.md)
 ---
 
 ## How can we convert the classic pipelines to yaml pipelines?
@@ -40,5 +40,5 @@ As we mentioned before, using yaml files to develop our pipelines gives us huge 
     <p align="center"><img src="images/Converting-pipelines/image-7.png"></p>
 
 ---
-#### Previous Chapter: [04 - Building CI Pipeline In Azure DevOps](ch04-building-ci-pipeline-in-azure-devops.md) | Next Chapter: [06 - CI Tools](ch06-ci-tools.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [05 - Building CI Pipeline In Azure DevOps](ch05-building-ci-pipeline-in-azure-devops.md) | Next Chapter: [07 - CI Tools](ch07-ci-tools.md) | Return to [Main Page](README.md)
 ---

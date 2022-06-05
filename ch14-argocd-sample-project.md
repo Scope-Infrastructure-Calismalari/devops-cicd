@@ -1,6 +1,6 @@
 # Argo CD - Sample Project
 
-#### Previous Chapter: [12 - Argo CD - Installation to Local Machine](ch12-argocd-installation-to-local-machine.md) | Next Chapter: [14 - Argo CD - Installation to K8s Cluster](ch14-argo-cd-installation-to-k8s-cluster.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [13 - Argo CD - Installation to Local Machine](ch13-argocd-installation-to-local-machine.md) | Next Chapter: [15 - Argo CD - Installation to K8s Cluster](ch15-argo-cd-installation-to-k8s-cluster.md) | Return to [Main Page](README.md)
 ---
 
 ## *In this example we will see how to install and run the fully automated CD pipeline with the Argo CD application for K8s configuration changes*
@@ -215,5 +215,5 @@ With the command
 we can edit the deployment information, increase the number of replicas from 2 to 4. This manual change we make will be reversed or overwritten as a result of synchronization, and the number of replicas will be 2 again.
 
 ---
-#### Previous Chapter: [12 - Argo CD - Installation to Local Machine](ch12-argocd-installation-to-local-machine.md) | Next Chapter: [14 - Argo CD - Installation to K8s Cluster](ch14-argo-cd-installation-to-k8s-cluster.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [13 - Argo CD - Installation to Local Machine](ch13-argocd-installation-to-local-machine.md) | Next Chapter: [15 - Argo CD - Installation to K8s Cluster](ch15-argo-cd-installation-to-k8s-cluster.md) | Return to [Main Page](README.md)
 ---

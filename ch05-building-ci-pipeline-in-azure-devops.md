@@ -1,6 +1,6 @@
 # Building CI Pipeline In Azure DevOps
 
-#### Previous Chapter: [03 - CI/CD Pipeline](ch03-ci-cd-pipeline.md) | Next Chapter: [05 - Converting Classic Pipelines to YAMLs](ch05-converting-classic-pipelines-to-yamls.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [04 - CI/CD Pipeline](ch04-ci-cd-pipeline.md) | Next Chapter: [06 - Converting Classic Pipelines to YAMLs](ch06-converting-classic-pipelines-to-yamls.md) | Return to [Main Page](README.md)
 ---
 
 In this document, you can find:
@@ -167,5 +167,5 @@ As seen in the image below, a new slot can be opened to the agent with the "+" b
 <p align="center"><img src="images/CI-surecleri/image-36.png"></p>
 
 ---
-#### Previous Chapter: [03 - CI/CD Pipeline](ch03-ci-cd-pipeline.md) | Next Chapter: [05 - Converting Classic Pipelines to YAMLs](ch05-converting-classic-pipelines-to-yamls.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [04 - CI/CD Pipeline](ch04-ci-cd-pipeline.md) | Next Chapter: [06 - Converting Classic Pipelines to YAMLs](ch06-converting-classic-pipelines-to-yamls.md) | Return to [Main Page](README.md)
 ---

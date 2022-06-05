@@ -1,6 +1,6 @@
 # GitOps
 
-#### Previous Chapter: [09 - Comparisons of CD Tools](ch09-comparisons-of-cd-tools.md) | Next Chapter: [11 - Argo CD - Introduction](ch11-argocd-introduction.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [10 - Comparisons of CD Tools](ch10-comparisons-of-cd-tools.md) | Next Chapter: [12 - Argo CD - Introduction](ch12-argocd-introduction.md) | Return to [Main Page](README.md)
 ---
 
 In this document, you can find:
@@ -161,5 +161,5 @@ So as a result; we have
 To summarize, GitOps is an **Infrastructure as Code** with **Version Control**, **Pull/Merge Requests** and **CI/CD Pipeline**.
 
 ---
-#### Previous Chapter: [09 - Comparisons of CD Tools](ch09-comparisons-of-cd-tools.md) | Next Chapter: [11 - Argo CD - Introduction](ch11-argocd-introduction.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [10 - Comparisons of CD Tools](ch10-comparisons-of-cd-tools.md) | Next Chapter: [12 - Argo CD - Introduction](ch12-argocd-introduction.md) | Return to [Main Page](README.md)
 ---

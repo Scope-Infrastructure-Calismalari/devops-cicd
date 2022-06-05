@@ -1,6 +1,6 @@
 # CI/CD Pipeline
 
-#### Previous Chapter: [02 - CI vs CD vs CD](ch02-ci-vs-cd-vs-cd.md) | Next Chapter: [04 - Building CI Pipeline In Azure DevOps](ch04-building-ci-pipeline-in-azure-devops.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [03 - CI vs CD vs CD](ch03-ci-vs-cd-vs-cd.md) | Next Chapter: [05 - Building CI Pipeline In Azure DevOps](ch05-building-ci-pipeline-in-azure-devops.md) | Return to [Main Page](README.md)
 ---
 
 In this document, you can find:
@@ -141,5 +141,5 @@ Here are the pros/ benefits of CI/CD Pipeline:
 - MTTF (Mean Time to Failure) measures the amount of time between fixes and outages.
 
 ---
-#### Previous Chapter: [02 - CI vs CD vs CD](ch02-ci-vs-cd-vs-cd.md) | Next Chapter: [04 - Building CI Pipeline In Azure DevOps](ch04-building-ci-pipeline-in-azure-devops.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [03 - CI vs CD vs CD](ch03-ci-vs-cd-vs-cd.md) | Next Chapter: [05 - Building CI Pipeline In Azure DevOps](ch05-building-ci-pipeline-in-azure-devops.md) | Return to [Main Page](README.md)
 ---

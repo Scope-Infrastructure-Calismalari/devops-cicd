@@ -1,6 +1,6 @@
 # CI vs CD vs CD
 
-#### Previous Chapter: [01 - Introduction](ch01-introduction.md) | Next Chapter: [03 - CI/CD Pipeline](ch03-ci-cd-pipeline.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [02 - Introduction to CD](ch02-introduction-to-cd.md) | Next Chapter: [04 - CI/CD Pipeline](ch04-ci-cd-pipeline.md) | Return to [Main Page](README.md)
 ---
 
 In this document, you can find:
@@ -196,5 +196,5 @@ Here are the challenges of continuous deployment:
 - Experimental results must be continuously linked with the software roadmap.
 
 ---
-#### Previous Chapter: [01 - Introduction](ch01-introduction.md) | Next Chapter: [03 - CI/CD Pipeline](ch03-ci-cd-pipeline.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [02 - Introduction to CD](ch02-introduction-to-cd.md) | Next Chapter: [04 - CI/CD Pipeline](ch04-ci-cd-pipeline.md) | Return to [Main Page](README.md)
 ---

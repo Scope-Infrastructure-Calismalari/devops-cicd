@@ -1,6 +1,6 @@
 # CI Tools
 
-#### Previous Chapter: [05 - Converting Classic Pipelines to YAMLs](ch05-converting-classic-pipelines-to-yamls.md) | Next Chapter: [07 - Comparisons of CI Tools](ch07-comparisons-of-ci-tools.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [06 - Converting Classic Pipelines to YAMLs](ch06-converting-classic-pipelines-to-yamls.md) | Next Chapter: [08 - Comparisons of CI Tools](ch08-comparisons-of-ci-tools.md) | Return to [Main Page](README.md)
 ---
 
 Continuous Integration (CI) and Continuous Delivery (CD) (or CI/CD) has become an integral part of software development and DevOps testing. It provides developers the necessary features so that they can deploy the code continuously. It detects bugs at an early stage and avoids integration problems due to frequent committing of source code. With so many CI/CD tools available in the market, it becomes essential to choose the best CI/CD tools that suit the budget and project requirements. To make it easy for you, we have created this list, which we hope will help you choose the best CI/CD tool.
@@ -590,5 +590,5 @@ The most common use of Spacelift is that of a deployment system that interacts w
 - Plugin-based architecture of Spacelift makes it extensible with specific source control systems, build tools, and more.
 
 ---
-#### Previous Chapter: [05 - Converting Classic Pipelines to YAMLs](ch05-converting-classic-pipelines-to-yamls.md) | Next Chapter: [07 - Comparisons of CI Tools](ch07-comparisons-of-ci-tools.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [06 - Converting Classic Pipelines to YAMLs](ch06-converting-classic-pipelines-to-yamls.md) | Next Chapter: [08 - Comparisons of CI Tools](ch08-comparisons-of-ci-tools.md) | Return to [Main Page](README.md)
 ---

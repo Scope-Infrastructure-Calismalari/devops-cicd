@@ -1,6 +1,6 @@
 # Comparisons of CI Tools
 
-#### Previous Chapter: [06 - CI Tools](ch06-ci-tools.md) | Next Chapter: [08 - CD Tools](ch08-cd-tools.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [07 - CI Tools](ch07-ci-tools.md) | Next Chapter: [09 - CD Tools](ch09-cd-tools.md) | Return to [Main Page](README.md)
 ---
 
 In this document, you can find:
@@ -251,5 +251,5 @@ I have already explored a few reasons why you might want to use cloud service pr
 - If you require fine-grained access controls, advanced user and group management capabilities, and integration with internal user directories, again, Azure Pipelines and AWS CodePipeline are the best choices
 
 ---
-#### Previous Chapter: [06 - CI Tools](ch06-ci-tools.md) | Next Chapter: [08 - CD Tools](ch08-cd-tools.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [07 - CI Tools](ch07-ci-tools.md) | Next Chapter: [09 - CD Tools](ch09-cd-tools.md) | Return to [Main Page](README.md)
 ---

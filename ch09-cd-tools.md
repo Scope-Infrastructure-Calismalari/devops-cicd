@@ -1,6 +1,6 @@
 # CD Tools
 
-#### Previous Chapter: [07 - Comparisons of CI Tools](ch07-comparisons-of-ci-tools.md) | Next Chapter: [09 - Comparisons of CD Tools](ch09-comparisons-of-cd-tools.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [08 - Comparisons of CI Tools](ch08-comparisons-of-ci-tools.md) | Next Chapter: [10 - Comparisons of CD Tools](ch10-comparisons-of-cd-tools.md) | Return to [Main Page](README.md)
 ---
 
 In this document, you can find:
@@ -105,5 +105,5 @@ Jenkins X provides pipeline automation, built-in GitOps, and preview environment
    Jenkins X automatically comments on your Commits, Issues and Pull Requests with feedback as code is ready to be previewed, is promoted to environments or if Pull Requests are generated automatically to upgrade versions.
 
 ---
-#### Previous Chapter: [07 - Comparisons of CI Tools](ch07-comparisons-of-ci-tools.md) | Next Chapter: [09 - Comparisons of CD Tools](ch09-comparisons-of-cd-tools.md) | Return to [Main Page](README.md)
+#### Previous Chapter: [08 - Comparisons of CI Tools](ch08-comparisons-of-ci-tools.md) | Next Chapter: [10 - Comparisons of CD Tools](ch10-comparisons-of-cd-tools.md) | Return to [Main Page](README.md)
 ---
