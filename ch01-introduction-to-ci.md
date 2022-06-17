@@ -47,8 +47,8 @@ Here are key differences between development using CI or without CI.
 
 ## Difference between Compilation and Continuous Integration
 
-![](images/CI-surecleri/image-4.png" alt="Activities in CI)
-<h4 align="center">Activities in CI</h4>
+![](images/CI-surecleri/image-4.png)
+***Activities in CI***
 
 While compilation only compiles a code, CI does the following activities:
 
@@ -84,8 +84,8 @@ Compilation is the process the computer takes to convert a high-level programmin
 
 ### How do I build?
 
-![](images/CI-surecleri/image-5.png" alt="CI process)
-<h4 align="center">CI process</h4>
+![](images/CI-surecleri/image-5.png)
+***CI process***
 
 - Ideally, the build should come from the command line and should not depend on IDE.
 - The build should happen continuously using a dedicated Cl server, not a cron job.
@@ -95,7 +95,8 @@ Compilation is the process the computer takes to convert a high-level programmin
 
 ## What do you need to conduct CI process?
 
-![](images/CI-surecleri/image-6.png" alt="CI process)
+![](images/CI-surecleri/image-6.png)
+***CI process***
 
 Here, are the key elements which you need to perfom the entire CI process:
 
@@ -106,8 +107,8 @@ Here, are the key elements which you need to perfom the entire CI process:
 
 ## How CI work?
 
-![](images/CI-surecleri/image-7.png" alt="Example of CI)
-<h4 align="center">Example of CI</h4>
+![](images/CI-surecleri/image-7.png)
+***Example of CI***
 
 You are surely aware of the old phone Nokia. Nokia used to implement a procedure called nightly build. After multiple commits from diverse developers during the day, the software built every night. Since the software was built only once in a day, it's a huge pain to isolate, identify, and fix the errors in a large codebase.
 

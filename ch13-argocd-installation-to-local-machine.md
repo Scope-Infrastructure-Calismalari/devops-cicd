@@ -86,9 +86,9 @@ Installation steps:
 
         Link for the document describing how to configure Argo CD with ingress: <https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/ingress.md>
 
-**If we have been able to proceed smoothly until this step, when we click on the [localhost link](https://localhost:8080), a page like the one below will appear on our screen.**
+    **If we have been able to proceed smoothly until this step, when we click on the [localhost link](https://localhost:8080), a page like the one below will appear on our screen.**
 
-![](images/Argo-CD/image-17.png)
+    ![](images/Argo-CD/image-17.png)
 
 6. Argo CD application, which comes with "admin" as the default user name, creates the user password at the time of installation. The initial password can be accessed as follows:
 
@@ -148,7 +148,7 @@ Installation steps:
 
 7. If we were able to pass these stages without any problems, we should be able to access our application again with [localhost:8080](https://localhost:8080) and log in with the password we set and bcrypt. If the login process is successful, the following screen will appear:
 
-![](images/Argo-CD/image-19.png)
+    ![](images/Argo-CD/image-19.png)
 
 8. Congratulations. You have successfully completed the installation process. In the next step, we will fill this empty screen with applications and animate it a little :)
 

@@ -49,27 +49,27 @@ Now we have a new question: *"How will this newly created Docker image be deploy
 
 1. We update the k8s deployment YAML file by typing the new version number of the Docker image.
 
-![](images/Argo-CD/image-7.png)
+    ![](images/Argo-CD/image-7.png)
 
 2. We apply the modified YAML file to k8s.
 
-**While all the steps up to pushing the Docker image to Docker Repo create the CI process, applying the updated YAML file to the k8s cluster creates the CD process.**
+    **While all the steps up to pushing the Docker image to Docker Repo create the CI process, applying the updated YAML file to the k8s cluster creates the CD process.**
 
-![](images/Argo-CD/image-8.png)
+    ![](images/Argo-CD/image-8.png)
 
-**Challenges and frustrations of this CI/CD process:**
+    **Challenges and frustrations of this CI/CD process:**
 
-- In order to be able to access the k8s cluster and make changes, tools such as kubectl, helm must be installed in the *Build Automation Tool* that we assume as Jenkins in this example
+    - In order to be able to access the k8s cluster and make changes, tools such as kubectl, helm must be installed in the *Build Automation Tool* that we assume as Jenkins in this example
 
-- Access to k8s is also required because kubectl is only k8s client tool and "credentials" must be defined in order to access k8s. If we are using cloud servers such as AWS, we also need to define credentials to access them.
+    - Access to k8s is also required because kubectl is only k8s client tool and "credentials" must be defined in order to access k8s. If we are using cloud servers such as AWS, we also need to define credentials to access them.
 
-- These credential definitions not only put effort into configuration, but also raise the issue of security. We also need to export cluster credentials to external services and tools. For example, if we have 33 applications, each application requests a separate credential for itself. Only in this way, each application will be able to access the application resources defined for itself in the cluster. If we do not have a single cloud service but also have other clusters, credential definitions will still be required for each of them.
+    - These credential definitions not only put effort into configuration, but also raise the issue of security. We also need to export cluster credentials to external services and tools. For example, if we have 33 applications, each application requests a separate credential for itself. Only in this way, each application will be able to access the application resources defined for itself in the cluster. If we do not have a single cloud service but also have other clusters, credential definitions will still be required for each of them.
 
-- **The most important problem** is that Jenkins, which deploys applications to k8s or makes a change in k8s configurations, cannot have information about the status of these deployments. Once the "`kubectl apply ...`" command is run, Jenkins actually has no information about the status of this execution. "Is the application installed?", "Is the application status healty?", or "Is the application failed during startup?" Jenkins cannot follow the answers to such questions.
+    - **The most important problem** is that Jenkins, which deploys applications to k8s or makes a change in k8s configurations, cannot have information about the status of these deployments. Once the "`kubectl apply ...`" command is run, Jenkins actually has no information about the status of this execution. "Is the application installed?", "Is the application status healty?", or "Is the application failed during startup?" Jenkins cannot follow the answers to such questions.
 
-**Due to these situations, we see that the CD part of the CI/CD process can be improved.**
+    **Due to these situations, we see that the CD part of the CI/CD process can be improved.**
 
-Considering these special cases, Argo CD was developed on the basis of GitOps principles so that k8s clusters can be *"delivery"* more effectively. We can say **"CD for Kubernetes"** for Argo CD.
+    Considering these special cases, Argo CD was developed on the basis of GitOps principles so that k8s clusters can be *"delivery"* more effectively. We can say **"CD for Kubernetes"** for Argo CD.
 
 ## Executing the CD Process with Argo CD
 
@@ -157,7 +157,7 @@ We will also apply this to "non-human users". For example, build automation tool
 
 ![](images/Argo-CD/image-15.png)
 
-## Argo CD as k8s Add-on
+## Argo CD as K8s Add-on
 
 Argo CD is not just an application deployed to the k8s cluster, if it were, there would be no difference since Jenkins could be deployed in the same way. What differentiates Argo CD here is that it is actually an extension of the k8s API. In fact, Argo CD adds and enriches the functions of the k8s, rather than rebuilding things, reintroducing all the functions. It also uses the functions of k8s to do its own operations, for example it uses *"etcd"* to store data.
 

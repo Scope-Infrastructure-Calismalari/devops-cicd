@@ -3,9 +3,7 @@
 #### Previous Chapter: [13 - Argo CD - Installation to Local Machine](ch13-argocd-installation-to-local-machine.md) | Next Chapter: [15 - Argo CD - Installation to K8s Cluster](ch15-argo-cd-installation-to-k8s-cluster.md) | Return to [Main Page](README.md)
 ---
 
-## *In this example we will see how to install and run the fully automated CD pipeline with the Argo CD application for K8s configuration changes*
-
-### In this sample application we need
+In this example we will see how to install and run the fully automated CD pipeline with the Argo CD application for K8s configuration changes. We need:
 
 - Git repo with "deployment" and "service" yaml files,
 
@@ -13,7 +11,7 @@
 
 - Minikube cluster
 
-### Steps to complete this example
+## Steps to complete this example
 
 1. Install Argo CD in K8s cluster
 
@@ -21,9 +19,9 @@
 
 3. Testing the installation by updating the *deployment.yaml* file
 
-![](images/Argo-CD/image-28.png)
+    ![](images/Argo-CD/image-28.png)
 
-### Step 1 - Install ArgoCD in K8s cluster
+## Step 1 - Install ArgoCD in K8s cluster
 
 - We create the Argo CD namespace inside the K8s cluster:
 
@@ -53,57 +51,57 @@
 
 <br>
 
-#### Accessing the Argo CD UI
+## Accessing the Argo CD UI
 
-  When we examine the services running in the K8s cluster with the
+When we examine the services running in the K8s cluster with the
   
-  `kubectl get svc -n argocd`
+`kubectl get svc -n argocd`
   
-  command, we can observe that the *80* and *443* ports of the *argocd-server* service are open.
+command, we can observe that the *80* and *443* ports of the *argocd-server* service are open.
 
-  ![](images/Argo-CD/image-23.png)
+![](images/Argo-CD/image-23.png)
 
-  By forwarding these ports to the ports of our own machine, we will be able to access the UI.
+By forwarding these ports to the ports of our own machine, we will be able to access the UI.
 
-  `kubectl port-forward -n argocd svc/argocd-server 8080:443`
+`kubectl port-forward -n argocd svc/argocd-server 8080:443`
 
-  With this command, we are now able to access this service over localhost.
+With this command, we are now able to access this service over localhost.
 
-  ![](images/Argo-CD/image-24.png)
+![](images/Argo-CD/image-24.png)
 
-  Now we can access the service with the addresses [localhost:8080](https://localhost:8080) or [127.0.0.1:8080](https://127.0.0.1:8080)
+Now we can access the service with the addresses [localhost:8080](https://localhost:8080) or [127.0.0.1:8080](https://127.0.0.1:8080)
 
-  In case of an getting unsafe connection warning as below, we will be able to access the connection by making progress as *Advanced -> Proceed to 127.0.0.1 (unsafe)*.
+In case of an getting unsafe connection warning as below, we will be able to access the connection by making progress as *Advanced -> Proceed to 127.0.0.1 (unsafe)*.
 
-  ![](images/Argo-CD/image-25.png)
+![](images/Argo-CD/image-25.png)
 
-  Now the UI of the Argo CD application will appear:
+Now the UI of the Argo CD application will appear:
 
-  <img src="images/Argo-CD/image-17.png)
+![](images/Argo-CD/image-17.png)
 
-  **WARNING:** How to log in to the system is explained under the *4. Login Using The CLI* title on the above-mentioned [website](https://argo-cd.readthedocs.io/en/stable/getting_started/#1-install-argo-cd).
+**WARNING:** How to log in to the system is explained under the *4. Login Using The CLI* title on the above-mentioned [website](https://argo-cd.readthedocs.io/en/stable/getting_started/#1-install-argo-cd).
 
-  We will also talk about accessing the system here, but if the login method here changes after new updates (which was the case before), then it would be useful to try the new method from the mentioned website.
+We will also talk about accessing the system here, but if the login method here changes after new updates (which was the case before), then it would be useful to try the new method from the mentioned website.
 
-  The password of the system where the username is defined as *admin* is created while installing Argo CD. The password is stored in the secret created with the name *argocd-initial-admin-secret*.
+The password of the system where the username is defined as *admin* is created while installing Argo CD. The password is stored in the secret created with the name *argocd-initial-admin-secret*.
 
-  We print the secret as yaml to the screen:
+We print the secret as yaml to the screen:
 
-  `kubectl get secret argocd-initial-admin-secret -n argocd -o yaml`
+`kubectl get secret argocd-initial-admin-secret -n argocd -o yaml`
 
-  <img src="images/Argo-CD/image-26.png)
+![](images/Argo-CD/image-26.png)
 
-  The password information written next to *password* under *data* is the base64 encode value. We will be able to decode this value and get the password:
+The password information written next to *password* under *data* is the base64 encode value. We will be able to decode this value and get the password:
 
-  `echo <encoded_password_value> | base64 --decode`
+`echo <encoded_password_value> | base64 --decode`
 
-  <img src="images/Argo-CD/image-27.png)
+![](images/Argo-CD/image-27.png)
 
-  We obtain the password by copying the previous values, ignoring the **%** sign. This is how we reached the *initial password* value of the user whose username is admin.
+We obtain the password by copying the previous values, ignoring the **%** sign. This is how we reached the *initial password* value of the user whose username is admin.
 
-  After logging in, Argo CD's blank UI screen will appear.
+After logging in, Argo CD's blank UI screen will appear.
 
-  ![](images/Argo-CD/image-19.png)
+![](images/Argo-CD/image-19.png)
 
 <br>
 
