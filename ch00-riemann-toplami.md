@@ -5,7 +5,7 @@
 
 ## Riemann Toplamı - Konuya felsefik bir yaklaşım
 
-<p align="center"><img src="images/Riemann-Toplami/image-1.png"></p>
+![](images/Riemann-Toplami/image-1.png)
 
 Yukarıdaki şeklin alanını nasıl hesaplayabiliriz?
 
@@ -13,7 +13,7 @@ Hayat, problemler, projeler kenarı köşesi belli olmayan, eğik-bükük şekil
 
 *"Madem dörtgenlerin alanlarını hesaplamayı biliyoruz, o zaman düzgün olmayan bu şekli, dörtgen parçalardan oluşan bir bütün olarak düşünelim ve bu dörtgenlerin alanlarını toplayarak tüm şeklin alanının yaklaşık değerini bulalım"* diye düşünüp, bu düşünceden temel alan bir formül üretmiş.
 
-<p align="center"><img src="images/Riemann-Toplami/image-2.png"></p>
+![](images/Riemann-Toplami/image-2.png)
 
 Bugün yaygın olan yazılım geliştirme metodolojilerinin mantığı Riemann’ın mantığına benziyor. Uygulamaları özelliklere bölüp, belli zaman dilimleri içerisinde bu özellikleri tamamlayarak projeleri inşa ediyoruz.
 

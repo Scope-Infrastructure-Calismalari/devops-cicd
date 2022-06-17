@@ -26,7 +26,7 @@ A CI/CD pipeline is a runnable specification of the steps that any developer sho
 
 Here are the important Stages of CI/CD pipeline:
 
-<p align="center"><img src="images/CI-surecleri/image-11.png" alt="Stages of CI/CD pipeline"></p>
+![](images/CI-surecleri/image-11.png" alt="Stages of CI/CD pipeline)
 
 <h4 align="center">Stages of CI/CD pipeline</h4>
 

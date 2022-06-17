@@ -61,11 +61,11 @@ This is a step-by-step guide to using Azure Pipelines to build a sample applicat
 
 2. Click on the **Pipelines** button which is under the Pipelines in the left panel.
 
-<p align="center"><img src="images/CI-surecleri/image-15.png"></p>
+![](images/CI-surecleri/image-15.png)
 
 3. If it is the first time to create a pipeline, **"Create your First Pipeline"** screen will come to screen. Click the **"Create Pipeline"** button under this screen.
 
-<p align="center"><img src="images/CI-surecleri/image-16.png"></p>
+![](images/CI-surecleri/image-16.png)
 
 4. New versions of pipelines comes with yaml configuration as default instead of classic pipeline. One yaml file is enough to define the pipeline now.
 
@@ -73,13 +73,13 @@ This is a step-by-step guide to using Azure Pipelines to build a sample applicat
 
 5. Choose "Azure Repos Git" from "Where is your code?" screen.
 
-<p align="center"><img src="images/CI-surecleri/image-17.png"></p>
+![](images/CI-surecleri/image-17.png)
 
 *You can also continue with classic editor by clicking the "Use the classic editor" in the left-bottom corner but this method is old, not recommended and used in this document.*
 
 6. Choose the repo you want to work and define pipeline on it.
 
-<p align="center"><img src="images/CI-surecleri/image-18.png"></p>
+![](images/CI-surecleri/image-18.png)
 
 7. Choose "Maven" under the "Configure your pipeline" screen. You can also continue with other topics.
 
@@ -105,39 +105,39 @@ Here you can see the "azure-pipelines.yml" file below
 
 8. After changing the required fields, adding desired commands or steps, click on **"Save and run"** button. A new screen will appear, ask whether to commit directly to the main branch or create a new branch for azure-pipelines.yml file, you can choose which you want.
 
-<p align="center"><img src="images/CI-surecleri/image-21.png"></p>
+![](images/CI-surecleri/image-21.png)
 
 9. Now we can see pipeline job which is in the queue and waiting to be executed by agent from specified agent pool.
 
-<p align="center"><img src="images/CI-surecleri/image-22.png"></p>
+![](images/CI-surecleri/image-22.png)
 
 If you encounter a screen about permissions which is like below, you can solve it with giving required permissions.
 
-<p align="center"><img src="images/CI-surecleri/image-23.png"></p><p align="center"><img src="images/CI-surecleri/image-24.png"></p><p align="center"><img src="images/CI-surecleri/image-25.png"></p>
+![](images/CI-surecleri/image-23.png)![](images/CI-surecleri/image-24.png)![](images/CI-surecleri/image-25.png)
 
 10. After giving permissions, the pipeline steps will be executed in order  and we can see details of each step by only click on them.
 
-<p align="center"><img src="images/CI-surecleri/image-26.png"></p>
+![](images/CI-surecleri/image-26.png)
 
 11. We add a new line to the "Demo.java" file and commit again to test our pipeline, which we have set to trigger when the main branch commits comes.
 
-<p align="center"><img src="images/CI-surecleri/image-27.png"></p><p align="center"><img src="images/CI-surecleri/image-28.png"></p>
+![](images/CI-surecleri/image-27.png)![](images/CI-surecleri/image-28.png)
 
 12. By clicking the "Pipelines" button on the left menu, which we used to create the pipeline before, we see our compiled pipeline. This shows us that our pipeline is triggered automatically with the commit came to the main branch. *(The blue icon will turn green when the compilation process is complete.)*
 
-<p align="center"><img src="images/CI-surecleri/image-29.png"></p><p align="center"><img src="images/CI-surecleri/image-30.png"></p>
+![](images/CI-surecleri/image-29.png)![](images/CI-surecleri/image-30.png)
 
 13. When we click on our pipeline that turns into a "tick" icon, we see the previous times that this pipeline was running. There is information about the previous "Runs", how long ago it worked, how long it took to run, whether it ended with an error or successfully:
 
-<p align="center"><img src="images/CI-surecleri/image-31.png"></p>
+![](images/CI-surecleri/image-31.png)
 
 When a run is entered, more detailed information is given.
 
-<p align="center"><img src="images/CI-surecleri/image-32.png"></p>
+![](images/CI-surecleri/image-32.png)
 
 When we click on "Job" under the "Jobs" heading at the bottom of this new window, the steps of that pipeline that has been run appear and can be examined in detail by clicking on them.
 
-<p align="center"><img src="images/CI-surecleri/image-33.png"></p>
+![](images/CI-surecleri/image-33.png)
 
 **Summary:** In this example, we have created a build pipeline configured with the "azure-pipelines" file in YAML format for the "example-repo-ci-cd-java-pipeline" repository, which is compiled by agents in the SCOPE-CICD repository and automatically triggered every time a commit comes to the main branch.
 
@@ -156,15 +156,15 @@ In other words, we can see the codes and versions of two years ago, as well as t
 Azure DevOps platform offers us two kinds of pipeline creation options; classic editor and yaml.
 Although the Azure DevOps platform directs us to create a pipeline with yaml by default when we want to create a new pipeline, the classic pipeline structure can be installed with the "Use the classic editor" button, which is also indicated in the image below.
 
-<p align="center"><img src="images/CI-surecleri/image-34.png"></p>
+![](images/CI-surecleri/image-34.png)
 
 As you can continue with the template, you can also continue with the "Empty job" and the desired more specific tasks can be selected and ordered to create a pipeline.
 
-<p align="center"><img src="images/CI-surecleri/image-35.png"></p>
+![](images/CI-surecleri/image-35.png)
 
 As seen in the image below, a new slot can be opened to the agent with the "+" button, and a pipeline can be created by adding the appropriate tasks through the search window.
 
-<p align="center"><img src="images/CI-surecleri/image-36.png"></p>
+![](images/CI-surecleri/image-36.png)
 
 ---
 #### Previous Chapter: [04 - CI/CD Pipeline](ch04-ci-cd-pipeline.md) | Next Chapter: [06 - Converting Classic Pipelines to YAMLs](ch06-converting-classic-pipelines-to-yamls.md) | Return to [Main Page](README.md)

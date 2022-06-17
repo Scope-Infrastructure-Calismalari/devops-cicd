@@ -15,13 +15,13 @@ In this document, you can find:
 
 ## What is CD?
 
+![](images/CD-surecleri/image-1.png)
+
 The "CD" refers to Continuous Delivery and/or Continuous Deployment, which are related concepts that sometimes get used interchangeably. Both are about automating further stages of the pipeline, but they’re sometimes used separately to illustrate just how much automation is happening.
 
 Continuous delivery usually means a developer’s changes to an application are automatically bug tested and uploaded to a repository (like GitHub or a container registry), where they can then be deployed to a live production environment by the operations team. It’s an answer to the problem of poor visibility and communication between dev and business teams. To that end, the purpose of continuous delivery is to ensure that it takes minimal effort to deploy new code.
 
 Continuous deployment (the other possible "CD") can refer to automatically releasing a developer’s changes from the repository to production, where it is usable by customers. It addresses the problem of overloading operations teams with manual processes that slow down app delivery. It builds on the benefits of continuous delivery by automating the next stage in the pipeline.
-
-<p align="center"><img src="images/CD-surecleri/image-1.png"></p>
 
 It’s possible for CI/CD to specify just the connected practices of CI and continuous delivery, or it can also mean all 3 connected practices of CI, continuous delivery, and continuous deployment. To make it more complicated, sometimes "continuous delivery" is used in a way that encompasses the processes of continuous deployment as well.
 

@@ -21,7 +21,7 @@
 
 3. Testing the installation by updating the *deployment.yaml* file
 
-<p align="center"><img src="images/Argo-CD/image-28.png"></p>
+![](images/Argo-CD/image-28.png)
 
 ### Step 1 - Install ArgoCD in K8s cluster
 
@@ -29,13 +29,13 @@
 
   `kubectl create namespace argocd`
 
-  <p align="center"><img src="images/Argo-CD/image-20.png"></p>
+  ![](images/Argo-CD/image-20.png)
 
 - We install the Argo CD application in Namespace
 
   `kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/core-install.yaml`
 
-  <p align="center"><img src="images/Argo-CD/image-21.png"></p>
+  ![](images/Argo-CD/image-21.png)
 
   In order to see the installation result, we can run the
   
@@ -43,7 +43,7 @@
   
   command and see the output.
 
-  <p align="center"><img src="images/Argo-CD/image-22.png"></p>
+  ![](images/Argo-CD/image-22.png)
 
   We have to wait for all pods to be operational. With the command
   
@@ -61,7 +61,7 @@
   
   command, we can observe that the *80* and *443* ports of the *argocd-server* service are open.
 
-  <p align="center"><img src="images/Argo-CD/image-23.png"></p>
+  ![](images/Argo-CD/image-23.png)
 
   By forwarding these ports to the ports of our own machine, we will be able to access the UI.
 
@@ -69,17 +69,17 @@
 
   With this command, we are now able to access this service over localhost.
 
-  <p align="center"><img src="images/Argo-CD/image-24.png"></p>
+  ![](images/Argo-CD/image-24.png)
 
   Now we can access the service with the addresses [localhost:8080](https://localhost:8080) or [127.0.0.1:8080](https://127.0.0.1:8080)
 
   In case of an getting unsafe connection warning as below, we will be able to access the connection by making progress as *Advanced -> Proceed to 127.0.0.1 (unsafe)*.
 
-  <p align="center"><img src="images/Argo-CD/image-25.png"></p>
+  ![](images/Argo-CD/image-25.png)
 
   Now the UI of the Argo CD application will appear:
 
-  <img src="images/Argo-CD/image-17.png"></p>
+  <img src="images/Argo-CD/image-17.png)
 
   **WARNING:** How to log in to the system is explained under the *4. Login Using The CLI* title on the above-mentioned [website](https://argo-cd.readthedocs.io/en/stable/getting_started/#1-install-argo-cd).
 
@@ -91,25 +91,25 @@
 
   `kubectl get secret argocd-initial-admin-secret -n argocd -o yaml`
 
-  <img src="images/Argo-CD/image-26.png"></p>
+  <img src="images/Argo-CD/image-26.png)
 
   The password information written next to *password* under *data* is the base64 encode value. We will be able to decode this value and get the password:
 
   `echo <encoded_password_value> | base64 --decode`
 
-  <img src="images/Argo-CD/image-27.png"></p>
+  <img src="images/Argo-CD/image-27.png)
 
   We obtain the password by copying the previous values, ignoring the **%** sign. This is how we reached the *initial password* value of the user whose username is admin.
 
   After logging in, Argo CD's blank UI screen will appear.
 
-  <p align="center"><img src="images/Argo-CD/image-19.png"></p>
+  ![](images/Argo-CD/image-19.png)
 
 <br>
 
 ## Step 2 - Configure Argo CD with "Application" CRD
 
-<p align="center"><img src="images/Argo-CD/image-29.png"></p>
+![](images/Argo-CD/image-29.png)
 
 In this step, we will write the configuration file that will connect the Git repo with the configuration files to Argo CD and complete the connection (Argo CD's configuration file will also be in this configuration repo.)
 
@@ -125,13 +125,13 @@ For version control, the file under the *Applications* heading under the link [D
 
 The first lines of our file are as follows. With these lines, the components of the application will be created under the namespace where the Argo CD application is running.
 
-<p align="center"><img src="images/Argo-CD/image-30.png"></p>
+![](images/Argo-CD/image-30.png)
 
 We continue to write the codes with *spec*. *project* under the spec allows us to group multiple applications. If this is not important to us, we can write *default* and continue. If we do not write this line at all, then it will be accepted as *default*.
 
 After that, we move on to the two necessary steps when creating all Argo CD applications. Firstly; The Git repo to which Argo CD will connect and synchronize, and secondly, the destination(K8s cluster) information to apply the definitions found in the Git repo.
 
-<p align="center"><img src="images/Argo-CD/image-31.png"></p>
+![](images/Argo-CD/image-31.png)
 
 **Source**
 
@@ -143,7 +143,7 @@ After that, we move on to the two necessary steps when creating all Argo CD appl
 
 - *server* Where we define the own address of the K8s cluster. The address `https://kubernetes.default.svc` is the internal address of the K8s API server.
 
-<p align="center"><img src="images/Argo-CD/image-32.png"></p>
+![](images/Argo-CD/image-32.png)
 
 *Note: Since Argo CD runs inside the K8s cluster, the internal IP address is sufficient for the cluster to access the API server, there is no need for an external cluster endpoint. Since Argo CD can access the cluster from outside or manage multiple clusters, there is such a definition, but in our example, the internal address is sufficient.*
 
@@ -162,39 +162,39 @@ Two settings can be defined under the *"automated"* title. With *"selfHeal"* it 
 
 Argo CD, which we set with *automated*, will check the Git repo every 3 minutes and if there is a difference with its instant status, it will correct these differences and configure itself according to the settings in the Git repo.
 
-<p align="center"><img src="images/Argo-CD/image-35.png"></p>
+![](images/Argo-CD/image-35.png)
 
 *Note: "Git webhook" can be used for this if we want Argo CD to be notified of the change immediately instead of waiting for 3 minutes.*
 
 So why are features such as automatic synchronization, self-healing, and pruning turned off?
 
-<p align="center"><img src="images/Argo-CD/image-36.png"></p>
+![](images/Argo-CD/image-36.png)
 
 Although I don't know the exact answer, these are probably decisions that were thought and implemented under "security". Thus, as a result of accidental deletion of some things, we will not need to enable it from the outside, and in some cases, the settings we tried will be deleted due to automatic synchronization, preventing us from doing trial and error.
 
 After we finish and complete the writing of our **aplication.yaml** file, we will apply this yaml file to the cluster with the command we need to run for the first and last time. As we can see from the output below, the application component has been created.
 
-<p align="center"><img src="images/Argo-CD/image-37.png"></p>
+![](images/Argo-CD/image-37.png)
 
 Our application is currently running in the cluster.
 
 If we have successfully completed the steps so far, when we access the Argo CD application on localhost, a screen like the one below will welcome us and our application installed in the cluster will appear:
 
-<p align="center"><img src="images/Argo-CD/image-38.png"></p>
+![](images/Argo-CD/image-38.png)
 
 When we click on the installation, we will be able to see all the components that have been installed:
 
-<p align="center"><img src="images/Argo-CD/image-39.png"></p>
+![](images/Argo-CD/image-39.png)
 
 We will see two pods connected to the "replica set" denoted by "rs" at the bottom of Deployment:
 
-<p align="center"><img src="images/Argo-CD/image-40.png"></p>
+![](images/Argo-CD/image-40.png)
 
 This is due to the fact that we defined the "replicas: " field as "2" under the "spec" heading in the *"deployment.yaml"* file. In this way, the replicas created according to the number we gave were seen on the UI at this stage.
 
 When we click on one of the pods, we will be able to see the "main data" information, which Docker image the pod is running with, and the "actual state manifest (live manifest)" information. We can also find the events performed by the pod and their log information from this window.
 
-<p align="center"><img src="images/Argo-CD/image-41.png"></p>
+![](images/Argo-CD/image-41.png)
 
 ## Step 3 - Test our setup by updating Deployment.yaml file
 
@@ -202,7 +202,7 @@ The changes we will make in *deployment.yaml* under the *dev* folder in our Git 
 
 For example, update the line *"scopeinfra/argocd-app:1.0"* in the *image* line under *containers:* under *spec:* in this file from **1.0** to **1.2** and push it back to the GitHub repo's.
 
-<p align="center"><img src="images/Argo-CD/image-43.png"></p>
+![](images/Argo-CD/image-43.png)
 
 After this change, Argo CD needs to detect this change and change the application we deploy. We can wait for 3 minutes for this, or we can trigger the synchronization manually by pressing the "Sync" button on the Argo CD application page.
 

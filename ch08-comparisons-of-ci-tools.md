@@ -62,7 +62,7 @@ CircleCI and Travis CI are both heavyweights in the CI/CD tool arena. Each of th
 
 ### CircleCI
 
-<p align="center"><img src="images/CI-toolsets/image-33.png"></p>
+![](images/CI-toolsets/image-33.png)
 
 CircleCI offers a hosted tool called CircleCI Cloud and a self-hosted tool called CircleCI Server. These tools have many similarities as well as a few key differences.
 
@@ -72,7 +72,7 @@ CircleCI generally refers to CI/CD pipelines as “workflows,” which let you w
 
 ### Travis CI
 
-<p align="center"><img src="images/CI-toolsets/image-34.png"></p>
+![](images/CI-toolsets/image-34.png)
 
 Travis CI also offers a hosted tool, as well as a self-hosted tool called Travis CI Enterprise. Both tools allow you to build using a variety of languages and runtimes on Linux, Windows, or macOS.
 
@@ -94,7 +94,7 @@ Now let’s take a look at the tools from the three big cloud service providers.
 
 ### Azure Pipelines
 
-<p align="center"><img src="images/CI-toolsets/image-35.png"></p>
+![](images/CI-toolsets/image-35.png)
 
 Azure Pipelines is advertised as a complete CI/CD system that can build anything and deploy anywhere. While it certainly is capable of supporting deployments to other cloud providers, the documentation and examples focus on deployment to Azure. It offers deep integration with the larger Azure DevOps platform and a rather large marketplace with extensions that can add new integrations to your pipeline.
 
@@ -106,7 +106,7 @@ Build agents can be Microsoft-hosted or self-hosted. Builds can run directly on 
 
 ### Google Cloud Build
 
-<p align="center"><img src="images/CI-toolsets/image-36.png"></p>
+![](images/CI-toolsets/image-36.png)
 
 Google Cloud Build is a newer tool compared to its peers. This tool focuses primarily on building containerized applications. There are a few characteristics and limitations that differentiate this tool from the others.
 
@@ -118,7 +118,7 @@ The Google Cloud SDK (CLI) can be used to trigger builds remotely or even run bu
 
 ### AWS CodePipeline
 
-<p align="center"><img src="images/CI-toolsets/image-37.png"></p>
+![](images/CI-toolsets/image-37.png)
 
 AWS CodePipeline is one of several Amazon tools that are tightly integrated together and necessary to build a CI/CD pipeline. CodeBuild and CodeDeploy are the two other tools that you will most likely want to set up. In fact, Amazon has done a great job making sure all of its AWS tools and services are given first-class treatment.
 

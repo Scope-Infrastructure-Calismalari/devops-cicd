@@ -88,7 +88,7 @@ Installation steps:
 
 **If we have been able to proceed smoothly until this step, when we click on the [localhost link](https://localhost:8080), a page like the one below will appear on our screen.**
 
-<p align="center"><img src="images/Argo-CD/image-17.png"></p>
+![](images/Argo-CD/image-17.png)
 
 6. Argo CD application, which comes with "admin" as the default user name, creates the user password at the time of installation. The initial password can be accessed as follows:
 
@@ -114,7 +114,7 @@ Installation steps:
 
     The password must be encrypted using the **Bcrypt** encryption method. In order to do this, we can perform the encryption process by going to [browserling](https://www.browserling.com/tools/bcrypt) and typing the password we have determined in the Password field and pressing the **Bcrypt** button.
 
-    <p align="center"><img src="images/Argo-CD/image-18.png"></p>
+    ![](images/Argo-CD/image-18.png)
 
     When we copy this created password, replace the "XXXXX" part in the above command and run it, the password change process will be completed successfully.
 
@@ -140,15 +140,15 @@ Installation steps:
     
     command.
 
-    <p align="center"><img src="images/Argo-CD/image-26.png"></p>
+    ![](images/Argo-CD/image-26.png)
 
     `echo <encoded-password> | base64 --decode` command, we can decode our password and see the output directly on the terminal. The part before the '%' sign is our password, **Be careful to not to copy the '%' character!**
 
-    <p align="center"><img src="images/Argo-CD/image-27.png"></p>
+    ![](images/Argo-CD/image-27.png)
 
 7. If we were able to pass these stages without any problems, we should be able to access our application again with [localhost:8080](https://localhost:8080) and log in with the password we set and bcrypt. If the login process is successful, the following screen will appear:
 
-<p align="center"><img src="images/Argo-CD/image-19.png"></p>
+![](images/Argo-CD/image-19.png)
 
 8. Congratulations. You have successfully completed the installation process. In the next step, we will fill this empty screen with applications and animate it a little :)
 

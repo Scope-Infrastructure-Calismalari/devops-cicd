@@ -37,27 +37,27 @@ Let's imagine that we have many microservices like the one on the left of the im
 
 And then let's say we make changes to the source code of our application (like adding new features or making bugfixes) and pushing it to the Git repo.
 
-<p align="center"><img src="images/Argo-CD/image-4.png"></p>
+![](images/Argo-CD/image-4.png)
 
 After this change and push, Jenkins etc. installed on our system and mapped to this Git repos. CI pipeline of our applications will be triggered automatically.
 
-<p align="center"><img src="images/Argo-CD/image-5.png"></p>
+![](images/Argo-CD/image-5.png)
 
 This triggered pipeline process will automatically test our application, create a new Docker image if it does not encounter any errors, and push it to the Docker Repo and complete the CI process.
 
-<p align="center"><img src="images/Argo-CD/image-6.png"></p>
+![](images/Argo-CD/image-6.png)
 
 Now we have a new question: *"How will this newly created Docker image be deployed to the k8s cluster?"*
 
 1. We update the k8s deployment YAML file by typing the new version number of the Docker image.
 
-<p align="center"><img src="images/Argo-CD/image-7.png"></p>
+![](images/Argo-CD/image-7.png)
 
 2. We apply the modified YAML file to k8s.
 
 **While all the steps up to pushing the Docker image to Docker Repo create the CI process, applying the updated YAML file to the k8s cluster creates the CD process.**
 
-<p align="center"><img src="images/Argo-CD/image-8.png"></p>
+![](images/Argo-CD/image-8.png)
 
 **Challenges and frustrations of this CI/CD process:**
 
@@ -107,17 +107,17 @@ So why should we take this approach? Because:
 
 - The Argo CD application, which we have told to follow the *App Configuration* Git repo only, will automatically run and pull it into the k8s cluster after the Jenkins application completes the CI process which changes the k8s manifest file (for example Deployment.yml) and pushes it to this repo.
 
-<p align="center"><img src="images/Argo-CD/image-9.png"></p>
+![](images/Argo-CD/image-9.png)
 
 Argo CD supports k8s manifest files "Plain(k8s) YAML Files", "Helm Charts", "Kustomize Files" or other template files that create other k8s manifest files.
 
 The repo with these files, which we call *App Configuration*, actually became the GitOps repo and we are telling Argo CD to listen here. Files in this repo can be changed by the Jenkins CI process or directly by DevOps engineers.
 
-<p align="center"><img src="images/Argo-CD/image-10.png"></p>
+![](images/Argo-CD/image-10.png)
 
 After Argo CD installation and use, we now separate our CI and CD pipelines. 
 
-<p align="center"><img src="images/Argo-CD/image-11.png"></p>
+![](images/Argo-CD/image-11.png)
 
 The advantage of this for us is to enable developers who develop the CI processes to carry out the CI processes and to follow the packaging of the codes they have written. At the same time, people who are more interested in operational work can focus on receiving the packages produced as a result of the pipelines organized by the developers and ensuring that they work correctly. Thus, two different teams with different focuses will be able to focus on their own processes.
 
@@ -137,7 +137,7 @@ In cases where the cluster needs to be updated very quickly, the automatic synch
 
 ## Recovering the Cluster
 
-<p align="center"><img src="images/Argo-CD/image-12.png"></p>
+![](images/Argo-CD/image-12.png)
 
 Having the source codes of the applications we developed in the Git repo saves the codes safely, saves us in case of a problem in the local machine / the system crashes / the machine is lost, as well as with the configuration files that we repo' with this method in case the computer running the cluster has problems. We will be able to revolt our country in the same way. If manual changes had been made, all previous adjustments would have to be remembered and redone, if that is possible.
 
@@ -145,19 +145,19 @@ Actually, this is not something that Argo CD brings, it is one of the benefits o
 
 ## Access Control of k8s with Git
 
-<p align="center"><img src="images/Argo-CD/image-13.png"></p>
+![](images/Argo-CD/image-13.png)
 
 We will not need to define *"Cluster Role"* and *"User resources"* for k8s clusters that we manage with Git repo. We will be able to manage cluster accesses directly with Git. For example, as in the image above, while the whole team can be authorized to open a "merge request", we can assign the "merge" authority only to "Senior Engineers".
 
 We will be able to continue our operations more securely without defining the team's access to the k8s cluster by only giving the team access to the Git repo.
 
-<p align="center"><img src="images/Argo-CD/image-14.png"></p>
+![](images/Argo-CD/image-14.png)
 
 We will also apply this to "non-human users". For example, build automation tools like Jenkins will not need to define k8s access directly because Argo CD is already running inside the cluster and it will be the only one that applies the different changes to the cluster.
 
 **In summary**, cluster credentials no longer need to be outside the cluster because the agent is already running inside the cluster. This also allows us to simplify the management of the security of all clusters.
 
-<p align="center"><img src="images/Argo-CD/image-15.png"></p>
+![](images/Argo-CD/image-15.png)
 
 ## Argo CD as k8s Add-on
 
@@ -167,7 +167,7 @@ One of the things that makes Argo CD give us a big advantage is that it actually
 
 If we look at the big picture, we actually have our Git repo on one side, the k8s cluster on the other, and Argo CD in the middle of the two. Git repo indicates **desired state** here, k8s cluster **actually running state**. Argo CD is responsible for making sure that these two are synchronized. In case of separation/difference between the two, it updates at the first opportunity.
 
-<p align="center"><img src="images/Argo-CD/image-16.png"></p>
+![](images/Argo-CD/image-16.png)
 
 ---
 #### Previous Chapter: [11 - GitOps](ch11-gitops.md) | Next Chapter: [13 - Argo CD - Installation to Local Machine](ch13-argocd-installation-to-local-machine.md) | Return to [Main Page](README.md)

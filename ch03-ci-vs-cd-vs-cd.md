@@ -21,6 +21,8 @@ In this document, you can find:
 
 ## Difference between CI vs CD vs CD
 
+![](images/CD-surecleri/image-2.png)
+
 Here is an important difference between CI vs CD vs CD.
 
 | Continuous Integration | Continuous Delivery | Continuous Deployment |

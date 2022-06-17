@@ -17,7 +17,7 @@ In this document, you can find:
 
 ## What is CI?
 
-<p align="center"><img src="images/CI-surecleri/image-3.png"></p>
+![](images/CI-surecleri/image-1.png)
 
 Continuous Integration (CI) is the process of automating the build and testing of code every time a team member commits changes to version control. CI encourages developers to share their code and unit tests by merging their changes into a shared version control repository after every small task completion. Committing code triggers an automated build system to grab the latest code from the shared repository and to build, test, and validate the full main, or trunk, branch.
 
@@ -47,7 +47,7 @@ Here are key differences between development using CI or without CI.
 
 ## Difference between Compilation and Continuous Integration
 
-<p align="center"><img src="images/CI-surecleri/image-4.png" alt="Activities in CI"></p>
+![](images/CI-surecleri/image-4.png" alt="Activities in CI)
 <h4 align="center">Activities in CI</h4>
 
 While compilation only compiles a code, CI does the following activities:
@@ -84,7 +84,7 @@ Compilation is the process the computer takes to convert a high-level programmin
 
 ### How do I build?
 
-<p align="center"><img src="images/CI-surecleri/image-5.png" alt="CI process"></p>
+![](images/CI-surecleri/image-5.png" alt="CI process)
 <h4 align="center">CI process</h4>
 
 - Ideally, the build should come from the command line and should not depend on IDE.
@@ -95,7 +95,7 @@ Compilation is the process the computer takes to convert a high-level programmin
 
 ## What do you need to conduct CI process?
 
-<p align="center"><img src="images/CI-surecleri/image-6.png" alt="CI process"></p>
+![](images/CI-surecleri/image-6.png" alt="CI process)
 
 Here, are the key elements which you need to perfom the entire CI process:
 
@@ -106,7 +106,7 @@ Here, are the key elements which you need to perfom the entire CI process:
 
 ## How CI work?
 
-<p align="center"><img src="images/CI-surecleri/image-7.png" alt="Example of CI"></p>
+![](images/CI-surecleri/image-7.png" alt="Example of CI)
 <h4 align="center">Example of CI</h4>
 
 You are surely aware of the old phone Nokia. Nokia used to implement a procedure called nightly build. After multiple commits from diverse developers during the day, the software built every night. Since the software was built only once in a day, it's a huge pain to isolate, identify, and fix the errors in a large codebase.
