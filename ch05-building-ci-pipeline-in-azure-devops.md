@@ -93,15 +93,11 @@ This is a step-by-step guide to using Azure Pipelines to build a sample applicat
 
 Here you can see the "azure-pipelines.yml" file below
 
-<p align="center">
-  <img src="images/CI-surecleri/image-19.png">
-</p>
+![](images/CI-surecleri/image-19.png)
 
 **If we do not change the pool name which the collection can reach, the pipeline cannot be worked.**
 
-<p align="center">
-  <img src="images/CI-surecleri/image-20.png">
-</p>
+![](images/CI-surecleri/image-20.png)
 
 8. After changing the required fields, adding desired commands or steps, click on **"Save and run"** button. A new screen will appear, ask whether to commit directly to the main branch or create a new branch for azure-pipelines.yml file, you can choose which you want.
 

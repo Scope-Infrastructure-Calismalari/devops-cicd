@@ -28,12 +28,10 @@ Before we understand Argo CD, we need to understand how CD is added and applied 
 
 ## How CD is used in many projects?
 
-Let's imagine that we have many microservices like the one on the left of the images below and we move them to the Kubernetes(k8s) cluster as in the right image.
+Let's imagine that we have many microservices like the one on the first image below and we move them to the Kubernetes(k8s) cluster as in the second image.
 
-<p float="center">
-  <img src="images/Argo-CD/image-2.png" width="49%">
-  <img src="images/Argo-CD/image-3.png" width="49%">
-</p>
+![](images/Argo-CD/image-2.png)
+![](images/Argo-CD/image-3.png)
 
 And then let's say we make changes to the source code of our application (like adding new features or making bugfixes) and pushing it to the Git repo.
 

@@ -149,10 +149,8 @@ After that, we move on to the two necessary steps when creating all Argo CD appl
 
 - With the *namespace* field, we define where Argo CD will apply the configuration files found in the Git repo. When we define it as *myapp*, we ensure that all configurations are created in the namespace named myapp.
 
-<p float="center">
-  <img src="images/Argo-CD/image-33.png" width="49%">
-  <img src="images/Argo-CD/image-34.png" width="49%">
-</p>
+![](images/Argo-CD/image-33.png)
+![](images/Argo-CD/image-34.png)
 
 We did not define a namespace named myapp before, in this case Argo CD will get an error when it tries to deploy the application. To prevent this, we made sure that this namespace will be in the destination cluster with *- CreateNamespace=true* under *syncOptions* under *syncPolicy*.
 

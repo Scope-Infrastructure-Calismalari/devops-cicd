@@ -53,7 +53,7 @@ Also, when we commit infras's code changes into the repository, no automated tes
 We need to use GitOps Flow for IaC approach.
 
 ![](images/GitOps/image-1.png)
-<h4 align="center">GitOps Flow</h1>
+***GitOps Flow***
 
 ### Steps
 
@@ -74,7 +74,7 @@ There are two different approaches how a CI/CD pipeline can implement the change
 - **Push-based**
   
   The pipeline is started and runs tools that make the changes in the platform. Changes can be triggered by a commit or merge request.
-    
+
 - **Pull-based**
   
   An agent watches the git repository for changes and compares the definition in the repository with the actual running state. If changes are detected, the agent applies the changes to the infrastructure.
@@ -112,11 +112,11 @@ Examples of GitOps tools that work with the pull-based model are Argo CD, Flux C
 
 Infra is breaked because of a new commit:
 ![](images/GitOps/image-7.png)
-<h4 align="center">Breaked<br><br></h1>
+***Breaked***
 
 Roll-backing and fixing via `git revert ...` command:
 ![](images/GitOps/image-8.png)
-<h4 align="center">Fixed<br><br></h1>
+***Fixed***
 
 When we have version control for our code and the changes in our repository are automatically synced to the environment, we can easily rollback the environment to any previous state in our code. It gives us another big advantage, for example, if we make changes that break sth in the environment, so our cluster does not work anymore, we can just do git revert to undo the latest changes and get the environment back to the last working state.
 
